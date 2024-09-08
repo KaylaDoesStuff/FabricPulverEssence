@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_mythril_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:deepslate_mythril_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mythril_ingot_from_blasting_deepslate_mythril_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_mythril_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mythril_ingot_from_blasting_deepslate_mythril_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

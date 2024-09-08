@@ -1,0 +1,18 @@
+{
+  "item.pulderessence.mythril_ingot": "Mythril Ingot",
+  "item.pulderessence.mythril_nugget": "Mythril Nugget",
+  "item.pulderessence.raw_mythril": "Raw Mythril",
+  "item.pulderessence.mythril_rod": "Mythril Rod",
+
+  "item.pulderessence.faerie_dust": "Faerie Dust",
+
+  "block.pulderessence.mythril_block": "Mythril Block",
+  "block.pulderessence.raw_mythril_block": "Raw Mythril Block",
+  "block.pulderessence.mythril_ore": "Mythril Ore",
+  "block.pulderessence.deepslate_mythril_ore": "Deepslate Mythril Ore",
+
+  "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
+
+  "group.mythril": "Mythril",
+  "group.faerie": "Faerie"
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "pulderessence:mythril_block",
+    "pulderessence:raw_mythril_block",
+    "pulderessence:mythril_ore",
+    "pulderessence:deepslate_mythril_ore",
+    "pulderessence:pulverent_nylium"
+  ]
+}

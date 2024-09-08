@@ -1,0 +1,6 @@
+// 1.20.1	2024-09-07T23:01:34.8147399	PulderEssence/Tags for minecraft:block
+a80fa8b06af9250133d2ecd322f455d65869095e data\minecraft\tags\blocks\needs_iron_tool.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
+13a700e17331c423f45c8342148eb828e2bd1b6e data\minecraft\tags\blocks\needs_stone_tool.json
+cb75e6910e377b02effc7c43f51ce1970dfe57f4 data\minecraft\tags\blocks\mineable\pickaxe.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\fabric\tags\blocks\needs_tool_level_4.json

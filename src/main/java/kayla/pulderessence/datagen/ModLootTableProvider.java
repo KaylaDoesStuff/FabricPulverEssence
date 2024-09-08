@@ -26,6 +26,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_MYTHRIL_BLOCK);
 
         addDrop(ModBlocks.PULVERENT_NYLIUM);
+        addDrop(ModBlocks.STRIPPED_PULVERENT_LOG);
 
         addDrop(ModBlocks.MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 2.0F, 5.0F));
         addDrop(ModBlocks.DEEPSLATE_MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.DEEPSLATE_MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 3.0F, 7.0F));

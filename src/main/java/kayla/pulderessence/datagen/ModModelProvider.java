@@ -21,6 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_MYTHRIL_BLOCK);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
+        blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.STRIPPED_PULVERENT_LOG);
     }
 
     @Override

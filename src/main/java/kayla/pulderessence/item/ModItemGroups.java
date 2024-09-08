@@ -33,6 +33,8 @@ public class ModItemGroups {
                     .displayName(Text.translatable("group.pulverent"))
                     .icon(() -> new ItemStack(ModBlocks.PULVERENT_NYLIUM)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FAERIE_DUST);
+                        entries.add(ModBlocks.PULVERENT_NYLIUM);
+                        entries.add(ModBlocks.STRIPPED_PULVERENT_LOG);
                     }).build());
 
     public static void registerItemGroups() {}

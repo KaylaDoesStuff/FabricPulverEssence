@@ -13,6 +13,9 @@
 
   "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
   "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Log",
+  "block.pulderessence.stripped_pulverent_wood": "Stripped Pulverent Wood",
+  "block.pulderessence.pulverent_log": "Pulverent Log",
+  "block.pulderessence.pulverent_wood": "Pulverent Wood",
 
   "group.mythril": "Mythril",
   "group.pulverent": "Pulverent Biome"

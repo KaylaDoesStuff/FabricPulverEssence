@@ -22,6 +22,9 @@ public class ModBlocks {
     public static Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)));
     public static Block PULVERENT_NYLIUM = registerBlock("pulverent_nylium", new NetherrackBlock(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM)));
     public static Block STRIPPED_PULVERENT_LOG = registerBlock("stripped_pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_STEM)));
+    public static Block STRIPPED_PULVERENT_WOOD = registerBlock("stripped_pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_HYPHAE)));
+    public static Block PULVERENT_LOG = registerBlock("pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_STEM)));
+    public static Block PULVERENT_WOOD = registerBlock("pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

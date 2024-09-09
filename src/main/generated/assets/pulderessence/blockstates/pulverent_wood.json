@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "pulderessence:block/pulverent_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "pulderessence:block/pulverent_wood"
+    },
+    "axis=z": {
+      "model": "pulderessence:block/pulverent_wood",
+      "x": 90
+    }
+  }
+}

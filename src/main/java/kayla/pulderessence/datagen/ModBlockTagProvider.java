@@ -26,11 +26,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
                 .add(ModBlocks.PULVERENT_NYLIUM);
 
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.PULVERENT_LOG)
+                .add(ModBlocks.STRIPPED_PULVERENT_LOG);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MYTHRIL_BLOCK)
                 .add(ModBlocks.RAW_MYTHRIL_BLOCK);
-
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.MYTHRIL_ORE)

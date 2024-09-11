@@ -18,7 +18,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, new Identifier("fabric", "charged")))
-                .add(ModItems.CHARGED_MYTHRIL_ROD);
     }
 }

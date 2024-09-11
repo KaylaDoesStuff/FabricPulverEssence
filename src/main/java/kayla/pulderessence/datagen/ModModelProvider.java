@@ -29,6 +29,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MYTHRIL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
 

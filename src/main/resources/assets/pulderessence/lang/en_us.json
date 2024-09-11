@@ -3,6 +3,7 @@
   "item.pulderessence.mythril_nugget": "Mythril Nugget",
   "item.pulderessence.raw_mythril": "Raw Mythril",
   "item.pulderessence.mythril_rod": "Mythril Rod",
+  "item.pulderessence.charged_mythril_rod": "Charged Mythril Rod",
 
   "item.pulderessence.faerie_dust": "Faerie Dust",
 
@@ -18,7 +19,5 @@
   "block.pulderessence.pulverent_wood": "Pulverent Wood",
 
   "group.mythril": "Mythril",
-  "group.pulverent": "Pulverent Biome",
-
-  "tooltip.charged": "This item is Charged. It Holds a Charged value of "
+  "group.pulverent": "Pulverent Biome"
 }

@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"kayla.pulderessence.PulderEssenceDataGenerator"
+		],
+		"terrablender": [
+			"net.kayla.pulderessence.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

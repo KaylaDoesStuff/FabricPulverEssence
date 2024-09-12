@@ -25,7 +25,7 @@
 			"kayla.pulderessence.PulderEssenceDataGenerator"
 		],
 		"terrablender": [
-			"net.kayla.pulderessence.world.biome.ModTerrablenderAPI"
+			"kayla.pulderessence.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

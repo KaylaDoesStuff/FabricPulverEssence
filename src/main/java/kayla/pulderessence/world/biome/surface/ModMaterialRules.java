@@ -9,7 +9,7 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 public class ModMaterialRules {
     private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
     private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
-    private static final MaterialRules.MaterialRule RUBY = makeStateRule(ModBlocks.PULVERENT_NYLIUM);
+    private static final MaterialRules.MaterialRule NYLIUM = makeStateRule(ModBlocks.PULVERENT_NYLIUM);
     private static final MaterialRules.MaterialRule NETHERRACK = makeStateRule(Blocks.NETHERRACK);
 
     public static MaterialRules.MaterialRule makeRules() {
@@ -20,9 +20,8 @@ public class ModMaterialRules {
         return MaterialRules.sequence(
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.PULVERENT_BIOME),
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, NETHERRACK)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, RUBY)),
+                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, NYLIUM)),
 
-                // Default to a grass and dirt surface
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
         );
     }

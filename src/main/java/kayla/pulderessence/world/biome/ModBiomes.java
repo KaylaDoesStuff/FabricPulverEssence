@@ -36,26 +36,13 @@ public class ModBiomes {
     public static Biome testBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
-
-        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.ENDERMAN, 5, 4, 4));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
-        globalOverworldGeneration(biomeBuilder);
-        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
-
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
-        DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
-
-        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         return new Biome.Builder()
                 .precipitation(true)

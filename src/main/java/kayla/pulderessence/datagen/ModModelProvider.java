@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PULVERENT_LOG).log(ModBlocks.STRIPPED_PULVERENT_LOG).wood(ModBlocks.STRIPPED_PULVERENT_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PULVERENT_PLANKS);
     }
 
     @Override
@@ -34,5 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.FAERIE_DUST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FAERIE_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_FAERIE_ROD, Models.GENERATED);
     }
 }

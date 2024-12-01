@@ -7,8 +7,10 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -19,6 +21,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
+    }
+
+    private void chargingRecipe(Consumer<RecipeJsonProvider> exporter, Item input, Item output) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
+                .pattern("IFF")
+                .pattern("FF ")
+                .input('I', input)
+                .input('F', ModItems.FAERIE_DUST)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter, new Identifier(getRecipeName(output)));
     }
 
     @Override
@@ -45,6 +57,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('M', ModItems.MYTHRIL_NUGGET)
                 .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.FAERIE_DUST)
+                .criterion(hasItem(ModItems.FAERIE_DUST), conditionsFromItem(ModItems.FAERIE_DUST))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.FAERIE_ROD)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PULVERENT_PLANKS, 4)
+                .input(ModBlocks.PULVERENT_LOG, 1)
+                .criterion(hasItem(ModBlocks.PULVERENT_LOG.asItem()), conditionsFromItem(ModBlocks.PULVERENT_LOG.asItem()))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PULVERENT_PLANKS)));
+
+        chargingRecipe(exporter, ModItems.MYTHRIL_ROD, ModItems.CHARGED_MYTHRIL_ROD);
+        chargingRecipe(exporter, ModItems.FAERIE_ROD, ModItems.CHARGED_FAERIE_ROD);
 
     }
 }

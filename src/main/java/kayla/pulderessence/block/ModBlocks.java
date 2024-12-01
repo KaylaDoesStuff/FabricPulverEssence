@@ -25,6 +25,7 @@ public class ModBlocks {
     public static Block STRIPPED_PULVERENT_WOOD = registerBlock("stripped_pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_HYPHAE)));
     public static Block PULVERENT_LOG = registerBlock("pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_STEM)));
     public static Block PULVERENT_WOOD = registerBlock("pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE)));
+    public static Block PULVERENT_PLANKS = registerBlock("pulverent_planks", new Block(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

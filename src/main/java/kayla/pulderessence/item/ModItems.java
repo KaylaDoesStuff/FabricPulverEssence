@@ -17,6 +17,8 @@ public class ModItems {
     public static final Item CHARGED_MYTHRIL_ROD = registerItems("charged_mythril_rod", new ChargedItem(new FabricItemSettings(), 4));
 
     public static final Item FAERIE_DUST = registerItems("faerie_dust", new Item(new FabricItemSettings()));
+    public static final Item FAERIE_ROD = registerItems("faerie_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_FAERIE_ROD = registerItems("charged_faerie_rod", new ChargedItem(new FabricItemSettings(), 8));
 
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);

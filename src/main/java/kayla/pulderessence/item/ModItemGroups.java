@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MYTHRIL_NUGGET);
                         entries.add(ModItems.RAW_MYTHRIL);
                         entries.add(ModItems.MYTHRIL_ROD);
+                        entries.add(ModItems.CHARGED_MYTHRIL_ROD);
                         entries.add(ModBlocks.MYTHRIL_BLOCK);
                         entries.add(ModBlocks.RAW_MYTHRIL_BLOCK);
                         entries.add(ModBlocks.MYTHRIL_ORE);
@@ -33,8 +34,11 @@ public class ModItemGroups {
                     .displayName(Text.translatable("group.pulverent"))
                     .icon(() -> new ItemStack(ModBlocks.PULVERENT_NYLIUM)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FAERIE_DUST);
+                        entries.add(ModItems.FAERIE_ROD);
+                        entries.add(ModItems.CHARGED_FAERIE_ROD);
                         entries.add(ModBlocks.PULVERENT_NYLIUM);
                         entries.add(ModBlocks.PULVERENT_LOG);
+                        entries.add(ModBlocks.PULVERENT_PLANKS);
                         entries.add(ModBlocks.PULVERENT_WOOD);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_LOG);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);

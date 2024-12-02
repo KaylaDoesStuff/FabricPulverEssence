@@ -40,13 +40,19 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MYTHRIL_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.MYTHRIL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.MYTHRIL_HOE, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.FAERIE_DUST, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FAERIE_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FAERIE_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_FAERIE_ROD, Models.GENERATED);
     }
 }

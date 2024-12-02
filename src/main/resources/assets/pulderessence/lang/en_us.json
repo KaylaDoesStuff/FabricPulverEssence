@@ -29,6 +29,12 @@
   "block.pulderessence.pulverent_door": "Pulverent Door",
   "block.pulderessence.pulverent_trapdoor": "Pulverent Trapdoor",
 
+  "item.pulderessence.mythril_sword": "Mythril Sword",
+  "item.pulderessence.mythril_axe": "Mythril Axe",
+  "item.pulderessence.mythril_pickaxe": "Mythril Pickaxe",
+  "item.pulderessence.mythril_shovel": "Mythril Shovel",
+  "item.pulderessence.mythril_hoe": "Mythril Hoe",
+
   "group.mythril": "Mythril",
   "group.pulverent": "Pulverent Biome",
 

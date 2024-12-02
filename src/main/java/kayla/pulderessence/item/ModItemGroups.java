@@ -18,6 +18,11 @@ public class ModItemGroups {
                     .displayName(Text.translatable("group.mythril"))
                     .icon(() -> new ItemStack(ModItems.MYTHRIL_INGOT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MYTHRIL_INGOT);
+                        entries.add(ModItems.MYTHRIL_SWORD);
+                        entries.add(ModItems.MYTHRIL_AXE);
+                        entries.add(ModItems.MYTHRIL_PICKAXE);
+                        entries.add(ModItems.MYTHRIL_SHOVEL);
+                        entries.add(ModItems.MYTHRIL_HOE);
                         entries.add(ModItems.MYTHRIL_NUGGET);
                         entries.add(ModItems.RAW_MYTHRIL);
                         entries.add(ModItems.MYTHRIL_ROD);

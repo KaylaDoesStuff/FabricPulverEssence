@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-02T00:27:12.4621441	PulderEssence/Block Loot Tables
+// 1.20.1	2024-12-02T23:28:14.146457	PulderEssence/Block Loot Tables
 bc6e8ba598bd13f7ab674e2ed918c3582009e227 data\pulderessence\loot_tables\blocks\pulverent_planks.json
 8351679e3a7889f119a2aed8ae758988c6cd2835 data\pulderessence\loot_tables\blocks\pulverent_fence_gate.json
 19de885af1189f92a8e948c2f7b34bc9b88232e3 data\pulderessence\loot_tables\blocks\pulverent_slab.json
@@ -11,7 +11,7 @@ e89d86e37120b49f4109cf13a20f67413d1be018 data\pulderessence\loot_tables\blocks\p
 84c5fb67e02866a025bca11e7c0fd1a9dd50fa77 data\pulderessence\loot_tables\blocks\raw_mythril_block.json
 badc345be175b5b920c6dc35f91a9353f2f54184 data\pulderessence\loot_tables\blocks\stripped_pulverent_log.json
 9b97470b76e13e7f8cc5aa6df841b74a4edb9e80 data\pulderessence\loot_tables\blocks\pulverent_stairs.json
-9842913702f924047098ee63d709410ffa7fc3fa data\pulderessence\loot_tables\blocks\mythril_block.json
 5024aa135b7c4a38abce92dcacca4cc2d05f988f data\pulderessence\loot_tables\blocks\pulverent_fence.json
+9842913702f924047098ee63d709410ffa7fc3fa data\pulderessence\loot_tables\blocks\mythril_block.json
 aca5b0052ccc0a8342ceda1ff996cb60d7c9c58e data\pulderessence\loot_tables\blocks\deepslate_mythril_ore.json
 6b84ed5584e2a7b308b2fd032f2219593f796129 data\pulderessence\loot_tables\blocks\pulverent_nylium.json

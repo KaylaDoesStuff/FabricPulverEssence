@@ -9,6 +9,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.TagKey;
@@ -94,9 +95,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PULVERENT_TRAPDOOR)));
 
+
+
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PULVERENT_SLAB, ModBlocks.PULVERENT_PLANKS);
         offerPressurePlateRecipe(exporter, ModBlocks.PULVERENT_PRESSURE_PLATE, ModBlocks.PULVERENT_PLANKS);
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PULVERENT_WALL, ModBlocks.PULVERENT_PLANKS);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_SWORD, 1)
+                .pattern("M")
+                .pattern("M")
+                .pattern("S")
+                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_SWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_AXE, 1)
+                .pattern("MM")
+                .pattern("SM")
+                .pattern("S ")
+                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_AXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE, 1)
+                .pattern("MMM")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_PICKAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_SHOVEL, 1)
+                .pattern("M")
+                .pattern("S")
+                .pattern("S")
+                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_SHOVEL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_HOE, 1)
+                .pattern("MM")
+                .pattern("S ")
+                .pattern("S ")
+                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_HOE)));
 
     }
 }

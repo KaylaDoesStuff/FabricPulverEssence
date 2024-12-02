@@ -23,6 +23,7 @@ public class ChargedItem extends Item {
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(chargeTooltip());
+        tooltip.add(chargeDescription());
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -30,6 +31,12 @@ public class ChargedItem extends Item {
         int chargeLevel = getCharge(); // Call the method to get the charge level
         MutableText tooltipText = Text.translatable("Charge value: "+ chargeLevel+ "J");
         tooltipText.formatted(Formatting.RED);
+        return tooltipText;
+    }
+
+    public MutableText chargeDescription() {
+        MutableText tooltipText = Text.translatable("charge.description.tooltip");
+        tooltipText.formatted((Formatting.DARK_GRAY));
         return tooltipText;
     }
 

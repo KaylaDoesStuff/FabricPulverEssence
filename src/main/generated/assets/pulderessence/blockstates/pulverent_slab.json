@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pulderessence:block/pulverent_slab"
+    },
+    "type=double": {
+      "model": "pulderessence:block/pulverent_planks"
+    },
+    "type=top": {
+      "model": "pulderessence:block/pulverent_slab_top"
+    }
+  }
+}

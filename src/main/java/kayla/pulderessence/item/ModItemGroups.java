@@ -39,6 +39,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PULVERENT_NYLIUM);
                         entries.add(ModBlocks.PULVERENT_LOG);
                         entries.add(ModBlocks.PULVERENT_PLANKS);
+                        entries.add(ModBlocks.PULVERENT_STAIRS);
+                        entries.add(ModBlocks.PULVERENT_SLAB);
+                        entries.add(ModBlocks.PULVERENT_FENCE);
+                        entries.add(ModBlocks.PULVERENT_WALL);
+                        entries.add(ModBlocks.PULVERENT_FENCE_GATE);
+                        entries.add(ModBlocks.PULVERENT_BUTTON);
+                        entries.add(ModBlocks.PULVERENT_PRESSURE_PLATE);
+                        entries.add(ModBlocks.PULVERENT_DOOR);
+                        entries.add(ModBlocks.PULVERENT_TRAPDOOR);
                         entries.add(ModBlocks.PULVERENT_WOOD);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_LOG);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);

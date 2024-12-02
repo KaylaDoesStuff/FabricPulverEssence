@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "pulderessence:block/pulverent_planks",
+    "side": "pulderessence:block/pulverent_planks",
+    "top": "pulderessence:block/pulverent_planks"
+  }
+}

@@ -23,7 +23,18 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PULVERENT_LOG).log(ModBlocks.STRIPPED_PULVERENT_LOG).wood(ModBlocks.STRIPPED_PULVERENT_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PULVERENT_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool planksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PULVERENT_PLANKS);
+
+        planksPool.stairs(ModBlocks.PULVERENT_STAIRS);
+        planksPool.slab(ModBlocks.PULVERENT_SLAB);
+        planksPool.button(ModBlocks.PULVERENT_BUTTON);
+        planksPool.pressurePlate(ModBlocks.PULVERENT_PRESSURE_PLATE);
+        planksPool.fence(ModBlocks.PULVERENT_FENCE);
+        planksPool.fenceGate(ModBlocks.PULVERENT_FENCE_GATE);
+        planksPool.wall(ModBlocks.PULVERENT_WALL);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.PULVERENT_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.PULVERENT_TRAPDOOR);
     }
 
     @Override

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "pulderessence:block/pulverent_door_bottom",
+    "top": "pulderessence:block/pulverent_door_top"
+  }
+}

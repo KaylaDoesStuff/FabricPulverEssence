@@ -3,10 +3,7 @@ package kayla.pulderessence.block;
 import kayla.pulderessence.PulderEssence;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.NetherrackBlock;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -26,6 +23,19 @@ public class ModBlocks {
     public static Block PULVERENT_LOG = registerBlock("pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_STEM)));
     public static Block PULVERENT_WOOD = registerBlock("pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE)));
     public static Block PULVERENT_PLANKS = registerBlock("pulverent_planks", new Block(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
+
+    public static Block PULVERENT_STAIRS = registerBlock("pulverent_stairs", new StairsBlock(ModBlocks.PULVERENT_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
+    public static Block PULVERENT_SLAB = registerBlock("pulverent_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
+
+    public static Block PULVERENT_BUTTON = registerBlock("pulverent_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK, 10, true));
+    public static Block PULVERENT_PRESSURE_PLATE = registerBlock("pulverent_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
+
+    public static Block PULVERENT_FENCE = registerBlock("pulverent_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
+    public static Block PULVERENT_FENCE_GATE = registerBlock("pulverent_fence_gate", new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), WoodType.OAK));
+    public static Block PULVERENT_WALL = registerBlock("pulverent_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));
+
+    public static Block PULVERENT_DOOR = registerBlock("pulverent_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
+    public static Block PULVERENT_TRAPDOOR = registerBlock("pulverent_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

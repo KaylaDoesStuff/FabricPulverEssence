@@ -15,11 +15,22 @@
   "block.pulderessence.deepslate_mythril_ore": "Deepslate Mythril Ore",
 
   "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
-  "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Log",
+  "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Hyphae",
   "block.pulderessence.stripped_pulverent_wood": "Stripped Pulverent Wood",
   "block.pulderessence.pulverent_log": "Pulverent Log",
-  "block.pulderessence.pulverent_wood": "Pulverent Wood",
+  "block.pulderessence.pulverent_wood": "Pulverent Hyphae",
+  "block.pulderessence.pulverent_planks": "Pulverent Planks",
+
+  "block.pulderessence.pulverent_stairs": "Pulverent Stairs",
+  "block.pulderessence.pulverent_slab": "Pulverent Slab",
+  "block.pulderessence.pulverent_fence": "Pulverent Fence",
+  "block.pulderessence.pulverent_fence_gate": "Pulverent Gate",
+  "block.pulderessence.pulverent_wall": "Pulverent Wall",
+  "block.pulderessence.pulverent_door": "Pulverent Door",
+  "block.pulderessence.pulverent_trapdoor": "Pulverent Trapdoor",
 
   "group.mythril": "Mythril",
-  "group.pulverent": "Pulverent Biome"
+  "group.pulverent": "Pulverent Biome",
+
+  "charge.description.tooltip": "Charged items are used to create advanced tools and machines"
 }

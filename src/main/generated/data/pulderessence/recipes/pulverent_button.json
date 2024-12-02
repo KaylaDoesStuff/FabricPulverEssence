@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "pulderessence:pulverent_planks"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:pulverent_button"
+  }
+}

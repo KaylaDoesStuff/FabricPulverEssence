@@ -28,6 +28,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PULVERENT_NYLIUM);
         addDrop(ModBlocks.STRIPPED_PULVERENT_LOG);
 
+        addDrop(ModBlocks.PULVERENT_PLANKS);
+        addDrop(ModBlocks.PULVERENT_BUTTON);
+        addDrop(ModBlocks.PULVERENT_PRESSURE_PLATE);
+        addDrop(ModBlocks.PULVERENT_STAIRS);
+        addDrop(ModBlocks.PULVERENT_FENCE);
+        addDrop(ModBlocks.PULVERENT_FENCE_GATE);
+        addDrop(ModBlocks.PULVERENT_WALL);
+        addDrop(ModBlocks.PULVERENT_TRAPDOOR);
+
+        addDrop(ModBlocks.PULVERENT_DOOR, doorDrops(ModBlocks.PULVERENT_DOOR));
+        addDrop(ModBlocks.PULVERENT_SLAB, slabDrops(ModBlocks.PULVERENT_SLAB));
+
         addDrop(ModBlocks.MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 2.0F, 5.0F));
         addDrop(ModBlocks.DEEPSLATE_MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.DEEPSLATE_MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 3.0F, 7.0F));
     }

@@ -19,7 +19,6 @@ public class MachineBlock extends BlockWithEntity {
         super(settings);
     }
 
-
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return null;

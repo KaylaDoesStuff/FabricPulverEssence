@@ -28,6 +28,8 @@
   "block.pulderessence.pulverent_wall": "Pulverent Wall",
   "block.pulderessence.pulverent_door": "Pulverent Door",
   "block.pulderessence.pulverent_trapdoor": "Pulverent Trapdoor",
+  "block.pulderessence.pulverent_button": "Pulverent Button",
+  "block.pulderessence.pulverent_pressure_plate": "Pulverent Pressure Plate",
 
   "item.pulderessence.mythril_sword": "Mythril Sword",
   "item.pulderessence.mythril_axe": "Mythril Axe",

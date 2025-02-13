@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    },
+    {
+      "item": "pulderessence:indium_nugget"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:indium_ingot"
+  }
+}

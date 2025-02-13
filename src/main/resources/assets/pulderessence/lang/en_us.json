@@ -3,7 +3,12 @@
   "item.pulderessence.mythril_nugget": "Mythril Nugget",
   "item.pulderessence.raw_mythril": "Raw Mythril",
   "item.pulderessence.mythril_rod": "Mythril Rod",
-  "item.pulderessence.charged_mythril_rod": "Charged Mythril Rod",
+  "item.pulderessence.charged_mythril_rod": "Charged Indium Rod",
+  "item.pulderessence.indium_ingot": "Indium Ingot",
+  "item.pulderessence.indium_nugget": "Indium Nugget",
+  "item.pulderessence.raw_indium": "Raw Indium",
+  "item.pulderessence.indium_rod": "Indium Rod",
+  "item.pulderessence.charged_indium_rod": "Charged Indium Rod",
 
   "item.pulderessence.faerie_dust": "Faerie Dust",
   "item.pulderessence.faerie_rod": "Faerie Rod",
@@ -37,8 +42,8 @@
   "item.pulderessence.mythril_shovel": "Mythril Shovel",
   "item.pulderessence.mythril_hoe": "Mythril Hoe",
 
-  "group.mythril": "Mythril",
-  "group.pulverent": "Pulverent Biome",
+  "group.items": "Items",
+  "group.blocks": "Blocks",
 
   "charge.description.tooltip": "Charged items are used to create advanced tools and machines"
 }

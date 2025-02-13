@@ -16,6 +16,12 @@ public class ModItems {
     public static final Item MYTHRIL_ROD = registerItems("mythril_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_MYTHRIL_ROD = registerItems("charged_mythril_rod", new ChargedItem(new FabricItemSettings(), 4));
 
+    public static final Item INDIUM_INGOT = registerItems("indium_ingot", new Item(new FabricItemSettings()));
+    public static final Item INDIUM_NUGGET = registerItems("indium_nugget", new Item(new FabricItemSettings()));
+    public static final Item RAW_INDIUM = registerItems("raw_indium", new Item(new FabricItemSettings()));
+    public static final Item INDIUM_ROD = registerItems("indium_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_INDIUM_ROD = registerItems("charged_indium_rod", new ChargedItem(new FabricItemSettings(), 2));
+
     public static final Item FAERIE_DUST = registerItems("faerie_dust", new Item(new FabricItemSettings()));
     public static final Item FAERIE_ROD = registerItems("faerie_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_FAERIE_ROD = registerItems("charged_faerie_rod", new ChargedItem(new FabricItemSettings(), 8));

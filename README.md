@@ -3,8 +3,6 @@
 # Added
 Blocks
 - Mythril Ore
-- Raw Mythril Block
-- Deepslate Mythril Ore
 - Mythril Block
 - Pulverent Log/Wood/Planks, Stairs, Slab, Button, Pressure Plate, Door, Trapdoor, Fence, Wall and Gate
 - Stripped Pulverent Log/Wood
@@ -12,6 +10,8 @@ Blocks
 Items
 - Mythril Tools(Equiv to Iron+)
 - Raw Mythril & Block
+- Raw Indium
 - Mythril Ingot, Rod, Nugget and Block
 - Faerie Dust and Rod
-- Charged varients of both Rods
+- Indium Ingot, Rod, Nugget
+- Charged variants of Rods

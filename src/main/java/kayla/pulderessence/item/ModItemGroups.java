@@ -12,10 +12,10 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
-    public static final ItemGroup MYTHRIL = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PulderEssence.MOD_ID, "mythril"),
+    public static final ItemGroup PULVERENT_ITEMS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PulderEssence.MOD_ID, "items"),
             FabricItemGroup.builder()
-                    .displayName(Text.translatable("group.mythril"))
+                    .displayName(Text.translatable("group.items"))
                     .icon(() -> new ItemStack(ModItems.MYTHRIL_INGOT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MYTHRIL_INGOT);
                         entries.add(ModItems.MYTHRIL_SWORD);
@@ -27,20 +27,27 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_MYTHRIL);
                         entries.add(ModItems.MYTHRIL_ROD);
                         entries.add(ModItems.CHARGED_MYTHRIL_ROD);
+
+                        entries.add(ModItems.FAERIE_DUST);
+                        entries.add(ModItems.FAERIE_ROD);
+                        entries.add(ModItems.CHARGED_FAERIE_ROD);
+
+                        entries.add(ModItems.INDIUM_NUGGET);
+                        entries.add(ModItems.INDIUM_INGOT);
+                        entries.add(ModItems.RAW_INDIUM);
+                        entries.add(ModItems.INDIUM_ROD);
+                        entries.add(ModItems.CHARGED_INDIUM_ROD);
+                    }).build());
+
+    public static final ItemGroup PULVERENT_BLOCKS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PulderEssence.MOD_ID, "blocks"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("group.blocks"))
+                    .icon(() -> new ItemStack(ModBlocks.PULVERENT_NYLIUM)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.MYTHRIL_BLOCK);
                         entries.add(ModBlocks.RAW_MYTHRIL_BLOCK);
                         entries.add(ModBlocks.MYTHRIL_ORE);
                         entries.add(ModBlocks.DEEPSLATE_MYTHRIL_ORE);
-                    }).build());
-
-    public static final ItemGroup PULVERENT_BIOME = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PulderEssence.MOD_ID, "pulverent"),
-            FabricItemGroup.builder()
-                    .displayName(Text.translatable("group.pulverent"))
-                    .icon(() -> new ItemStack(ModBlocks.PULVERENT_NYLIUM)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.FAERIE_DUST);
-                        entries.add(ModItems.FAERIE_ROD);
-                        entries.add(ModItems.CHARGED_FAERIE_ROD);
                         entries.add(ModBlocks.PULVERENT_NYLIUM);
                         entries.add(ModBlocks.PULVERENT_LOG);
                         entries.add(ModBlocks.PULVERENT_PLANKS);

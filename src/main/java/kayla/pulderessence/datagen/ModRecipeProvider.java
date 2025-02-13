@@ -20,6 +20,7 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> MYTHRIL_SMELTABLES = List.of(ModItems.RAW_MYTHRIL, ModBlocks.MYTHRIL_ORE, ModBlocks.DEEPSLATE_MYTHRIL_ORE);
+    private static final List<ItemConvertible> INDIUM_SMELTABLES = List.of(ModItems.RAW_INDIUM);
 
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
@@ -39,6 +40,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 200, "mythril");
         offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 100, "mythril");
+        offerSmelting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 200, "indium");
+        offerBlasting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 100, "indium");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_MYTHRIL, RecipeCategory.DECORATIONS, ModBlocks.RAW_MYTHRIL_BLOCK);
@@ -53,12 +56,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.MYTHRIL_NUGGET), conditionsFromItem(ModItems.MYTHRIL_NUGGET))
                 .offerTo(exporter, new Identifier("mythril_ingot_from_nugget"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_INGOT, 1)
+                .input(ModItems.INDIUM_NUGGET, 9)
+                .criterion(hasItem(ModItems.INDIUM_NUGGET), conditionsFromItem(ModItems.INDIUM_NUGGET))
+                .offerTo(exporter, new Identifier("indium_ingot_from_nugget"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_ROD, 1)
                 .pattern("M")
                 .pattern("M")
                 .input('M', ModItems.MYTHRIL_NUGGET)
                 .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.INDIUM_NUGGET)
+                .criterion(hasItem(ModItems.INDIUM_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.INDIUM_ROD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
                 .pattern("M")
@@ -78,6 +93,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         chargingRecipe(exporter, ModItems.MYTHRIL_ROD, ModItems.CHARGED_MYTHRIL_ROD);
         chargingRecipe(exporter, ModItems.FAERIE_ROD, ModItems.CHARGED_FAERIE_ROD);
+        chargingRecipe(exporter, ModItems.INDIUM_ROD, ModItems.CHARGED_INDIUM_ROD);
 
         createStairsRecipe(ModBlocks.PULVERENT_STAIRS, Ingredient.ofItems(ModBlocks.PULVERENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))

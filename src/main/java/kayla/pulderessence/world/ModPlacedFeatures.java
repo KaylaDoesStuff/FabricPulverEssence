@@ -17,11 +17,15 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> MYTHRIL_ORE_PLACED_KEY = registerKey("mythril_ore_placed");
+    public static final RegistryKey<PlacedFeature> INDIUM_ORE_PLACED_KEY = registerKey("indium_ore_placed");
 
     public static void boostrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, MYTHRIL_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.MYTHRIL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(12,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context, INDIUM_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.INDIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
     }

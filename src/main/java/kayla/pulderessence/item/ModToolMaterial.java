@@ -5,7 +5,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    MYTHRIL(2, 400, 7.0f, 2.5f, 20,
+    MYTHRIL(2, 400, 0.3f, 2.5f, 20,
             () -> Ingredient.ofItems(ModItems.MYTHRIL_INGOT));
 
     private final int miningLevel;

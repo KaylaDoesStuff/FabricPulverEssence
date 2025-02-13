@@ -21,6 +21,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MYTHRIL_ORE_KEY = registerKey("mythril_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> INDIUM_ORE_KEY = registerKey("indium_ore");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -31,8 +32,12 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldMythrilOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.MYTHRIL_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_MYTHRIL_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> overworldIndiumOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.INDIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_INDIUM_ORE.getDefaultState()));
 
         register(context, MYTHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMythrilOres, 12));
+        register(context, INDIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldIndiumOres, 8));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

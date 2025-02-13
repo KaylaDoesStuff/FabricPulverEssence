@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "pulderessence:mythril_block",
-    "pulderessence:raw_mythril_block"
+    "pulderessence:raw_mythril_block",
+    "pulderessence:indium_block",
+    "pulderessence:raw_indium_block"
   ]
 }

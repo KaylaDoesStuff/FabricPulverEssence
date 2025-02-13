@@ -24,6 +24,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.MYTHRIL_BLOCK);
         addDrop(ModBlocks.RAW_MYTHRIL_BLOCK);
+        addDrop(ModBlocks.INDIUM_BLOCK);
+        addDrop(ModBlocks.RAW_INDIUM_BLOCK);
+
+        addDrop(ModBlocks.DEEPSLATE_INDIUM_ORE, ModItems.RAW_INDIUM);
+        addDrop(ModBlocks.INDIUM_ORE, ModItems.RAW_INDIUM);
 
         addDrop(ModBlocks.PULVERENT_NYLIUM);
         addDrop(ModBlocks.STRIPPED_PULVERENT_LOG);

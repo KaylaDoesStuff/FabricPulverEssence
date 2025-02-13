@@ -5,6 +5,10 @@
     "pulderessence:raw_mythril_block",
     "pulderessence:mythril_ore",
     "pulderessence:deepslate_mythril_ore",
+    "pulderessence:indium_block",
+    "pulderessence:raw_indium_block",
+    "pulderessence:indium_ore",
+    "pulderessence:deepslate_indium_ore",
     "pulderessence:pulverent_nylium"
   ]
 }

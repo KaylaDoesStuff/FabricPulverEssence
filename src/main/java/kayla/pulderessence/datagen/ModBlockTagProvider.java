@@ -23,6 +23,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
                 .add(ModBlocks.RAW_MYTHRIL_BLOCK)
                 .add(ModBlocks.MYTHRIL_ORE)
                 .add(ModBlocks.DEEPSLATE_MYTHRIL_ORE)
+                .add(ModBlocks.INDIUM_BLOCK)
+                .add(ModBlocks.RAW_INDIUM_BLOCK)
+                .add(ModBlocks.INDIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_INDIUM_ORE)
 
                 .add(ModBlocks.PULVERENT_NYLIUM);
 
@@ -32,11 +36,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MYTHRIL_BLOCK)
-                .add(ModBlocks.RAW_MYTHRIL_BLOCK);
+                .add(ModBlocks.RAW_MYTHRIL_BLOCK)
+                .add(ModBlocks.INDIUM_BLOCK)
+                .add(ModBlocks.RAW_INDIUM_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.MYTHRIL_ORE)
-                .add(ModBlocks.DEEPSLATE_MYTHRIL_ORE);
+                .add(ModBlocks.DEEPSLATE_MYTHRIL_ORE)
+                .add(ModBlocks.INDIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_INDIUM_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
 

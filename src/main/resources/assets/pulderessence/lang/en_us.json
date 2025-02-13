@@ -3,7 +3,8 @@
   "item.pulderessence.mythril_nugget": "Mythril Nugget",
   "item.pulderessence.raw_mythril": "Raw Mythril",
   "item.pulderessence.mythril_rod": "Mythril Rod",
-  "item.pulderessence.charged_mythril_rod": "Charged Indium Rod",
+  "item.pulderessence.charged_mythril_rod": "Charged Mythril Rod",
+
   "item.pulderessence.indium_ingot": "Indium Ingot",
   "item.pulderessence.indium_nugget": "Indium Nugget",
   "item.pulderessence.raw_indium": "Raw Indium",
@@ -18,6 +19,10 @@
   "block.pulderessence.raw_mythril_block": "Raw Mythril Block",
   "block.pulderessence.mythril_ore": "Mythril Ore",
   "block.pulderessence.deepslate_mythril_ore": "Deepslate Mythril Ore",
+  "block.pulderessence.indium_block": "Indium Block",
+  "block.pulderessence.raw_indium_block": "Raw Indium Block",
+  "block.pulderessence.indium_ore": "Indium Ore",
+  "block.pulderessence.deepslate_indium_ore": "Deepslate Indium Ore",
 
   "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
   "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Hyphae",

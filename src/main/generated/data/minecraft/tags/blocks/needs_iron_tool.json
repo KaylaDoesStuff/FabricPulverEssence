@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "pulderessence:mythril_ore",
-    "pulderessence:deepslate_mythril_ore"
+    "pulderessence:deepslate_mythril_ore",
+    "pulderessence:indium_ore",
+    "pulderessence:deepslate_indium_ore"
   ]
 }

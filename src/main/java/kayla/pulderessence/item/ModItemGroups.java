@@ -48,6 +48,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_MYTHRIL_BLOCK);
                         entries.add(ModBlocks.MYTHRIL_ORE);
                         entries.add(ModBlocks.DEEPSLATE_MYTHRIL_ORE);
+
+                        entries.add(ModBlocks.INDIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_INDIUM_BLOCK);
+                        entries.add(ModBlocks.INDIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_INDIUM_ORE);
+
                         entries.add(ModBlocks.PULVERENT_NYLIUM);
                         entries.add(ModBlocks.PULVERENT_LOG);
                         entries.add(ModBlocks.PULVERENT_PLANKS);

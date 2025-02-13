@@ -19,6 +19,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_MYTHRIL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_INDIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_INDIUM_BLOCK);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
@@ -41,12 +45,12 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MYTHRIL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.HANDHELD_ROD);
-        itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_ROD, Models.HANDHELD_ROD);
-        itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_INDIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_NUGGET, Models.GENERATED);
 
@@ -58,6 +62,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.FAERIE_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAERIE_ROD, Models.HANDHELD_ROD);
-        itemModelGenerator.register(ModItems.CHARGED_FAERIE_ROD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARGED_FAERIE_ROD, Models.HANDHELD_ROD);
     }
 }

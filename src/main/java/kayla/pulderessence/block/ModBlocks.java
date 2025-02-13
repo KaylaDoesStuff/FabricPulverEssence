@@ -17,6 +17,10 @@ public class ModBlocks {
     public static Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
     public static Block MYTHRIL_ORE = registerBlock("mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)));
     public static Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)));
+    public static Block INDIUM_BLOCK = registerBlock("indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static Block RAW_INDIUM_BLOCK = registerBlock("raw_indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static Block INDIUM_ORE = registerBlock("indium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static Block DEEPSLATE_INDIUM_ORE = registerBlock("deepslate_indium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE)));
     public static Block PULVERENT_NYLIUM = registerBlock("pulverent_nylium", new NetherrackBlock(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM)));
     public static Block STRIPPED_PULVERENT_LOG = registerBlock("stripped_pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_STEM)));
     public static Block STRIPPED_PULVERENT_WOOD = registerBlock("stripped_pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_HYPHAE)));

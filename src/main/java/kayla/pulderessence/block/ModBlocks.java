@@ -1,6 +1,7 @@
 package kayla.pulderessence.block;
 
 import kayla.pulderessence.PulderEssence;
+import kayla.pulderessence.block.custom.ChargingStationBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -40,6 +41,8 @@ public class ModBlocks {
 
     public static Block PULVERENT_DOOR = registerBlock("pulverent_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
     public static Block PULVERENT_TRAPDOOR = registerBlock("pulverent_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
+
+    public static Block CHARGING_STATION = registerBlock("charging_station", new ChargingStationBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -71,5 +71,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);
                     }).build());
 
+    public static final ItemGroup MACHINE_BLOCKS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PulderEssence.MOD_ID, "machines"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("group.machines"))
+                    .icon(() -> new ItemStack(ModBlocks.CHARGING_STATION)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.CHARGING_STATION);
+                    }).build());
+
+
     public static void registerItemGroups() {}
 }

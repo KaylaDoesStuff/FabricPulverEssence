@@ -1,6 +1,7 @@
 package kayla.pulderessence;
 
 import kayla.pulderessence.block.ModBlocks;
+import kayla.pulderessence.block.entity.ModBlockEntities;
 import kayla.pulderessence.item.ModItems;
 import kayla.pulderessence.item.ModItemGroups;
 import kayla.pulderessence.world.gen.ModWorldGeneration;
@@ -22,6 +23,7 @@ public class PulderEssence implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
 
 		ModWorldGeneration.generateModWorldGen();
 

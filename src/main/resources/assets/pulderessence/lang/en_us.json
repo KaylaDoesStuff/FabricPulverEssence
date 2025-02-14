@@ -41,6 +41,8 @@
   "block.pulderessence.pulverent_button": "Pulverent Button",
   "block.pulderessence.pulverent_pressure_plate": "Pulverent Pressure Plate",
 
+  "block.pulderessence.charging_station": "Charging Station",
+
   "item.pulderessence.mythril_sword": "Mythril Sword",
   "item.pulderessence.mythril_axe": "Mythril Axe",
   "item.pulderessence.mythril_pickaxe": "Mythril Pickaxe",
@@ -49,6 +51,7 @@
 
   "group.items": "Items",
   "group.blocks": "Blocks",
+  "group.machines": "Machines",
 
   "charge.description.tooltip": "Charged items are used to create advanced tools and machines"
 }

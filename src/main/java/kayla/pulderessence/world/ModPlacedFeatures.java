@@ -23,11 +23,11 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, MYTHRIL_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.MYTHRIL_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(8,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(32))));
         register(context, INDIUM_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.INDIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

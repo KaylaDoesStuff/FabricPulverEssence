@@ -20,7 +20,8 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> MYTHRIL_SMELTABLES = List.of(ModItems.RAW_MYTHRIL, ModBlocks.MYTHRIL_ORE, ModBlocks.DEEPSLATE_MYTHRIL_ORE);
-    private static final List<ItemConvertible> INDIUM_SMELTABLES = List.of(ModItems.RAW_INDIUM);
+    private static final List<ItemConvertible> INDIUM_SMELTABLES = List.of(ModItems.RAW_INDIUM, ModBlocks.INDIUM_ORE, ModBlocks.DEEPSLATE_INDIUM_ORE);
+    private static final List<ItemConvertible> TUNGSTEN_SMELTABLES = List.of(ModItems.RAW_TUNGSTEN, ModBlocks.TUNGSTEN_ORE, ModBlocks.DEEPSLATE_TUNGSTEN_ORE);
 
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
@@ -40,11 +41,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 200, "mythril");
         offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 100, "mythril");
+
+
         offerSmelting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 200, "indium");
         offerBlasting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 100, "indium");
 
+        offerSmelting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 200, "indium");
+        offerBlasting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 100, "indium");
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_MYTHRIL, RecipeCategory.DECORATIONS, ModBlocks.RAW_MYTHRIL_BLOCK);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.INDIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.INDIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_INDIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_INDIUM_BLOCK);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TUNGSTEN_INGOT, RecipeCategory.DECORATIONS, ModBlocks.TUNGSTEN_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TUNGSTEN, RecipeCategory.DECORATIONS, ModBlocks.RAW_TUNGSTEN_BLOCK);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_NUGGET, 9)
                 .input(ModItems.MYTHRIL_INGOT, 1)
@@ -56,10 +68,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.MYTHRIL_NUGGET), conditionsFromItem(ModItems.MYTHRIL_NUGGET))
                 .offerTo(exporter, new Identifier("mythril_ingot_from_nugget"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_NUGGET, 9)
+                .input(ModItems.INDIUM_INGOT, 1)
+                .criterion(hasItem(ModItems.INDIUM_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
+                .offerTo(exporter, new Identifier("indium_nuggets_from_ingot"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_INGOT, 1)
                 .input(ModItems.INDIUM_NUGGET, 9)
                 .criterion(hasItem(ModItems.INDIUM_NUGGET), conditionsFromItem(ModItems.INDIUM_NUGGET))
                 .offerTo(exporter, new Identifier("indium_ingot_from_nugget"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_NUGGET, 9)
+                .input(ModItems.TUNGSTEN_INGOT, 1)
+                .criterion(hasItem(ModItems.TUNGSTEN_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
+                .offerTo(exporter, new Identifier("tungsten_nuggets_from_ingot"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 1)
+                .input(ModItems.TUNGSTEN_NUGGET, 9)
+                .criterion(hasItem(ModItems.TUNGSTEN_NUGGET), conditionsFromItem(ModItems.TUNGSTEN_NUGGET))
+                .offerTo(exporter, new Identifier("tungsten_ingot_from_nugget"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_ROD, 1)
                 .pattern("M")
@@ -74,6 +101,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('M', ModItems.INDIUM_NUGGET)
                 .criterion(hasItem(ModItems.INDIUM_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.INDIUM_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.TUNGSTEN_NUGGET)
+                .criterion(hasItem(ModItems.TUNGSTEN_INGOT), conditionsFromItem(ModItems.TUNGSTEN_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TUNGSTEN_ROD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
                 .pattern("M")
@@ -94,6 +128,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         chargingRecipe(exporter, ModItems.MYTHRIL_ROD, ModItems.CHARGED_MYTHRIL_ROD);
         chargingRecipe(exporter, ModItems.FAERIE_ROD, ModItems.CHARGED_FAERIE_ROD);
         chargingRecipe(exporter, ModItems.INDIUM_ROD, ModItems.CHARGED_INDIUM_ROD);
+        chargingRecipe(exporter, ModItems.TUNGSTEN_ROD, ModItems.CHARGED_TUNGSTEN_ROD);
 
         createStairsRecipe(ModBlocks.PULVERENT_STAIRS, Ingredient.ofItems(ModBlocks.PULVERENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))

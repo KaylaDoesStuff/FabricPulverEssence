@@ -1,7 +1,7 @@
 package kayla.pulderessence.block;
 
 import kayla.pulderessence.PulderEssence;
-import kayla.pulderessence.block.custom.ChargingStationBlock;
+//import kayla.pulderessence.block.custom.ChargingStationBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -18,10 +18,17 @@ public class ModBlocks {
     public static Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
     public static Block MYTHRIL_ORE = registerBlock("mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)));
     public static Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)));
+
     public static Block INDIUM_BLOCK = registerBlock("indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
     public static Block RAW_INDIUM_BLOCK = registerBlock("raw_indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
     public static Block INDIUM_ORE = registerBlock("indium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
     public static Block DEEPSLATE_INDIUM_ORE = registerBlock("deepslate_indium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
+    public static Block TUNGSTEN_BLOCK = registerBlock("tungsten_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static Block RAW_TUNGSTEN_BLOCK = registerBlock("raw_tungsten_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+    public static Block TUNGSTEN_ORE = registerBlock("tungsten_ore", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static Block DEEPSLATE_TUNGSTEN_ORE = registerBlock("deepslate_tungsten_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
     public static Block PULVERENT_NYLIUM = registerBlock("pulverent_nylium", new NetherrackBlock(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM)));
     public static Block STRIPPED_PULVERENT_LOG = registerBlock("stripped_pulverent_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_STEM)));
     public static Block STRIPPED_PULVERENT_WOOD = registerBlock("stripped_pulverent_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_WARPED_HYPHAE)));
@@ -42,7 +49,7 @@ public class ModBlocks {
     public static Block PULVERENT_DOOR = registerBlock("pulverent_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
     public static Block PULVERENT_TRAPDOOR = registerBlock("pulverent_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK));
 
-    public static Block CHARGING_STATION = registerBlock("charging_station", new ChargingStationBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).nonOpaque()));
+    //public static Block CHARGING_STATION = registerBlock("charging_station", new ChargingStationBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).nonOpaque()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

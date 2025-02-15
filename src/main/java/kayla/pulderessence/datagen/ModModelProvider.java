@@ -19,12 +19,18 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MYTHRIL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_MYTHRIL_BLOCK);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_INDIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INDIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_INDIUM_BLOCK);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TUNGSTEN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TUNGSTEN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TUNGSTEN_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TUNGSTEN_BLOCK);
+
+        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
@@ -50,11 +56,18 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.INDIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_INDIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_TUNGSTEN_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MYTHRIL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MYTHRIL_AXE, Models.HANDHELD);

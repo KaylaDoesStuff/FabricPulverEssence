@@ -1,5 +1,7 @@
-// 1.20.1	2025-02-14T17:12:55.1436104	PulderEssence/
-2978ffcc641f69fabb11a8c7e557226a20643ea9 data\pulderessence\worldgen\placed_feature\indium_ore_placed.json
-cf9cdfa48629e0beb7c849204a5bca7c8505613d data\pulderessence\worldgen\placed_feature\mythril_ore_placed.json
-7644f8c44275b462346e7ea73357d44ed89e1dd3 data\pulderessence\worldgen\configured_feature\indium_ore.json
+// 1.20.1	2025-02-15T22:40:08.2364465	PulderEssence/
 0408765e2a1e622abf06776ad746ece4c82322f2 data\pulderessence\worldgen\configured_feature\mythril_ore.json
+7644f8c44275b462346e7ea73357d44ed89e1dd3 data\pulderessence\worldgen\configured_feature\indium_ore.json
+5c1e7e3489d72145159e4328f70571ec3f19859f data\pulderessence\worldgen\placed_feature\tungsten_ore_placed.json
+cf9cdfa48629e0beb7c849204a5bca7c8505613d data\pulderessence\worldgen\placed_feature\mythril_ore_placed.json
+2978ffcc641f69fabb11a8c7e557226a20643ea9 data\pulderessence\worldgen\placed_feature\indium_ore_placed.json
+826b416362755db1e97c32301a084936edaaddc7 data\pulderessence\worldgen\configured_feature\tungsten_ore.json

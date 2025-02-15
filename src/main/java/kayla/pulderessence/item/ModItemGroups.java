@@ -37,6 +37,12 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_INDIUM);
                         entries.add(ModItems.INDIUM_ROD);
                         entries.add(ModItems.CHARGED_INDIUM_ROD);
+
+                        entries.add(ModItems.TUNGSTEN_NUGGET);
+                        entries.add(ModItems.TUNGSTEN_INGOT);
+                        entries.add(ModItems.RAW_TUNGSTEN);
+                        entries.add(ModItems.TUNGSTEN_ROD);
+                        entries.add(ModItems.CHARGED_TUNGSTEN_ROD);
                     }).build());
 
     public static final ItemGroup PULVERENT_BLOCKS = Registry.register(Registries.ITEM_GROUP,
@@ -53,6 +59,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_INDIUM_BLOCK);
                         entries.add(ModBlocks.INDIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_INDIUM_ORE);
+
+                        entries.add(ModBlocks.TUNGSTEN_BLOCK);
+                        entries.add(ModBlocks.RAW_TUNGSTEN_BLOCK);
+                        entries.add(ModBlocks.TUNGSTEN_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_TUNGSTEN_ORE);
 
                         entries.add(ModBlocks.PULVERENT_NYLIUM);
                         entries.add(ModBlocks.PULVERENT_LOG);
@@ -71,14 +82,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);
                     }).build());
 
-    public static final ItemGroup MACHINE_BLOCKS = Registry.register(Registries.ITEM_GROUP,
+    /*public static final ItemGroup MACHINE_BLOCKS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(PulderEssence.MOD_ID, "machines"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("group.machines"))
                     .icon(() -> new ItemStack(ModBlocks.CHARGING_STATION)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CHARGING_STATION);
                     }).build());
-
+    */
 
     public static void registerItemGroups() {}
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:indium_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "pulderessence:indium_nugget"
+  }
+}

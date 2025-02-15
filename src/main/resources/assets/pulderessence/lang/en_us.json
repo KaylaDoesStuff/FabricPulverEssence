@@ -11,6 +11,12 @@
   "item.pulderessence.indium_rod": "Indium Rod",
   "item.pulderessence.charged_indium_rod": "Charged Indium Rod",
 
+  "item.pulderessence.tungsten_ingot": "Tungsten Ingot",
+  "item.pulderessence.tungsten_nugget": "Tungsten Nugget",
+  "item.pulderessence.raw_tungsten": "Raw Tungsten",
+  "item.pulderessence.tungsten_rod": "Tungsten Rod",
+  "item.pulderessence.charged_tungsten_rod": "Charged Tungsten Rod",
+
   "item.pulderessence.faerie_dust": "Faerie Dust",
   "item.pulderessence.faerie_rod": "Faerie Rod",
   "item.pulderessence.charged_faerie_rod": "Charged Faerie Rod",
@@ -19,10 +25,16 @@
   "block.pulderessence.raw_mythril_block": "Raw Mythril Block",
   "block.pulderessence.mythril_ore": "Mythril Ore",
   "block.pulderessence.deepslate_mythril_ore": "Deepslate Mythril Ore",
+
   "block.pulderessence.indium_block": "Indium Block",
   "block.pulderessence.raw_indium_block": "Raw Indium Block",
   "block.pulderessence.indium_ore": "Indium Ore",
   "block.pulderessence.deepslate_indium_ore": "Deepslate Indium Ore",
+
+  "block.pulderessence.tungsten_block": "Tungsten Block",
+  "block.pulderessence.raw_tungsten_block": "Raw Tungsten Block",
+  "block.pulderessence.tungsten_ore": "Tungsten Ore",
+  "block.pulderessence.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
 
   "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
   "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Hyphae",

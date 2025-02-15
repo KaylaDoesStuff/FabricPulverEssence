@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "indium",
+  "ingredient": {
+    "item": "pulderessence:deepslate_indium_ore"
+  },
+  "result": "pulderessence:indium_ingot"
+}

@@ -26,9 +26,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_MYTHRIL_BLOCK);
         addDrop(ModBlocks.INDIUM_BLOCK);
         addDrop(ModBlocks.RAW_INDIUM_BLOCK);
+        addDrop(ModBlocks.TUNGSTEN_BLOCK);
+        addDrop(ModBlocks.RAW_TUNGSTEN_BLOCK);
 
         addDrop(ModBlocks.DEEPSLATE_INDIUM_ORE, ModItems.RAW_INDIUM);
         addDrop(ModBlocks.INDIUM_ORE, ModItems.RAW_INDIUM);
+
+        addDrop(ModBlocks.DEEPSLATE_TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN);
+        addDrop(ModBlocks.TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN);
 
         addDrop(ModBlocks.PULVERENT_NYLIUM);
         addDrop(ModBlocks.STRIPPED_PULVERENT_LOG);

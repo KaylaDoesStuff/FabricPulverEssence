@@ -9,10 +9,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<ChargingStationBlockEntity> CHARGING_STATION_BLOCK_ENTITY =
+    /*public static final BlockEntityType<ChargingStationBlockEntity> CHARGING_STATION_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE,new Identifier(PulderEssence.MOD_ID, "charging_station_be"),
                     FabricBlockEntityTypeBuilder.create(ChargingStationBlockEntity::new,
                             ModBlocks.CHARGING_STATION).build());
-
+*/
     public static void registerBlockEntities(){}
 }

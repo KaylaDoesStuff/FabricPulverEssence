@@ -22,6 +22,12 @@ public class ModItems {
     public static final Item INDIUM_ROD = registerItems("indium_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_INDIUM_ROD = registerItems("charged_indium_rod", new ChargedItem(new FabricItemSettings(), 2));
 
+    public static final Item TUNGSTEN_INGOT = registerItems("tungsten_ingot", new Item(new FabricItemSettings()));
+    public static final Item TUNGSTEN_NUGGET = registerItems("tungsten_nugget", new Item(new FabricItemSettings()));
+    public static final Item RAW_TUNGSTEN = registerItems("raw_tungsten", new Item(new FabricItemSettings()));
+    public static final Item TUNGSTEN_ROD = registerItems("tungsten_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_TUNGSTEN_ROD = registerItems("charged_tungsten_rod", new ChargedItem(new FabricItemSettings(), 12));
+
     public static final Item FAERIE_DUST = registerItems("faerie_dust", new Item(new FabricItemSettings()));
     public static final Item FAERIE_ROD = registerItems("faerie_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_FAERIE_ROD = registerItems("charged_faerie_rod", new ChargedItem(new FabricItemSettings(), 8));

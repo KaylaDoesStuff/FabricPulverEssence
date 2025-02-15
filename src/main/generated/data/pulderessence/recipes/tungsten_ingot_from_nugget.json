@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    },
+    {
+      "item": "pulderessence:tungsten_nugget"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:tungsten_ingot"
+  }
+}

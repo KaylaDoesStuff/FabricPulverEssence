@@ -1,6 +1,7 @@
 package kayla.pulderessence.block.custom;
 
 import kayla.pulderessence.block.entity.ChargingStationBlockEntity;
+import kayla.pulderessence.block.entity.ModBlockEntities;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -61,8 +62,10 @@ public class ChargingStationBlock extends BlockWithEntity implements BlockEntity
         return ActionResult.SUCCESS;
     }
 
+    @Nullable
     @Override
-    public @Nullable <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return BlockEntityProvider.super.getTicker(world, state, type);
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return validateTicker(type, ModBlockEntities.CHARGING_STATION_BLOCK_ENTITY,
+                (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }

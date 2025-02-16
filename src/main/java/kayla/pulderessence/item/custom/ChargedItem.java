@@ -29,8 +29,8 @@ public class ChargedItem extends Item {
 
     public MutableText chargeTooltip() {
         int chargeLevel = getCharge(); // Call the method to get the charge level
-        MutableText tooltipText = Text.translatable("Charge value: "+ chargeLevel+ "J");
-        tooltipText.formatted(Formatting.RED);
+        MutableText tooltipText = Text.literal("Charge value: "+ chargeLevel+ "V");
+        tooltipText.formatted(Formatting.BLUE);
         return tooltipText;
     }
 

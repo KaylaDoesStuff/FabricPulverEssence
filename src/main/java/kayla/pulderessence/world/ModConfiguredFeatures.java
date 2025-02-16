@@ -40,9 +40,9 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.TUNGSTEN_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_TUNGSTEN_ORE.getDefaultState()));
 
-        register(context, MYTHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMythrilOres, 12));
-        register(context, INDIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldIndiumOres, 8));
-        register(context, TUNGSTEN_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTungstenOres, 8));
+        register(context, MYTHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMythrilOres, 8));
+        register(context, INDIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldIndiumOres, 6));
+        register(context, TUNGSTEN_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTungstenOres, 6));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

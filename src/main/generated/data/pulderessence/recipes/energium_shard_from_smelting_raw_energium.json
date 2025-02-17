@@ -5,7 +5,7 @@
   "experience": 0.7,
   "group": "energium",
   "ingredient": {
-    "item": "pulderessence:deepslate_energium_ore"
+    "item": "pulderessence:raw_energium"
   },
-  "result": "pulderessence:energium_ingot"
+  "result": "pulderessence:energium_shard"
 }

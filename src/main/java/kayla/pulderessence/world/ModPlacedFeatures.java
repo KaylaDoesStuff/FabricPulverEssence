@@ -24,14 +24,15 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, MYTHRIL_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.MYTHRIL_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(300,
+                ModOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(32))));
+
         register(context, INDIUM_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.INDIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(200,
+                ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(20))));
 
         register(context, TUNGSTEN_ORE_PLACED_KEY, configuredFeatureRegistryLookup.getOrThrow(ModConfiguredFeatures.TUNGSTEN_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(200,
+                ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(16))));
     }
 

@@ -73,11 +73,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.ENERGIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGIUM_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_ENERGIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_ENERGIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ENERGIUM_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MYTHRIL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MYTHRIL_AXE, Models.HANDHELD);

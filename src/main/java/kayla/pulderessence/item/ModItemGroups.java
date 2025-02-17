@@ -38,10 +38,9 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_INGOT);
                         entries.add(ModItems.RAW_TUNGSTEN);
                         entries.add(ModItems.TUNGSTEN_ROD);
-                        entries.add(ModItems.CHARGED_TUNGSTEN_ROD)
+                        entries.add(ModItems.CHARGED_TUNGSTEN_ROD);
 
-                        ;entries.add(ModItems.ENERGIUM_NUGGET);
-                        entries.add(ModItems.ENERGIUM_INGOT);
+                        entries.add(ModItems.ENERGIUM_SHARD);
                         entries.add(ModItems.RAW_ENERGIUM);
                         entries.add(ModItems.ENERGIUM_ROD);
                         entries.add(ModItems.CHARGED_ENERGIUM_ROD);

@@ -12,7 +12,6 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -50,8 +49,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 200, "tungsten");
         offerBlasting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 100, "tungsten");
 
-        offerSmelting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_INGOT, 0.7f, 200, "energium");
-        offerBlasting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_INGOT, 0.7f, 100, "energium");
+        offerSmelting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 200, "energium");
+        offerBlasting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 100, "energium");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_MYTHRIL, RecipeCategory.DECORATIONS, ModBlocks.RAW_MYTHRIL_BLOCK);
@@ -92,16 +91,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.TUNGSTEN_NUGGET), conditionsFromItem(ModItems.TUNGSTEN_NUGGET))
                 .offerTo(exporter, new Identifier("tungsten_ingot_from_nugget"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENERGIUM_NUGGET, 9)
-                .input(ModItems.ENERGIUM_INGOT, 1)
-                .criterion(hasItem(ModItems.ENERGIUM_INGOT), conditionsFromItem(ModItems.ENERGIUM_INGOT))
-                .offerTo(exporter, new Identifier("energium_nuggets_from_ingot"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENERGIUM_INGOT, 1)
-                .input(ModItems.ENERGIUM_NUGGET, 9)
-                .criterion(hasItem(ModItems.ENERGIUM_NUGGET), conditionsFromItem(ModItems.ENERGIUM_NUGGET))
-                .offerTo(exporter, new Identifier("energium_ingot_from_nugget"));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_ROD, 1)
                 .pattern("M")
                 .pattern("M")
@@ -126,8 +115,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENERGIUM_ROD, 1)
                 .pattern("M")
                 .pattern("M")
-                .input('M', ModItems.ENERGIUM_NUGGET)
-                .criterion(hasItem(ModItems.ENERGIUM_INGOT), conditionsFromItem(ModItems.ENERGIUM_INGOT))
+                .input('M', ModItems.ENERGIUM_SHARD)
+                .criterion(hasItem(ModItems.ENERGIUM_SHARD), conditionsFromItem(ModItems.ENERGIUM_SHARD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.ENERGIUM_ROD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)

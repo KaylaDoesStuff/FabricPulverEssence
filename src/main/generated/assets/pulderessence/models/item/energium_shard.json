@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pulderessence:item/energium_nugget"
+    "layer0": "pulderessence:item/energium_shard"
   }
 }

@@ -14,7 +14,6 @@ public class ModWorldGeneration extends FabricDynamicRegistryProvider {
 
     public static void generateModWorldGen() {
         ModOreGeneration.generateOres();
-
     }
 
     @Override

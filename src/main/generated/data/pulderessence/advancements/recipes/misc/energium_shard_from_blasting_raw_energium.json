@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_deepslate_energium_ore": {
+    "has_raw_energium": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:deepslate_energium_ore"
+              "pulderessence:raw_energium"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:energium_ingot_from_blasting_deepslate_energium_ore"
+        "recipe": "minecraft:energium_shard_from_blasting_raw_energium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_deepslate_energium_ore",
+      "has_raw_energium",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:energium_ingot_from_blasting_deepslate_energium_ore"
+      "minecraft:energium_shard_from_blasting_raw_energium"
     ]
   },
   "sends_telemetry_event": false

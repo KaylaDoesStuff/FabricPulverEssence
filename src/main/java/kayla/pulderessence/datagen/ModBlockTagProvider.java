@@ -55,8 +55,5 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.PULVERENT_FENCE_GATE);
-
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.PULVERENT_WALL);
     }
 }

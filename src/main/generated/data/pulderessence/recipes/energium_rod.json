@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "pulderessence:energium_nugget"
+    }
+  },
+  "pattern": [
+    "M",
+    "M"
+  ],
+  "result": {
+    "item": "pulderessence:energium_rod"
+  },
+  "show_notification": true
+}

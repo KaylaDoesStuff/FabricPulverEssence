@@ -28,10 +28,6 @@ public class ModItemGroups {
                         entries.add(ModItems.MYTHRIL_ROD);
                         entries.add(ModItems.CHARGED_MYTHRIL_ROD);
 
-                        entries.add(ModItems.FAERIE_DUST);
-                        entries.add(ModItems.FAERIE_ROD);
-                        entries.add(ModItems.CHARGED_FAERIE_ROD);
-
                         entries.add(ModItems.INDIUM_NUGGET);
                         entries.add(ModItems.INDIUM_INGOT);
                         entries.add(ModItems.RAW_INDIUM);
@@ -42,7 +38,17 @@ public class ModItemGroups {
                         entries.add(ModItems.TUNGSTEN_INGOT);
                         entries.add(ModItems.RAW_TUNGSTEN);
                         entries.add(ModItems.TUNGSTEN_ROD);
-                        entries.add(ModItems.CHARGED_TUNGSTEN_ROD);
+                        entries.add(ModItems.CHARGED_TUNGSTEN_ROD)
+
+                        ;entries.add(ModItems.ENERGIUM_NUGGET);
+                        entries.add(ModItems.ENERGIUM_INGOT);
+                        entries.add(ModItems.RAW_ENERGIUM);
+                        entries.add(ModItems.ENERGIUM_ROD);
+                        entries.add(ModItems.CHARGED_ENERGIUM_ROD);
+
+                        entries.add(ModItems.FAERIE_DUST);
+                        entries.add(ModItems.FAERIE_ROD);
+                        entries.add(ModItems.CHARGED_FAERIE_ROD);
                     }).build());
 
     public static final ItemGroup PULVERENT_BLOCKS = Registry.register(Registries.ITEM_GROUP,
@@ -60,6 +66,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.INDIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_INDIUM_ORE);
 
+                        entries.add(ModBlocks.ENERGIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_ENERGIUM_BLOCK);
+                        entries.add(ModBlocks.ENERGIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_ENERGIUM_ORE);
+
                         entries.add(ModBlocks.TUNGSTEN_BLOCK);
                         entries.add(ModBlocks.RAW_TUNGSTEN_BLOCK);
                         entries.add(ModBlocks.TUNGSTEN_ORE);
@@ -71,7 +82,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PULVERENT_STAIRS);
                         entries.add(ModBlocks.PULVERENT_SLAB);
                         entries.add(ModBlocks.PULVERENT_FENCE);
-                        entries.add(ModBlocks.PULVERENT_WALL);
                         entries.add(ModBlocks.PULVERENT_FENCE_GATE);
                         entries.add(ModBlocks.PULVERENT_BUTTON);
                         entries.add(ModBlocks.PULVERENT_PRESSURE_PLATE);

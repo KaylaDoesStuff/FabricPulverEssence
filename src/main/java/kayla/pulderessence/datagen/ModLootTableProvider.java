@@ -28,6 +28,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RAW_INDIUM_BLOCK);
         addDrop(ModBlocks.TUNGSTEN_BLOCK);
         addDrop(ModBlocks.RAW_TUNGSTEN_BLOCK);
+        addDrop(ModBlocks.ENERGIUM_BLOCK);
+        addDrop(ModBlocks.RAW_ENERGIUM_BLOCK);
 
         addDrop(ModBlocks.DEEPSLATE_INDIUM_ORE, ModItems.RAW_INDIUM);
         addDrop(ModBlocks.INDIUM_ORE, ModItems.RAW_INDIUM);
@@ -44,7 +46,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PULVERENT_STAIRS);
         addDrop(ModBlocks.PULVERENT_FENCE);
         addDrop(ModBlocks.PULVERENT_FENCE_GATE);
-        addDrop(ModBlocks.PULVERENT_WALL);
         addDrop(ModBlocks.PULVERENT_TRAPDOOR);
 
         addDrop(ModBlocks.PULVERENT_DOOR, doorDrops(ModBlocks.PULVERENT_DOOR));
@@ -52,6 +53,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 2.0F, 5.0F));
         addDrop(ModBlocks.DEEPSLATE_MYTHRIL_ORE, copperLikeOreDrops(ModBlocks.DEEPSLATE_MYTHRIL_ORE, ModItems.RAW_MYTHRIL, 3.0F, 7.0F));
+
+        addDrop(ModBlocks.ENERGIUM_ORE, copperLikeOreDrops(ModBlocks.ENERGIUM_ORE, ModItems.RAW_ENERGIUM, 2.0F, 5.0F));
+        addDrop(ModBlocks.DEEPSLATE_ENERGIUM_ORE, copperLikeOreDrops(ModBlocks.DEEPSLATE_ENERGIUM_ORE, ModItems.RAW_ENERGIUM, 3.0F, 7.0F));
     }
 
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item, Float minimum, Float maximum) {

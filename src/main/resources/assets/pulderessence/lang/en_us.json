@@ -17,6 +17,12 @@
   "item.pulderessence.tungsten_rod": "Tungsten Rod",
   "item.pulderessence.charged_tungsten_rod": "Charged Tungsten Rod",
 
+  "item.pulderessence.energium_ingot": "Energium Ingot",
+  "item.pulderessence.energium_nugget": "Energium Nugget",
+  "item.pulderessence.raw_energium": "Raw Energium",
+  "item.pulderessence.energium_rod": "Energium Rod",
+  "item.pulderessence.charged_energium_rod": "Charged Energium Rod",
+
   "item.pulderessence.faerie_dust": "Faerie Dust",
   "item.pulderessence.faerie_rod": "Faerie Rod",
   "item.pulderessence.charged_faerie_rod": "Charged Faerie Rod",
@@ -36,6 +42,11 @@
   "block.pulderessence.tungsten_ore": "Tungsten Ore",
   "block.pulderessence.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
 
+  "block.pulderessence.energium_block": "Energium Block",
+  "block.pulderessence.raw_energium_block": "Raw Energium Block",
+  "block.pulderessence.energium_ore": "Energium Ore",
+  "block.pulderessence.deepslate_energium_ore": "Deepslate Energium Ore",
+
   "block.pulderessence.pulverent_nylium": "Pulverent Nylium",
   "block.pulderessence.stripped_pulverent_log": "Stripped Pulverent Hyphae",
   "block.pulderessence.stripped_pulverent_wood": "Stripped Pulverent Wood",
@@ -47,7 +58,6 @@
   "block.pulderessence.pulverent_slab": "Pulverent Slab",
   "block.pulderessence.pulverent_fence": "Pulverent Fence",
   "block.pulderessence.pulverent_fence_gate": "Pulverent Gate",
-  "block.pulderessence.pulverent_wall": "Pulverent Wall",
   "block.pulderessence.pulverent_door": "Pulverent Door",
   "block.pulderessence.pulverent_trapdoor": "Pulverent Trapdoor",
   "block.pulderessence.pulverent_button": "Pulverent Button",

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "energium",
+  "ingredient": {
+    "item": "pulderessence:energium_ore"
+  },
+  "result": "pulderessence:energium_ingot"
+}

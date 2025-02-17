@@ -30,6 +30,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TUNGSTEN_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TUNGSTEN_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_ENERGIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENERGIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENERGIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_ENERGIUM_BLOCK);
+
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
@@ -43,7 +48,6 @@ public class ModModelProvider extends FabricModelProvider {
         planksPool.pressurePlate(ModBlocks.PULVERENT_PRESSURE_PLATE);
         planksPool.fence(ModBlocks.PULVERENT_FENCE);
         planksPool.fenceGate(ModBlocks.PULVERENT_FENCE_GATE);
-        planksPool.wall(ModBlocks.PULVERENT_WALL);
 
         blockStateModelGenerator.registerDoor(ModBlocks.PULVERENT_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.PULVERENT_TRAPDOOR);
@@ -68,6 +72,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHARGED_TUNGSTEN_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ENERGIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGIUM_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_ENERGIUM_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.RAW_ENERGIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENERGIUM_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MYTHRIL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MYTHRIL_AXE, Models.HANDHELD);

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pulverent_planks": {
+    "has_deepslate_energium_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:pulverent_planks"
+              "pulderessence:deepslate_energium_ore"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "pulderessence:pulverent_wall"
+        "recipe": "minecraft:energium_ingot_from_blasting_deepslate_energium_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_pulverent_planks",
+      "has_deepslate_energium_ore",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "pulderessence:pulverent_wall"
+      "minecraft:energium_ingot_from_blasting_deepslate_energium_ore"
     ]
   },
   "sends_telemetry_event": false

@@ -85,5 +85,6 @@
   "group.blocks": "Blocks",
   "group.machines": "Machines",
 
-  "charge.description.tooltip": "Charged items are used to create advanced tools and machines"
+  "charge.description.tooltip": "Charged items are used to create advanced tools and machines",
+
 }

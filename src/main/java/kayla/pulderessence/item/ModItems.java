@@ -49,7 +49,6 @@ public class ModItems {
     public static final Item MYTHRIL_SHOVEL = registerItems("mythril_shovel", new ShovelItem(ModToolMaterial.MYTHRIL, 2, 3, new FabricItemSettings().maxCount(1)));
     public static final Item MYTHRIL_HOE = registerItems("mythril_hoe", new HoeItem(ModToolMaterial.MYTHRIL, 0, 4, new FabricItemSettings().maxCount(1)));
 
-
     private static Item registerItems(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
     }

@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ChargedItem extends Item {
-    private int charge;
+    private final int charge;
 
     public ChargedItem(Settings settings, int initialCharge) {
         super(settings);
@@ -42,10 +42,6 @@ public class ChargedItem extends Item {
 
     public int getCharge() {
         return this.charge;
-    }
-
-    public void setCharge(int charge) {
-        this.charge = charge;
     }
 
     @Override

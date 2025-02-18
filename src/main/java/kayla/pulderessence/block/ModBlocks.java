@@ -19,6 +19,11 @@ public class ModBlocks {
     public static Block MYTHRIL_ORE = registerBlock("mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)));
     public static Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)));
 
+    public static Block YTTRIUM_BLOCK = registerBlock("yttrium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static Block RAW_YTTRIUM_BLOCK = registerBlock("raw_yttrium_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_GOLD_BLOCK)));
+    public static Block YTTRIUM_ORE = registerBlock("yttrium_ore", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_ORE)));
+    public static Block DEEPSLATE_YTTRIUM_ORE = registerBlock("deepslate_yttrium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE)));
+
     public static Block INDIUM_BLOCK = registerBlock("indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
     public static Block RAW_INDIUM_BLOCK = registerBlock("raw_indium_block", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
     public static Block INDIUM_ORE = registerBlock("indium_ore", new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));

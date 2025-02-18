@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "pulderessence:energium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "pulderessence:energium_shard"
+  }
+}

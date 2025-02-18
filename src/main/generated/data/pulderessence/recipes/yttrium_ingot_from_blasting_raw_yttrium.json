@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "yttrium",
+  "ingredient": {
+    "item": "pulderessence:raw_yttrium"
+  },
+  "result": "pulderessence:yttrium_ingot"
+}

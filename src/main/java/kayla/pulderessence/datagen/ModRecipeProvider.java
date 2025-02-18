@@ -22,6 +22,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> INDIUM_SMELTABLES = List.of(ModItems.RAW_INDIUM, ModBlocks.INDIUM_ORE, ModBlocks.DEEPSLATE_INDIUM_ORE);
     private static final List<ItemConvertible> TUNGSTEN_SMELTABLES = List.of(ModItems.RAW_TUNGSTEN, ModBlocks.TUNGSTEN_ORE, ModBlocks.DEEPSLATE_TUNGSTEN_ORE);
     private static final List<ItemConvertible> ENERGIUM_SMELTABLES = List.of(ModItems.RAW_ENERGIUM, ModBlocks.ENERGIUM_ORE, ModBlocks.DEEPSLATE_ENERGIUM_ORE);
+    private static final List<ItemConvertible> YTTRIUM_SMELTABLES = List.of(ModItems.RAW_YTTRIUM, ModBlocks.YTTRIUM_ORE, ModBlocks.DEEPSLATE_YTTRIUM_ORE);
 
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
@@ -52,6 +53,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 200, "energium");
         offerBlasting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 100, "energium");
 
+        offerSmelting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 0.7f, 200, "yttrium");
+        offerBlasting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 0.7f, 100, "yttrium");
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_MYTHRIL, RecipeCategory.DECORATIONS, ModBlocks.RAW_MYTHRIL_BLOCK);
 
@@ -60,6 +64,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TUNGSTEN_INGOT, RecipeCategory.DECORATIONS, ModBlocks.TUNGSTEN_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TUNGSTEN, RecipeCategory.DECORATIONS, ModBlocks.RAW_TUNGSTEN_BLOCK);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.YTTRIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.YTTRIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_YTTRIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_YTTRIUM_BLOCK);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ENERGIUM_SHARD, RecipeCategory.DECORATIONS, ModBlocks.ENERGIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_ENERGIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_ENERGIUM_BLOCK);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_NUGGET, 9)
                 .input(ModItems.MYTHRIL_INGOT, 1)
@@ -70,6 +80,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.MYTHRIL_NUGGET, 9)
                 .criterion(hasItem(ModItems.MYTHRIL_NUGGET), conditionsFromItem(ModItems.MYTHRIL_NUGGET))
                 .offerTo(exporter, new Identifier("mythril_ingot_from_nugget"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_NUGGET, 9)
+                .input(ModItems.YTTRIUM_INGOT, 1)
+                .criterion(hasItem(ModItems.YTTRIUM_INGOT), conditionsFromItem(ModItems.YTTRIUM_INGOT))
+                .offerTo(exporter, new Identifier("yttrium_nuggets_from_ingot"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 1)
+                .input(ModItems.YTTRIUM_NUGGET, 9)
+                .criterion(hasItem(ModItems.YTTRIUM_NUGGET), conditionsFromItem(ModItems.YTTRIUM_NUGGET))
+                .offerTo(exporter, new Identifier("yttrium_ingot_from_nugget"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_NUGGET, 9)
                 .input(ModItems.INDIUM_INGOT, 1)
@@ -97,6 +117,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('M', ModItems.MYTHRIL_NUGGET)
                 .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.YTTRIUM_NUGGET)
+                .criterion(hasItem(ModItems.YTTRIUM_INGOT), conditionsFromItem(ModItems.YTTRIUM_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.YTTRIUM_ROD)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_ROD, 1)
                 .pattern("M")
@@ -140,6 +167,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         chargingRecipe(exporter, ModItems.INDIUM_ROD, ModItems.CHARGED_INDIUM_ROD);
         chargingRecipe(exporter, ModItems.TUNGSTEN_ROD, ModItems.CHARGED_TUNGSTEN_ROD);
         chargingRecipe(exporter, ModItems.ENERGIUM_ROD, ModItems.CHARGED_ENERGIUM_ROD);
+        chargingRecipe(exporter, ModItems.YTTRIUM_ROD, ModItems.CHARGED_YTTRIUM_ROD);
 
         createStairsRecipe(ModBlocks.PULVERENT_STAIRS, Ingredient.ofItems(ModBlocks.PULVERENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))

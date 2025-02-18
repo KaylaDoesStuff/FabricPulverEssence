@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "pulderessence:faerie_dust"
+    },
+    "I": {
+      "item": "pulderessence:yttrium_rod"
+    }
+  },
+  "pattern": [
+    "IFF",
+    "FF "
+  ],
+  "result": {
+    "item": "pulderessence:charged_yttrium_rod"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:charged_yttrium_rod"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yttrium_rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:yttrium_rod"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yttrium_rod",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:charged_yttrium_rod"
+    ]
+  },
+  "sends_telemetry_event": false
+}

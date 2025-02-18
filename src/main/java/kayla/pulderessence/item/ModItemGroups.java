@@ -34,6 +34,12 @@ public class ModItemGroups {
                         entries.add(ModItems.INDIUM_ROD);
                         entries.add(ModItems.CHARGED_INDIUM_ROD);
 
+                        entries.add(ModItems.YTTRIUM_NUGGET);
+                        entries.add(ModItems.YTTRIUM_INGOT);
+                        entries.add(ModItems.RAW_YTTRIUM);
+                        entries.add(ModItems.YTTRIUM_ROD);
+                        entries.add(ModItems.CHARGED_YTTRIUM_ROD);
+
                         entries.add(ModItems.TUNGSTEN_NUGGET);
                         entries.add(ModItems.TUNGSTEN_INGOT);
                         entries.add(ModItems.RAW_TUNGSTEN);
@@ -64,6 +70,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_INDIUM_BLOCK);
                         entries.add(ModBlocks.INDIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_INDIUM_ORE);
+
+                        entries.add(ModBlocks.YTTRIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_YTTRIUM_BLOCK);
+                        entries.add(ModBlocks.YTTRIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_YTTRIUM_ORE);
 
                         entries.add(ModBlocks.ENERGIUM_BLOCK);
                         entries.add(ModBlocks.RAW_ENERGIUM_BLOCK);

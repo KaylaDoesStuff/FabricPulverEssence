@@ -35,6 +35,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENERGIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_ENERGIUM_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_YTTRIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YTTRIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YTTRIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_YTTRIUM_BLOCK);
+
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
@@ -55,6 +60,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
         itemModelGenerator.register(ModItems.MYTHRIL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.HANDHELD_ROD);
@@ -72,6 +78,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHARGED_TUNGSTEN_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.YTTRIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.YTTRIUM_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_YTTRIUM_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.RAW_YTTRIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.YTTRIUM_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.ENERGIUM_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENERGIUM_ROD, Models.HANDHELD_ROD);

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    },
+    {
+      "item": "pulderessence:yttrium_nugget"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:yttrium_ingot"
+  }
+}

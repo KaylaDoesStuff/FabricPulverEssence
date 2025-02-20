@@ -5,6 +5,7 @@ import kayla.pulderessence.block.entity.ModBlockEntities;
 import kayla.pulderessence.item.CompoundItems;
 import kayla.pulderessence.item.ModItems;
 import kayla.pulderessence.item.ModItemGroups;
+import kayla.pulderessence.mixin.PulderEssenceMixin;
 import kayla.pulderessence.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 

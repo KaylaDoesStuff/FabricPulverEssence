@@ -2,10 +2,8 @@ package kayla.pulderessence;
 
 import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.block.entity.ModBlockEntities;
-import kayla.pulderessence.item.CompoundItems;
 import kayla.pulderessence.item.ModItems;
 import kayla.pulderessence.item.ModItemGroups;
-import kayla.pulderessence.mixin.PulderEssenceMixin;
 import kayla.pulderessence.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -26,8 +24,6 @@ public class PulderEssence implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntities();
-		CompoundItems.registerCompounds();
-
 		ModWorldGeneration.generateModWorldGen();
 
 		StrippableBlockRegistry.register(ModBlocks.PULVERENT_LOG, ModBlocks.STRIPPED_PULVERENT_LOG);

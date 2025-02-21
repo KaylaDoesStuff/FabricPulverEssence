@@ -45,6 +45,16 @@ public abstract class PulderEssenceMixin {
 			tooltip.add(Text.literal("My").formatted(Formatting.DARK_GRAY));
 		} else if (stack.getItem() == ModItems.CHARGED_MYTHRIL_ROD) {
 			tooltip.add(Text.literal("My").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.INDIUM_INGOT) {
+			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.INDIUM_ROD) {
+			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.RAW_INDIUM) {
+			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.INDIUM_NUGGET) {
+			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_INDIUM_ROD) {
+			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
 		}
 	}
 }

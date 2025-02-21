@@ -34,6 +34,18 @@ public class ModItems {
     public static final Item YTTRIUM_ROD = registerItems("yttrium_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_YTTRIUM_ROD = registerItems("charged_yttrium_rod", new ChargedItem(new FabricItemSettings(), 12));
 
+    public static final Item SILVER_INGOT = registerItems("silver_ingot", new Item(new FabricItemSettings()));
+    public static final Item SILVER_NUGGET = registerItems("silver_nugget", new Item(new FabricItemSettings()));
+    public static final Item RAW_SILVER = registerItems("raw_silver", new Item(new FabricItemSettings()));
+    public static final Item SILVER_ROD = registerItems("silver_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_SILVER_ROD = registerItems("charged_silver_rod", new ChargedItem(new FabricItemSettings(), 20));
+
+    public static final Item LEAD_INGOT = registerItems("lead_ingot", new Item(new FabricItemSettings()));
+    public static final Item LEAD_NUGGET = registerItems("lead_nugget", new Item(new FabricItemSettings()));
+    public static final Item RAW_LEAD = registerItems("raw_lead", new Item(new FabricItemSettings()));
+    public static final Item LEAD_ROD = registerItems("lead_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_LEAD_ROD = registerItems("charged_lead_rod", new ChargedItem(new FabricItemSettings(), 6));
+
     public static final Item ENERGIUM_SHARD = registerItems("energium_shard", new Item(new FabricItemSettings()));
     public static final Item RAW_ENERGIUM = registerItems("raw_energium", new Item(new FabricItemSettings()));
     public static final Item ENERGIUM_ROD = registerItems("energium_rod", new Item(new FabricItemSettings()));

@@ -146,6 +146,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ENERGIUM_SHARD), conditionsFromItem(ModItems.ENERGIUM_SHARD))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.ENERGIUM_ROD)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.SILVER_NUGGET)
+                .criterion(hasItem(ModItems.SILVER_NUGGET), conditionsFromItem(ModItems.SILVER_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SILVER_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAD_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', ModItems.LEAD_NUGGET)
+                .criterion(hasItem(ModItems.LEAD_NUGGET), conditionsFromItem(ModItems.LEAD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEAD_ROD)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
                 .pattern("M")
                 .pattern("M")
@@ -168,6 +182,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         chargingRecipe(exporter, ModItems.TUNGSTEN_ROD, ModItems.CHARGED_TUNGSTEN_ROD);
         chargingRecipe(exporter, ModItems.ENERGIUM_ROD, ModItems.CHARGED_ENERGIUM_ROD);
         chargingRecipe(exporter, ModItems.YTTRIUM_ROD, ModItems.CHARGED_YTTRIUM_ROD);
+        chargingRecipe(exporter, ModItems.SILVER_ROD, ModItems.CHARGED_SILVER_ROD);
+        chargingRecipe(exporter, ModItems.LEAD_ROD, ModItems.CHARGED_LEAD_ROD);
 
         createStairsRecipe(ModBlocks.PULVERENT_STAIRS, Ingredient.ofItems(ModBlocks.PULVERENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))

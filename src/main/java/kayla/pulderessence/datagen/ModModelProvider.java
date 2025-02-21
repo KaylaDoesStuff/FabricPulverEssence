@@ -40,6 +40,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YTTRIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_YTTRIUM_BLOCK);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_SILVER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SILVER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SILVER_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_SILVER_BLOCK);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LEAD_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAD_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAD_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LEAD_BLOCK);
+
         //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
@@ -72,6 +82,18 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_INDIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.SILVER_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_SILVER_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.RAW_SILVER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SILVER_NUGGET, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LEAD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEAD_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_LEAD_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.RAW_LEAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LEAD_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_ROD, Models.HANDHELD_ROD);

@@ -17,6 +17,18 @@
   "item.pulderessence.tungsten_rod": "Tungsten Rod",
   "item.pulderessence.charged_tungsten_rod": "Charged Tungsten Rod",
 
+  "item.pulderessence.lead_ingot": "Lead Ingot",
+  "item.pulderessence.lead_nugget": "Lead Nugget",
+  "item.pulderessence.raw_lead": "Raw Lead",
+  "item.pulderessence.lead_rod": "Lead Rod",
+  "item.pulderessence.charged_lead_rod": "Charged Lead Rod",
+
+  "item.pulderessence.silver_ingot": "Silver Ingot",
+  "item.pulderessence.silver_nugget": "Silver Nugget",
+  "item.pulderessence.raw_silver": "Raw Silver",
+  "item.pulderessence.silver_rod": "Silver Rod",
+  "item.pulderessence.charged_silver_rod": "Charged Silver Rod",
+
   "item.pulderessence.yttrium_ingot": "Yttrium Ingot",
   "item.pulderessence.yttrium_nugget": "Yttrium Nugget",
   "item.pulderessence.raw_yttrium": "Raw Yttrium",
@@ -41,6 +53,16 @@
   "block.pulderessence.raw_indium_block": "Raw Indium Block",
   "block.pulderessence.indium_ore": "Indium Ore",
   "block.pulderessence.deepslate_indium_ore": "Deepslate Indium Ore",
+
+  "block.pulderessence.silver_block": "Silver Block",
+  "block.pulderessence.raw_silver_block": "Raw Silver Block",
+  "block.pulderessence.silver_ore": "Silver Ore",
+  "block.pulderessence.deepslate_silver_ore": "Deepslate Silver Ore",
+
+  "block.pulderessence.lead_block": "Lead Block",
+  "block.pulderessence.raw_lead_block": "Raw Lead Block",
+  "block.pulderessence.lead_ore": "Lead Ore",
+  "block.pulderessence.deepslate_lead_ore": "Deepslate Lead Ore",
 
   "block.pulderessence.yttrium_block": "Yttrium Block",
   "block.pulderessence.raw_yttrium_block": "Raw Yttrium Block",

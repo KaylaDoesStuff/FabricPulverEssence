@@ -34,6 +34,18 @@ public class ModItemGroups {
                         entries.add(ModItems.INDIUM_ROD);
                         entries.add(ModItems.CHARGED_INDIUM_ROD);
 
+                        entries.add(ModItems.LEAD_NUGGET);
+                        entries.add(ModItems.LEAD_INGOT);
+                        entries.add(ModItems.RAW_LEAD);
+                        entries.add(ModItems.LEAD_ROD);
+                        entries.add(ModItems.CHARGED_LEAD_ROD);
+
+                        entries.add(ModItems.SILVER_NUGGET);
+                        entries.add(ModItems.SILVER_INGOT);
+                        entries.add(ModItems.RAW_SILVER);
+                        entries.add(ModItems.SILVER_ROD);
+                        entries.add(ModItems.CHARGED_SILVER_ROD);
+
                         entries.add(ModItems.YTTRIUM_NUGGET);
                         entries.add(ModItems.YTTRIUM_INGOT);
                         entries.add(ModItems.RAW_YTTRIUM);
@@ -75,6 +87,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_YTTRIUM_BLOCK);
                         entries.add(ModBlocks.YTTRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_YTTRIUM_ORE);
+
+                        entries.add(ModBlocks.SILVER_BLOCK);
+                        entries.add(ModBlocks.RAW_SILVER_BLOCK);
+                        entries.add(ModBlocks.SILVER_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_SILVER_ORE);
+
+                        entries.add(ModBlocks.LEAD_BLOCK);
+                        entries.add(ModBlocks.RAW_LEAD_BLOCK);
+                        entries.add(ModBlocks.LEAD_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_LEAD_ORE);
 
                         entries.add(ModBlocks.ENERGIUM_BLOCK);
                         entries.add(ModBlocks.RAW_ENERGIUM_BLOCK);

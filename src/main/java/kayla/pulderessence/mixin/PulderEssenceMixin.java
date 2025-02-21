@@ -55,6 +55,44 @@ public abstract class PulderEssenceMixin {
 			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
 		} else if (stack.getItem() == ModItems.CHARGED_INDIUM_ROD) {
 			tooltip.add(Text.literal("In").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.TUNGSTEN_INGOT) {
+			tooltip.add(Text.literal("W").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.TUNGSTEN_ROD) {
+			tooltip.add(Text.literal("W").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.RAW_TUNGSTEN) {
+			tooltip.add(Text.literal("W").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.TUNGSTEN_NUGGET) {
+			tooltip.add(Text.literal("W").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_TUNGSTEN_ROD) {
+			tooltip.add(Text.literal("W").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.ENERGIUM_SHARD) {
+			tooltip.add(Text.literal("En").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.ENERGIUM_ROD) {
+			tooltip.add(Text.literal("En").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.RAW_ENERGIUM) {
+			tooltip.add(Text.literal("En").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_ENERGIUM_ROD) {
+			tooltip.add(Text.literal("En").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.SILVER_INGOT) {
+			tooltip.add(Text.literal("Ag").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.SILVER_ROD) {
+			tooltip.add(Text.literal("Ag").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.RAW_SILVER) {
+			tooltip.add(Text.literal("Ag").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.SILVER_NUGGET) {
+			tooltip.add(Text.literal("Ag").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_SILVER_ROD) {
+			tooltip.add(Text.literal("Ag").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.LEAD_INGOT) {
+			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.LEAD_ROD) {
+			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.RAW_LEAD) {
+			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.LEAD_NUGGET) {
+			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_LEAD_ROD) {
+			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
 		}
 	}
 }

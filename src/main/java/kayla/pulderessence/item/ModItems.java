@@ -55,6 +55,12 @@ public class ModItems {
     public static final Item FAERIE_ROD = registerItems("faerie_rod", new Item(new FabricItemSettings()));
     public static final Item CHARGED_FAERIE_ROD = registerItems("charged_faerie_rod", new ChargedItem(new FabricItemSettings(), 8));
 
+    public static final Item IRON_ROD = registerItems("iron_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_IRON_ROD = registerItems("charged_iron_rod", new ChargedItem(new FabricItemSettings(), 4));
+
+    public static final Item GOLD_ROD = registerItems("gold_rod", new Item(new FabricItemSettings()));
+    public static final Item CHARGED_GOLD_ROD = registerItems("charged_gold_rod", new ChargedItem(new FabricItemSettings(), 6));
+
     public static final Item MYTHRIL_SWORD = registerItems("mythril_sword", new SwordItem(ModToolMaterial.MYTHRIL, 4, 1, new FabricItemSettings().maxCount(1)));
     public static final Item MYTHRIL_AXE = registerItems("mythril_axe", new AxeItem(ModToolMaterial.MYTHRIL, 6, 0, new FabricItemSettings().maxCount(1)));
     public static final Item MYTHRIL_PICKAXE = registerItems("mythril_pickaxe", new PickaxeItem(ModToolMaterial.MYTHRIL, 3, 2, new FabricItemSettings().maxCount(1)));

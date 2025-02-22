@@ -93,6 +93,18 @@ public abstract class PulderEssenceMixin {
 			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
 		} else if (stack.getItem() == ModItems.CHARGED_LEAD_ROD) {
 			tooltip.add(Text.literal("Pb").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.IRON_ROD) {
+			tooltip.add(Text.literal("Fe").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_IRON_ROD) {
+			tooltip.add(Text.literal("Fe").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.GOLD_ROD) {
+			tooltip.add(Text.literal("Au").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == ModItems.CHARGED_GOLD_ROD) {
+			tooltip.add(Text.literal("Au").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == Items.GOLD_INGOT) {
+			tooltip.add(Text.literal("Au").formatted(Formatting.DARK_GRAY));
+		} else if (stack.getItem() == Items.GOLD_NUGGET) {
+			tooltip.add(Text.literal("Au").formatted(Formatting.DARK_GRAY));
 		}
 	}
 }

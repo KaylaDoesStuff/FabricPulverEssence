@@ -66,6 +66,9 @@ public class ModItemGroups {
                         entries.add(ModItems.FAERIE_DUST);
                         entries.add(ModItems.FAERIE_ROD);
                         entries.add(ModItems.CHARGED_FAERIE_ROD);
+
+                        entries.add(ModItems.IRON_ROD);
+                        entries.add(ModItems.CHARGED_IRON_ROD);
                     }).build());
 
     public static final ItemGroup PULVERENT_BLOCKS = Registry.register(Registries.ITEM_GROUP,

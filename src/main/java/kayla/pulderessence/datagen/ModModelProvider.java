@@ -77,6 +77,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_MYTHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_NUGGET, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.GOLD_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_GOLD_ROD, Models.HANDHELD_ROD);
+
+        itemModelGenerator.register(ModItems.IRON_ROD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.CHARGED_IRON_ROD, Models.HANDHELD_ROD);
+
         itemModelGenerator.register(ModItems.INDIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.HANDHELD_ROD);

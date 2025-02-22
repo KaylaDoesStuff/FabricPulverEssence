@@ -160,6 +160,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LEAD_NUGGET), conditionsFromItem(ModItems.LEAD_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEAD_ROD)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', Items.IRON_NUGGET)
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.IRON_ROD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLD_ROD, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', Items.GOLD_NUGGET)
+                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLD_ROD)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
                 .pattern("M")
                 .pattern("M")
@@ -184,6 +198,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         chargingRecipe(exporter, ModItems.YTTRIUM_ROD, ModItems.CHARGED_YTTRIUM_ROD);
         chargingRecipe(exporter, ModItems.SILVER_ROD, ModItems.CHARGED_SILVER_ROD);
         chargingRecipe(exporter, ModItems.LEAD_ROD, ModItems.CHARGED_LEAD_ROD);
+        chargingRecipe(exporter, ModItems.IRON_ROD, ModItems.CHARGED_IRON_ROD);
+        chargingRecipe(exporter, ModItems.GOLD_ROD, ModItems.CHARGED_GOLD_ROD);
 
         createStairsRecipe(ModBlocks.PULVERENT_STAIRS, Ingredient.ofItems(ModBlocks.PULVERENT_PLANKS.asItem()))
                 .criterion(hasItem(ModBlocks.PULVERENT_PLANKS.asItem()), conditionsFromItem(ModBlocks.PULVERENT_PLANKS))

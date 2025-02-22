@@ -3,41 +3,48 @@
   "item.pulderessence.mythril_nugget": "Mythril Nugget",
   "item.pulderessence.raw_mythril": "Raw Mythril",
   "item.pulderessence.mythril_rod": "Mythril Rod",
+  "item.pulderessence.mythril_dust": "Mythril Dust",
   "item.pulderessence.charged_mythril_rod": "Charged Mythril Rod",
 
   "item.pulderessence.indium_ingot": "Indium Ingot",
   "item.pulderessence.indium_nugget": "Indium Nugget",
   "item.pulderessence.raw_indium": "Raw Indium",
   "item.pulderessence.indium_rod": "Indium Rod",
+  "item.pulderessence.indium_dust": "Indium Dust",
   "item.pulderessence.charged_indium_rod": "Charged Indium Rod",
 
   "item.pulderessence.tungsten_ingot": "Tungsten Ingot",
   "item.pulderessence.tungsten_nugget": "Tungsten Nugget",
   "item.pulderessence.raw_tungsten": "Raw Tungsten",
   "item.pulderessence.tungsten_rod": "Tungsten Rod",
+  "item.pulderessence.tungsten_dust": "Tungsten Dust",
   "item.pulderessence.charged_tungsten_rod": "Charged Tungsten Rod",
 
   "item.pulderessence.lead_ingot": "Lead Ingot",
   "item.pulderessence.lead_nugget": "Lead Nugget",
   "item.pulderessence.raw_lead": "Raw Lead",
   "item.pulderessence.lead_rod": "Lead Rod",
+  "item.pulderessence.lead_dust": "Lead Dust",
   "item.pulderessence.charged_lead_rod": "Charged Lead Rod",
 
   "item.pulderessence.silver_ingot": "Silver Ingot",
   "item.pulderessence.silver_nugget": "Silver Nugget",
   "item.pulderessence.raw_silver": "Raw Silver",
   "item.pulderessence.silver_rod": "Silver Rod",
+  "item.pulderessence.silver_dust": "Silver Dust",
   "item.pulderessence.charged_silver_rod": "Charged Silver Rod",
 
   "item.pulderessence.yttrium_ingot": "Yttrium Ingot",
   "item.pulderessence.yttrium_nugget": "Yttrium Nugget",
   "item.pulderessence.raw_yttrium": "Raw Yttrium",
   "item.pulderessence.yttrium_rod": "Yttrium Rod",
+  "item.pulderessence.yttrium_dust": "Yttrium Dust",
   "item.pulderessence.charged_yttrium_rod": "Charged Yttrium Rod",
 
   "item.pulderessence.energium_shard": "Energium Shard",
   "item.pulderessence.raw_energium": "Raw Energium",
   "item.pulderessence.energium_rod": "Energium Rod",
+  "item.pulderessence.energium_dust": "Energium Dust",
   "item.pulderessence.charged_energium_rod": "Charged Energium Rod",
 
   "item.pulderessence.faerie_dust": "Faerie Dust",
@@ -45,7 +52,11 @@
   "item.pulderessence.charged_faerie_rod": "Charged Faerie Rod",
 
   "item.pulderessence.gold_rod": "Gold Rod",
+  "item.pulderessence.gold_dust": "Gold Dust",
   "item.pulderessence.charged_gold_rod": "Charged Gold Rod",
+
+  "item.pulderessence.silicon_ingot": "Silicon Ingot",
+  "item.pulderessence.silicon_boule": "Silicon Boule",
 
   "block.pulderessence.mythril_block": "Mythril Block",
   "block.pulderessence.raw_mythril_block": "Raw Mythril Block",

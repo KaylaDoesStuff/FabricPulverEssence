@@ -18,6 +18,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("group.items"))
                     .icon(() -> new ItemStack(ModItems.MYTHRIL_INGOT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MYTHRIL_INGOT);
+                        entries.add(ModItems.MYTHRIL_DUST);
                         entries.add(ModItems.MYTHRIL_SWORD);
                         entries.add(ModItems.MYTHRIL_AXE);
                         entries.add(ModItems.MYTHRIL_PICKAXE);
@@ -30,45 +31,59 @@ public class ModItemGroups {
 
                         entries.add(ModItems.INDIUM_NUGGET);
                         entries.add(ModItems.INDIUM_INGOT);
+                        entries.add(ModItems.INDIUM_DUST);
                         entries.add(ModItems.RAW_INDIUM);
                         entries.add(ModItems.INDIUM_ROD);
                         entries.add(ModItems.CHARGED_INDIUM_ROD);
 
                         entries.add(ModItems.LEAD_NUGGET);
                         entries.add(ModItems.LEAD_INGOT);
+                        entries.add(ModItems.LEAD_DUST);
                         entries.add(ModItems.RAW_LEAD);
                         entries.add(ModItems.LEAD_ROD);
                         entries.add(ModItems.CHARGED_LEAD_ROD);
 
                         entries.add(ModItems.SILVER_NUGGET);
                         entries.add(ModItems.SILVER_INGOT);
+                        entries.add(ModItems.SILVER_DUST);
                         entries.add(ModItems.RAW_SILVER);
                         entries.add(ModItems.SILVER_ROD);
                         entries.add(ModItems.CHARGED_SILVER_ROD);
 
                         entries.add(ModItems.YTTRIUM_NUGGET);
                         entries.add(ModItems.YTTRIUM_INGOT);
+                        entries.add(ModItems.YTTRIUM_DUST);
                         entries.add(ModItems.RAW_YTTRIUM);
                         entries.add(ModItems.YTTRIUM_ROD);
                         entries.add(ModItems.CHARGED_YTTRIUM_ROD);
 
                         entries.add(ModItems.TUNGSTEN_NUGGET);
                         entries.add(ModItems.TUNGSTEN_INGOT);
+                        entries.add(ModItems.TUNGSTEN_DUST);
                         entries.add(ModItems.RAW_TUNGSTEN);
                         entries.add(ModItems.TUNGSTEN_ROD);
                         entries.add(ModItems.CHARGED_TUNGSTEN_ROD);
 
                         entries.add(ModItems.ENERGIUM_SHARD);
+                        entries.add(ModItems.ENERGIUM_DUST);
                         entries.add(ModItems.RAW_ENERGIUM);
                         entries.add(ModItems.ENERGIUM_ROD);
                         entries.add(ModItems.CHARGED_ENERGIUM_ROD);
+
+                        entries.add(ModItems.SILICON_INGOT);
+                        entries.add(ModItems.SILICON_BOULE);
 
                         entries.add(ModItems.FAERIE_DUST);
                         entries.add(ModItems.FAERIE_ROD);
                         entries.add(ModItems.CHARGED_FAERIE_ROD);
 
                         entries.add(ModItems.IRON_ROD);
+                        entries.add(ModItems.IRON_DUST);
                         entries.add(ModItems.CHARGED_IRON_ROD);
+
+                        entries.add(ModItems.GOLD_ROD);
+                        entries.add(ModItems.GOLD_DUST);
+                        entries.add(ModItems.CHARGED_GOLD_ROD);
                     }).build());
 
     public static final ItemGroup PULVERENT_BLOCKS = Registry.register(Registries.ITEM_GROUP,

@@ -1,5 +1,6 @@
 package kayla.pulderessence.item.custom;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -8,6 +9,7 @@ import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,18 +19,21 @@ public class ProgressableItem extends Item {
     private int progress;
     private final int finalProgress;
     private final Item result;
+    private final Block inputBlock;
 
-    public ProgressableItem(Settings settings, int finalProgress, Item resultItem) {
+    public ProgressableItem(Settings settings, int finalProgress, Item resultItem, Block block) {
         super(settings);
         this.progress = 0;
         this.finalProgress = finalProgress;
         this.result = resultItem;
+        this.inputBlock = block;
     }
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         ItemStack selectedSlot = context.getPlayer().getMainHandStack();
-        if (!context.getWorld().isClient()) {
+        BlockHitResult blockHitResult = (BlockHitResult) context.getPlayer().raycast(5.0D, 0.0F, false);
+        if (!context.getWorld().isClient() && context.getWorld().getBlockState(blockHitResult.getBlockPos()).getBlock() == inputBlock) {
             if (this.progress >= this.finalProgress) {
                 if (!selectedSlot.isEmpty() && selectedSlot.getCount() > 0) {
                     if (selectedSlot.getCount() == 1) {

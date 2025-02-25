@@ -1,6 +1,7 @@
 package kayla.pulderessence.item;
 
 import kayla.pulderessence.PulderEssence;
+import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.custom.ChargedItem;
 import kayla.pulderessence.item.custom.ProgressableItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

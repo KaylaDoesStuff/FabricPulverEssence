@@ -1,18 +1,26 @@
 package kayla.pulderessence.item.custom;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
+import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.ClickType;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class ChargedItem extends Item {
-    private final int charge;
+    private int charge;
 
     public ChargedItem(Settings settings, int initialCharge) {
         super(settings);
@@ -29,7 +37,7 @@ public class ChargedItem extends Item {
 
     public MutableText chargeTooltip() {
         int chargeLevel = getCharge(); // Call the method to get the charge level
-        MutableText tooltipText = Text.literal("Charge value: "+ chargeLevel+ "V");
+        MutableText tooltipText = Text.literal("Charge value: "+ chargeLevel + " eV");
         tooltipText.formatted(Formatting.BLUE);
         return tooltipText;
     }
@@ -45,7 +53,22 @@ public class ChargedItem extends Item {
     }
 
     @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        if(!context.getWorld().isClient()) {
+            setCharge(this.charge+1);
+        }
+        return ActionResult.SUCCESS;
+    }
+
+
+    public void setCharge(int input) {
+        this.charge = input;
+    }
+
+    @Override
     public boolean hasGlint(ItemStack stack) {
         return true;
     }
+
+
 }

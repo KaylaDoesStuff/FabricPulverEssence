@@ -24,6 +24,9 @@ public class ElementItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.literal(elementID).formatted(Formatting.DARK_GRAY));
+        tooltip.add(Text.literal(String.valueOf(atomicNumber)).formatted(Formatting.DARK_GRAY));
+        tooltip.add(Text.literal(String.valueOf(atomicMass)).formatted(Formatting.DARK_GRAY));
+
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

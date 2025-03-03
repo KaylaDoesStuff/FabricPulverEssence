@@ -1,90 +1,59 @@
 package kayla.pulderessence.item.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.item.TooltipContext;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.text.MutableText;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.text.Text;
 
 import java.util.List;
 
 public class ProgressableItem extends Item {
+    private final Item resultItem; // Single result item
+    private final int clicksRequired;
+    private final Block validBlock; // The block that can be right-clicked
     private int progress;
-    private final int finalProgress;
-    private final Item result;
-    private final Block inputBlock;
 
-    public ProgressableItem(Settings settings, int finalProgress, Item resultItem, Block block) {
+    public ProgressableItem(Settings settings, Item resultItem, int clicksRequired, Block validBlock) {
         super(settings);
+        this.resultItem = resultItem;
+        this.clicksRequired = clicksRequired;
+        this.validBlock = validBlock;
         this.progress = 0;
-        this.finalProgress = finalProgress;
-        this.result = resultItem;
-        this.inputBlock = block;
     }
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        ItemStack selectedSlot = context.getPlayer().getMainHandStack();
-        BlockHitResult blockHitResult = (BlockHitResult) context.getPlayer().raycast(5.0D, 0.0F, false);
-        if (!context.getWorld().isClient() && context.getWorld().getBlockState(blockHitResult.getBlockPos()).getBlock() == inputBlock) {
-            if (this.progress >= this.finalProgress) {
-                if (!selectedSlot.isEmpty() && selectedSlot.getCount() > 0) {
-                    if (selectedSlot.getCount() == 1) {
-                        context.getPlayer().getInventory().removeOne(selectedSlot);
-                    } else {
-                        selectedSlot.decrement(1);
-                    }
-                    context.getPlayer().giveItemStack(new ItemStack(this.result));
-                    setProgress(0);
+        BlockPos pos = context.getBlockPos();
+        BlockState blockState = context.getWorld().getBlockState(pos);
+        PlayerEntity user = context.getPlayer();
+        ItemStack itemStack = context.getStack();
+
+        if (!context.getWorld().isClient()) {
+            if (blockState.getBlock() == validBlock) {
+                progress++;
+                if (progress >= clicksRequired) {
+                    progress = 0;
+                    user.getInventory().insertStack(new ItemStack(resultItem));
+                    user.getInventory().removeOne(itemStack);
                 }
-            } else {
-                setProgress(this.progress + 1);
+                return ActionResult.success(true);
             }
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.PASS;
     }
 
     @Override
-
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(progressTooltip());
-        tooltip.add(progressDescription());
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
+        int progressPercentage = (int) ((float) progress / clicksRequired * 100);
+        tooltip.add(Text.translatable("Progress: " + progressPercentage + "%"));
     }
-
-    public MutableText progressTooltip() {
-        float progressLevel = getProgress();
-        float progressPercentage;
-        if(progressLevel/this.finalProgress > 1 || progressLevel/this.finalProgress < 0) {
-            progressPercentage = 0;
-        } else {
-            progressPercentage = progressLevel/this.finalProgress;
-        };
-        MutableText tooltipText = Text.literal("Progress: "+ progressPercentage*100 + "%");
-        tooltipText.formatted(Formatting.DARK_RED);
-        return tooltipText;
-    }
-
-    public MutableText progressDescription() {
-        MutableText tooltipText = Text.translatable("progress.description.tooltip");
-        tooltipText.formatted((Formatting.DARK_GRAY));
-        return tooltipText;
-    }
-
-    public int getProgress() {
-        return this.progress;
-    }
-
-    public void setProgress(int input) {
-        this.progress = input;
-    }
-
 
 }

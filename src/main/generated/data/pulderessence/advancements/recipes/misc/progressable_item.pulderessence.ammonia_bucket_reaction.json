@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_element_7": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:element_7"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:progressable_item.pulderessence.ammonia_bucket_reaction"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_element_7",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:progressable_item.pulderessence.ammonia_bucket_reaction"
+    ]
+  },
+  "sends_telemetry_event": false
+}

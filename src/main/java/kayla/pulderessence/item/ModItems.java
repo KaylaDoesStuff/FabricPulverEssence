@@ -1,9 +1,7 @@
 package kayla.pulderessence.item;
 
 import kayla.pulderessence.PulderEssence;
-import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.custom.ChargedItem;
-import kayla.pulderessence.item.custom.ProgressableItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;

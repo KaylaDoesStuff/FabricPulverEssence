@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:element_7"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:ammonia_bucket_reaction"
+  }
+}

@@ -10,6 +10,10 @@ import net.minecraft.util.Identifier;
 
 public class ModElements {
 
+    public static final Item PROTON = registerElement("proton", new ElementItem(new FabricItemSettings(), "p", 1, 1.6728f));
+    public static final Item NEUTRON = registerElement("neutron", new ElementItem(new FabricItemSettings(), "n", 0, 1.6749f));
+    public static final Item ELECTRON = registerElement("electron", new ElementItem(new FabricItemSettings(), "e", 0, 0.0000019f));
+
     public static final Item HYDROGEN = registerElement("element_1", new ElementItem(new FabricItemSettings(), "H", 1, 1.008f));
     public static final Item HELIUM = registerElement("element_2", new ElementItem(new FabricItemSettings(), "He", 2, 4.003f));
     public static final Item LITHIUM = registerElement("element_3", new ElementItem(new FabricItemSettings(), "Li", 3, 6.941f));
@@ -128,6 +132,8 @@ public class ModElements {
     public static final Item LIVENMORIUM = registerElement("element_116", new ElementItem(new FabricItemSettings(), "Lv", 116, 291));
     public static final Item TENNESSINE = registerElement("element_117", new ElementItem(new FabricItemSettings(), "Ts", 117, 294));
     public static final Item OGANESSON = registerElement("element_118", new ElementItem(new FabricItemSettings(), "Og", 118, 294));
+
+
 
     private static Item registerElement(String id, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, id), item);

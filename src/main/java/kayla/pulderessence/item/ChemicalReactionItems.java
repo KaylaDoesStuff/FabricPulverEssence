@@ -13,7 +13,9 @@ import net.minecraft.registry.Registry;
 public class ChemicalReactionItems {
 
     public static final Item H2O_BUCKET = registerCraftItem("water_bucket_reaction", new ProgressableItem(new FabricItemSettings(), Items.WATER_BUCKET, 4, ModBlocks.YTTRIUM_BLOCK));
-    public static final Item NH4_BUCKET = registerCraftItem("ammonia_bucket_reaction", new ProgressableItem(new FabricItemSettings(), ModBucketItems.BLEACH_BUCKET, 6, ModBlocks.MYTHRIL_BLOCK));
+    public static final Item NH3_BUCKET = registerCraftItem("ammonia_bucket_reaction", new ProgressableItem(new FabricItemSettings(), ModBucketItems.AMMONIA_BUCKET, 2, ModBlocks.MYTHRIL_BLOCK));
+
+    public static final Item NaOCl_BOTTLE = registerCraftItem("sodium_hypochlorite_bottle_reaction", new ProgressableItem(new FabricItemSettings(), ModBottleItems.BLEACH_BOTTLE, 6, ModBlocks.MYTHRIL_BLOCK));
 
     private static Item registerCraftItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);

@@ -7,13 +7,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModBucketItems {
+public class ModBottleItems {
 
-    public static final Item AMMONIA_BUCKET = registerBucketItem("ammonia_bucket", new Item(new FabricItemSettings()));
+    public static final Item BLEACH_BOTTLE = registerBottleItem("bleach_bottle", new Item(new FabricItemSettings()));
 
-    private static Item registerBucketItem(String name, Item item) {
+    private static Item registerBottleItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
     }
 
-    public static void registerBuckets() {}
+    public static void registerBottles() {}
 }

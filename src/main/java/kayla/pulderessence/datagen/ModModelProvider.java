@@ -1,6 +1,9 @@
 package kayla.pulderessence.datagen;
 
 import kayla.pulderessence.block.ModBlocks;
+import kayla.pulderessence.item.ChemicalReactionItems;
+import kayla.pulderessence.item.ModBottleItems;
+import kayla.pulderessence.item.ModBucketItems;
 import kayla.pulderessence.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -139,5 +142,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.SILICON_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILICON_BOULE, Models.GENERATED);
+
+
+        itemModelGenerator.register(ModBottleItems.BLEACH_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModBucketItems.AMMONIA_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ChemicalReactionItems.H2O_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ChemicalReactionItems.NH3_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ChemicalReactionItems.NaOCl_BOTTLE, Models.GENERATED);
     }
 }

@@ -27,6 +27,7 @@ public class PulderEssence implements ModInitializer {
 		ModElements.registerElementItems();
         ChemicalReactionItems.registerCrafts();
 		ModBucketItems.registerBuckets();
+		ModBottleItems.registerBottles();
 
 		StrippableBlockRegistry.register(ModBlocks.PULVERENT_LOG, ModBlocks.STRIPPED_PULVERENT_LOG);
 		StrippableBlockRegistry.register(ModBlocks.PULVERENT_WOOD, ModBlocks.STRIPPED_PULVERENT_WOOD);

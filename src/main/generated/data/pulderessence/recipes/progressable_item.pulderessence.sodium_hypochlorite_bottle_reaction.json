@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:element_11"
+    },
+    {
+      "item": "pulderessence:element_8"
+    },
+    {
+      "item": "pulderessence:element_17"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:sodium_hypochlorite_bottle_reaction"
+  }
+}

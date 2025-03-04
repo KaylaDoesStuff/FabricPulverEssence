@@ -70,10 +70,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
     }
 
-    @Override
+    private void bottleElementRecipe(Consumer<RecipeJsonProvider> exporter, Item input1, int inputCount1, Item input2, int inputCount2, Item output) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
+                .input(input1, inputCount1)
+                .input(input2, inputCount2)
+                .input(Items.GLASS_BOTTLE, 1)
+                .criterion(hasItem(input1), conditionsFromItem(input1))
+                .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
+    }
+
+    private void bottleElementRecipe(Consumer<RecipeJsonProvider> exporter, Item input1, int inputCount1, Item input2, int inputCount2, Item input3, int inputCount3, Item output) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
+                .input(input1, inputCount1)
+                .input(input2, inputCount2)
+                .input(input3, inputCount3)
+                .input(Items.GLASS_BOTTLE, 1)
+                .criterion(hasItem(input1), conditionsFromItem(input1))
+                .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
+    }
+
+    private void bottleElementRecipe(Consumer<RecipeJsonProvider> exporter, Item input1, int inputCount1, Item input2, int inputCount2, Item input3, int inputCount3, Item input4, int inputCount4, Item output) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
+                .input(input1, inputCount1)
+                .input(input2, inputCount2)
+                .input(input3, inputCount3)
+                .input(input4, inputCount4)
+                .input(Items.GLASS_BOTTLE, 1)
+                .criterion(hasItem(input1), conditionsFromItem(input1))
+                .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
+    }
+
+    @Override    
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         bucketElementRecipe(exporter, ModElements.HYDROGEN, 2, ModElements.OXYGEN, 1, ChemicalReactionItems.H2O_BUCKET);
-        bucketElementRecipe(exporter, ModElements.NITROGEN, 1, ModElements.HYDROGEN, 4, ChemicalReactionItems.NH4_BUCKET);
+        bucketElementRecipe(exporter, ModElements.NITROGEN, 1, ModElements.HYDROGEN, 3, ChemicalReactionItems.NH3_BUCKET);
+
+        bottleElementRecipe(exporter, ModElements.SODIUM, 1, ModElements.OXYGEN, 1, ModElements.CHLORINE, 1, ChemicalReactionItems.NaOCl_BOTTLE);
 
         offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 200, "mythril");
         offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 100, "mythril");

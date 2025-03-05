@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:element_6"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_17"
+    },
+    {
+      "item": "pulderessence:element_17"
+    },
+    {
+      "item": "pulderessence:element_17"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:trichloromethane_bottle_reaction"
+  }
+}

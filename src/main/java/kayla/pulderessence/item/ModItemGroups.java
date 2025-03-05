@@ -142,14 +142,130 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);
                     }).build());
 
-    /*public static final ItemGroup MACHINE_BLOCKS = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PulderEssence.MOD_ID, "machines"),
+    public static final ItemGroup ELEMENTS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PulderEssence.MOD_ID, "elements"),
             FabricItemGroup.builder()
-                    .displayName(Text.translatable("group.machines"))
-                    .icon(() -> new ItemStack(ModBlocks.CHARGING_STATION)).entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.CHARGING_STATION);
+                    .displayName(Text.translatable("group.elements"))
+                    .icon(() -> new ItemStack(ModElements.HYDROGEN)).entries((displayContext, entries) -> {
+                        entries.add(ModElements.HYDROGEN);
+                        entries.add(ModElements.HELIUM);
+                        entries.add(ModElements.LITHIUM);
+                        entries.add(ModElements.BERYLLIUM);
+                        entries.add(ModElements.BORON);
+                        entries.add(ModElements.CARBON);
+                        entries.add(ModElements.NITROGEN);
+                        entries.add(ModElements.OXYGEN);
+                        entries.add(ModElements.FLUORINE);
+                        entries.add(ModElements.NEON);
+                        entries.add(ModElements.SODIUM);
+                        entries.add(ModElements.MAGNESIUM);
+                        entries.add(ModElements.ALUMINUM);
+                        entries.add(ModElements.SILICON);
+                        entries.add(ModElements.PHOSPHOR);
+                        entries.add(ModElements.SULFUR);
+                        entries.add(ModElements.CHLORINE);
+                        entries.add(ModElements.ARGON);
+                        entries.add(ModElements.POTASSIUM);
+                        entries.add(ModElements.CALCIUM);
+                        entries.add(ModElements.SCANDIUM);
+                        entries.add(ModElements.TITANIUM);
+                        entries.add(ModElements.VANADIUM);
+                        entries.add(ModElements.CHROMIUM);
+                        entries.add(ModElements.MANGANESE);
+                        entries.add(ModElements.IRON);
+                        entries.add(ModElements.COBALT);
+                        entries.add(ModElements.NICKEL);
+                        entries.add(ModElements.COPPER);
+                        entries.add(ModElements.ZINC);
+                        entries.add(ModElements.GALLIUM);
+                        entries.add(ModElements.GERMANIUM);
+                        entries.add(ModElements.ARSENIC);
+                        entries.add(ModElements.SELENIUM);
+                        entries.add(ModElements.BROMINE);
+                        entries.add(ModElements.KRYPTON);
+                        entries.add(ModElements.RUBIDIUM);
+                        entries.add(ModElements.STRONTIUM);
+                        entries.add(ModElements.YTTRIUM);
+                        entries.add(ModElements.ZIRCONIUM);
+                        entries.add(ModElements.NIOBIUM);
+                        entries.add(ModElements.MOLYBDENUM);
+                        entries.add(ModElements.TECHNETIUM);
+                        entries.add(ModElements.RUTHENIUM);
+                        entries.add(ModElements.RHODIUM);
+                        entries.add(ModElements.PALLADIUM);
+                        entries.add(ModElements.SILVER);
+                        entries.add(ModElements.CADMIUM);
+                        entries.add(ModElements.INDIUM);
+                        entries.add(ModElements.TIN);
+                        entries.add(ModElements.ANTIMONY);
+                        entries.add(ModElements.TELLURIUM);
+                        entries.add(ModElements.IODINE);
+                        entries.add(ModElements.XENON);
+                        entries.add(ModElements.CAESIUM);
+                        entries.add(ModElements.BARIUM);
+                        entries.add(ModElements.LANTHANIUM);
+                        entries.add(ModElements.CERIUM);
+                        entries.add(ModElements.PRASEODYMIUM);
+                        entries.add(ModElements.NEODYMIUM);
+                        entries.add(ModElements.PROMETHIUM);
+                        entries.add(ModElements.SAMARIUM);
+                        entries.add(ModElements.EUROPIUM);
+                        entries.add(ModElements.GADOLINIUM);
+                        entries.add(ModElements.TERBIUM);
+                        entries.add(ModElements.DYSPROSIUM);
+                        entries.add(ModElements.HOLMIUM);
+                        entries.add(ModElements.ERBIUM);
+                        entries.add(ModElements.THULLIUM);
+                        entries.add(ModElements.YTTERBIUM);
+                        entries.add(ModElements.LUTETIUM);
+                        entries.add(ModElements.HAFNIUM);
+                        entries.add(ModElements.TANTALUM);
+                        entries.add(ModElements.TUNGSTEN);
+                        entries.add(ModElements.RHENIUM);
+                        entries.add(ModElements.OSMIUM);
+                        entries.add(ModElements.IRIDIUM);
+                        entries.add(ModElements.PLATINUM);
+                        entries.add(ModElements.GOLD);
+                        entries.add(ModElements.MERCURY);
+                        entries.add(ModElements.THALLIUM);
+                        entries.add(ModElements.LEAD);
+                        entries.add(ModElements.BISMUTH);
+                        entries.add(ModElements.POLONIUM);
+                        entries.add(ModElements.ASTATINE);
+                        entries.add(ModElements.RADON);
+                        entries.add(ModElements.FRANCIUM);
+                        entries.add(ModElements.RADIUM);
+                        entries.add(ModElements.ACTINIUM);
+                        entries.add(ModElements.THORIUM);
+                        entries.add(ModElements.PROTACTINIUM);
+                        entries.add(ModElements.URANIUM);
+                        entries.add(ModElements.NEPTUNIUM);
+                        entries.add(ModElements.PLUTONIUM);
+                        entries.add(ModElements.AMERICIUM);
+                        entries.add(ModElements.CURIUM);
+                        entries.add(ModElements.BERKELLIUM);
+                        entries.add(ModElements.CALIFORNIUM);
+                        entries.add(ModElements.EINSTEINIUM);
+                        entries.add(ModElements.FERMIUM);
+                        entries.add(ModElements.MENDELEVLUM);
+                        entries.add(ModElements.NOBELIUM);
+                        entries.add(ModElements.LAWRENCIUM);
+                        entries.add(ModElements.RUTHERFORDIUM);
+                        entries.add(ModElements.DUBNIUM);
+                        entries.add(ModElements.SEABORGIUM);
+                        entries.add(ModElements.BOHRIUM);
+                        entries.add(ModElements.HASSIUM);
+                        entries.add(ModElements.MEITNERIUM);
+                        entries.add(ModElements.DARMSTADTIUM);
+                        entries.add(ModElements.ROENTGENIUM);
+                        entries.add(ModElements.COPERNICIUM);
+                        entries.add(ModElements.NIHONIUM);
+                        entries.add(ModElements.FLEVORIUM);
+                        entries.add(ModElements.MOSCOVIUM);
+                        entries.add(ModElements.LIVERMORIUM);
+                        entries.add(ModElements.TENNESSINE);
+                        entries.add(ModElements.OGANESSON);
                     }).build());
-    */
 
     public static void registerItemGroups() {}
 }

@@ -128,8 +128,8 @@ public class ModElements {
     public static final Item COPERNICIUM = registerElement("element_112", new ElementItem(new FabricItemSettings(), "Cn", 112, 285));
     public static final Item NIHONIUM = registerElement("element_113", new ElementItem(new FabricItemSettings(), "Nh", 113, 284));
     public static final Item FLEVORIUM = registerElement("element_114", new ElementItem(new FabricItemSettings(), "Fl", 114, 289));
-    public static final Item MOSCOVLUM = registerElement("element_115", new ElementItem(new FabricItemSettings(), "Mc", 115, 288));
-    public static final Item LIVENMORIUM = registerElement("element_116", new ElementItem(new FabricItemSettings(), "Lv", 116, 291));
+    public static final Item MOSCOVIUM = registerElement("element_115", new ElementItem(new FabricItemSettings(), "Mc", 115, 288));
+    public static final Item LIVERMORIUM = registerElement("element_116", new ElementItem(new FabricItemSettings(), "Lv", 116, 291));
     public static final Item TENNESSINE = registerElement("element_117", new ElementItem(new FabricItemSettings(), "Ts", 117, 294));
     public static final Item OGANESSON = registerElement("element_118", new ElementItem(new FabricItemSettings(), "Og", 118, 294));
 

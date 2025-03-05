@@ -106,10 +106,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         bucketElementRecipe(exporter, ModElements.NITROGEN, 1, ModElements.HYDROGEN, 3, ChemicalReactionItems.NH3_BUCKET);
 
         bottleElementRecipe(exporter, ModElements.SODIUM, 1, ModElements.OXYGEN, 1, ModElements.CHLORINE, 1, ChemicalReactionItems.NaOCl_BOTTLE);
+        bottleElementRecipe(exporter, ModElements.CARBON, 1, ModElements.HYDROGEN, 1, ModElements.CHLORINE, 3, ChemicalReactionItems.CHCl3_BOTTLE);
 
         offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 200, "mythril");
         offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 100, "mythril");
-
 
         offerSmelting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 200, "indium");
         offerBlasting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 100, "indium");

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_element_6": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:element_6"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:progressable_item.pulderessence.trichloromethane_bottle_reaction"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_element_6",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:progressable_item.pulderessence.trichloromethane_bottle_reaction"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModBottleItems {
 
     public static final Item BLEACH_BOTTLE = registerBottleItem("bleach_bottle", new Item(new FabricItemSettings()));
+    public static final Item CHLOROFORM_BOTTLE = registerBottleItem("chloroform_bottle", new Item(new FabricItemSettings()));
 
     private static Item registerBottleItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);

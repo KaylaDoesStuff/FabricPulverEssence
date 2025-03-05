@@ -16,6 +16,7 @@ public class ChemicalReactionItems {
     public static final Item NH3_BUCKET = registerCraftItem("ammonia_bucket_reaction", new ProgressableItem(new FabricItemSettings(), ModBucketItems.AMMONIA_BUCKET, 2, ModBlocks.MYTHRIL_BLOCK));
 
     public static final Item NaOCl_BOTTLE = registerCraftItem("sodium_hypochlorite_bottle_reaction", new ProgressableItem(new FabricItemSettings(), ModBottleItems.BLEACH_BOTTLE, 6, ModBlocks.MYTHRIL_BLOCK));
+    public static final Item CHCl3_BOTTLE = registerCraftItem("trichloromethane_bottle_reaction", new ProgressableItem(new FabricItemSettings(), ModBottleItems.CHLOROFORM_BOTTLE, 6, ModBlocks.MYTHRIL_BLOCK));
 
     private static Item registerCraftItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);

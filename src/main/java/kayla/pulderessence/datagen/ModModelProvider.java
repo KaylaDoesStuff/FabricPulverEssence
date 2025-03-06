@@ -143,9 +143,14 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModBottleItems.BLEACH_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ModBottleItems.CHLOROFORM_BOTTLE, Models.GENERATED);
+
         itemModelGenerator.register(ModBucketItems.AMMONIA_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModBucketItems.SULFURIC_ACID_BUCKET, Models.GENERATED);
+
         itemModelGenerator.register(ChemicalReactionItems.H2O_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ChemicalReactionItems.NH3_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ChemicalReactionItems.H2SO4_BUCKET, Models.GENERATED);
+
         itemModelGenerator.register(ChemicalReactionItems.NaOCl_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ChemicalReactionItems.CHCl3_BOTTLE, Models.GENERATED);
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pulderessence:item/water_bucket_reaction"
+    "layer0": "pulderessence:item/sulfuric_acid_bucket"
   }
 }

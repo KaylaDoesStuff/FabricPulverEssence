@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_1"
+    },
+    {
+      "item": "pulderessence:element_8"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "result": {
+    "item": "pulderessence:dihydrogen_monoxide_bucket_reaction"
+  }
+}

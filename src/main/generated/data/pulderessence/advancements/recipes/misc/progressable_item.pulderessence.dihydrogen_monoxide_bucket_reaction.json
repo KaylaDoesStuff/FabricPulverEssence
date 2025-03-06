@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:progressable_item.pulderessence.water_bucket_reaction"
+        "recipe": "minecraft:progressable_item.pulderessence.dihydrogen_monoxide_bucket_reaction"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:progressable_item.pulderessence.water_bucket_reaction"
+      "minecraft:progressable_item.pulderessence.dihydrogen_monoxide_bucket_reaction"
     ]
   },
   "sends_telemetry_event": false

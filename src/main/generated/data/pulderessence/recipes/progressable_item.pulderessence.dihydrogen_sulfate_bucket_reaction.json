@@ -9,6 +9,18 @@
       "item": "pulderessence:element_1"
     },
     {
+      "item": "pulderessence:element_16"
+    },
+    {
+      "item": "pulderessence:element_8"
+    },
+    {
+      "item": "pulderessence:element_8"
+    },
+    {
+      "item": "pulderessence:element_8"
+    },
+    {
       "item": "pulderessence:element_8"
     },
     {
@@ -16,6 +28,6 @@
     }
   ],
   "result": {
-    "item": "pulderessence:water_bucket_reaction"
+    "item": "pulderessence:dihydrogen_sulfate_bucket_reaction"
   }
 }

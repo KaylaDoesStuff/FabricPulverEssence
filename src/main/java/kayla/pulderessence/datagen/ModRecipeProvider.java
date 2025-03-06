@@ -104,6 +104,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         bucketElementRecipe(exporter, ModElements.HYDROGEN, 2, ModElements.OXYGEN, 1, ChemicalReactionItems.H2O_BUCKET);
         bucketElementRecipe(exporter, ModElements.NITROGEN, 1, ModElements.HYDROGEN, 3, ChemicalReactionItems.NH3_BUCKET);
+        bucketElementRecipe(exporter, ModElements.HYDROGEN, 2, ModElements.SULFUR, 1, ModElements.OXYGEN, 4, ChemicalReactionItems.H2SO4_BUCKET);
 
         bottleElementRecipe(exporter, ModElements.SODIUM, 1, ModElements.OXYGEN, 1, ModElements.CHLORINE, 1, ChemicalReactionItems.NaOCl_BOTTLE);
         bottleElementRecipe(exporter, ModElements.CARBON, 1, ModElements.HYDROGEN, 1, ModElements.CHLORINE, 3, ChemicalReactionItems.CHCl3_BOTTLE);

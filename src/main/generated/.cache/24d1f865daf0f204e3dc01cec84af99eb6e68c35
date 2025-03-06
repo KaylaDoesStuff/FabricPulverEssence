@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-05T12:19:47.1729668	PulderEssence/Model Definitions
+// 1.20.1	2025-03-06T09:37:11.6924074	PulderEssence/Model Definitions
 18a2cb7061a6d9e29ddc72ba58c0adf10c62c3f7 assets\pulderessence\models\block\pulverent_button_pressed.json
 9c5dce76ac6c5da903a9a3b2a25df075990319ce assets\pulderessence\models\item\element_2.json
 1ca30749bd518af3809dbf40a748d30a531ad7c8 assets\pulderessence\models\item\pulverent_wood.json
@@ -146,6 +146,7 @@ ff28544649ad4255f941dae3f03392d00d89334f assets\pulderessence\models\item\elemen
 fdb1a78444d6abca90613ef7a02be076ca52e160 assets\pulderessence\models\item\element_65.json
 65814a260fc6d9e605f32325a9276a2cf1fe694c assets\pulderessence\blockstates\pulverent_button.json
 eaf2ce0167d6bc59f85555c12eb20a798cecf618 assets\pulderessence\models\item\element_56.json
+918995ee875c1b0a2d680bfc6c701929ad0f7f3e assets\pulderessence\models\item\dihydrogen_sulfate_bucket_reaction.json
 813a7a47da47319a8e6b53f4927f85db1eca1d6a assets\pulderessence\models\block\raw_yttrium_block.json
 0de8115720ab7196a105dbd3f45b97274223818c assets\pulderessence\models\item\yttrium_nugget.json
 948950913915a758a18b00da9a3bf2c6d24a5e6a assets\pulderessence\models\item\element_107.json
@@ -208,6 +209,7 @@ be77718dcb03ae79b4880515ff24c6f80efce943 assets\pulderessence\models\item\faerie
 bd638a61500f69dc1343ae13bad7dda2705ada2e assets\pulderessence\models\block\pulverent_log_horizontal.json
 d7904f62edcabcf4f549d28303f00a22492e1c7f assets\pulderessence\models\item\element_44.json
 6ffc92eb10c9c0eac72ca3d5f7629010e36c840a assets\pulderessence\models\block\pulverent_button.json
+263a2bdeabef258b3776bcfbc7318b32e3c8f8a1 assets\pulderessence\models\item\sulfuric_acid_bucket.json
 8e989690b0b0c709e47a2172047ba2194d299ed3 assets\pulderessence\blockstates\deepslate_lead_ore.json
 54c5d5e0aee0a01ef6367f19c43ade0c9c62e273 assets\pulderessence\models\item\element_5.json
 6f9cc264b9e9511153ea91c125de88bd1d09b655 assets\pulderessence\models\item\mythril_rod.json
@@ -224,7 +226,6 @@ b761d961cce3a2d0e85a563decc7f2e6e44b8179 assets\pulderessence\models\item\elemen
 fc4df99dc845eb3c0c5077e24453e8109f68ffcc assets\pulderessence\models\item\energium_ore.json
 d586ed32608566576f829cf30c4bac14380d9593 assets\pulderessence\models\item\element_70.json
 97be300e6472cd6261a9c0cf633330a7cb359787 assets\pulderessence\models\item\element_48.json
-f51a0fd7148aafb82331c17c8527472d129cdffb assets\pulderessence\models\item\water_bucket_reaction.json
 73323884de382fce07ef073a6f14193f15c43c8c assets\pulderessence\models\item\element_73.json
 e90127deef9f3558cb6a0db329bca72a028c6797 assets\pulderessence\blockstates\raw_yttrium_block.json
 750d84a2ada0c21bafb8c91f4d66fcf9aed1bc75 assets\pulderessence\models\item\element_51.json
@@ -315,6 +316,7 @@ ac9afbe2eca407ee5dd11d5f03dbc228797d4239 assets\pulderessence\models\item\elemen
 c6464d110e7a333240237e6267e978b9a1f31974 assets\pulderessence\models\item\element_59.json
 547a68bb03128400dd6813182082c24f03b0a84d assets\pulderessence\models\block\pulverent_slab.json
 d861a328fd8f02b05336af5af57ebda754722b36 assets\pulderessence\models\item\element_62.json
+1775d2f16365a572e5093e8ca0042937ee75f4be assets\pulderessence\models\item\dihydrogen_monoxide_bucket_reaction.json
 f5917825bcfbb6ba024e0ccf6bde80b972f56e28 assets\pulderessence\models\block\pulverent_stairs_outer.json
 6b625eaa6dc48f6169f98dd686cef54bece12336 assets\pulderessence\models\item\element_43.json
 1c14c873d0f1bba9ae9e9f65cc3f9e1c6d07690c assets\pulderessence\models\item\element_104.json

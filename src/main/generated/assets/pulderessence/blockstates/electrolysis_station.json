@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "pulderessence:block/electrolysis_station"
+      },
+      {
+        "model": "pulderessence:block/electrolysis_station",
+        "y": 90
+      },
+      {
+        "model": "pulderessence:block/electrolysis_station",
+        "y": 180
+      },
+      {
+        "model": "pulderessence:block/electrolysis_station",
+        "y": 270
+      }
+    ]
+  }
+}

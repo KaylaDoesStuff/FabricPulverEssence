@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TextureMap;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -50,7 +52,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAD_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LEAD_BLOCK);
 
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
+        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.ELECTROLYSIS_STATION, ModBlocks.MYTHRIL_BLOCK, TextureMap.sideFrontTop(ModBlocks.ELECTROLYSIS_STATION));
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
@@ -146,10 +150,12 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModBucketItems.AMMONIA_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModBucketItems.SULFURIC_ACID_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModBucketItems.HYDROCHLORIC_ACID_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ChemicalReactionItems.H2O_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ChemicalReactionItems.NH3_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ChemicalReactionItems.H2SO4_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ChemicalReactionItems.HCl_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ChemicalReactionItems.NaOCl_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(ChemicalReactionItems.CHCl3_BOTTLE, Models.GENERATED);

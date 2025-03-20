@@ -4,11 +4,7 @@ import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TextureMap;
-import net.minecraft.util.Identifier;
+import net.minecraft.data.client.*;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -52,7 +48,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAD_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LEAD_BLOCK);
 
-        blockStateModelGenerator.registerCubeWithCustomTextures(ModBlocks.ELECTROLYSIS_STATION, ModBlocks.MYTHRIL_BLOCK, TextureMap.sideFrontTop(ModBlocks.ELECTROLYSIS_STATION));
+        blockStateModelGenerator.registerCooker(ModBlocks.ELECTROLYSIS_STATION, TexturedModel.ORIENTABLE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
 

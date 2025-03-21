@@ -8,11 +8,20 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ModElements {
+
+    private static final Map<Integer, ElementItem> ELEMENT_MAP = new HashMap<>();
 
     public static final Item PROTON = registerElement("proton", new ElementItem(new FabricItemSettings(), "p", 1, 1.6728f));
     public static final Item NEUTRON = registerElement("neutron", new ElementItem(new FabricItemSettings(), "n", 0, 1.6749f));
     public static final Item ELECTRON = registerElement("electron", new ElementItem(new FabricItemSettings(), "e", 0, 0.0000019f));
+
+    public static final Item ALPHA = registerElement("alpha_particle", new ElementItem(new FabricItemSettings(), "a", 2, 6.6447f));
+    public static final Item BETA = registerElement("beta_particle", new ElementItem(new FabricItemSettings(), "b", 0, 0.0000019f));
+    public static final Item GAMMA = registerElement("gamma_photon", new ElementItem(new FabricItemSettings(), "g", 0, 0));
 
     public static final Item HYDROGEN = registerElement("element_1", new ElementItem(new FabricItemSettings(), "H", 1, 1.008f));
     public static final Item HELIUM = registerElement("element_2", new ElementItem(new FabricItemSettings(), "He", 2, 4.003f));
@@ -133,7 +142,17 @@ public class ModElements {
     public static final Item TENNESSINE = registerElement("element_117", new ElementItem(new FabricItemSettings(), "Ts", 117, 294));
     public static final Item OGANESSON = registerElement("element_118", new ElementItem(new FabricItemSettings(), "Og", 118, 294));
 
+    public float getMass(ElementItem element) {
+        return this.element.atomicMass;
+    }
 
+    public static int getAtomicNumber(ElementItem element) {
+        return element.atomicNumber;
+    }
+
+    public static ElementItem getElementFromNumber(int atomicNumber) {
+        return ELEMENT_MAP.get(atomicNumber);
+    }
 
     private static Item registerElement(String id, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, id), item);

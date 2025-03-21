@@ -11,9 +11,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ElementItem extends Item {
-    private final String elementID;
-    private final float atomicMass;
-    private final int atomicNumber;
+    public final String elementID;
+    public final float atomicMass;
+    public final int atomicNumber;
 
     public ElementItem(Settings settings, String element, int number, float mass) {
         super(settings);

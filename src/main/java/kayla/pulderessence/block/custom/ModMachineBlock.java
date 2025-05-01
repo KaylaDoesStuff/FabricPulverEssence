@@ -12,7 +12,7 @@ public class ModMachineBlock extends Block {
 
     public void tick() {
         if(hasRecipe()) {
-            if (checkRecipe()==true) {
+            if (checkRecipe()) {
                 dropResult();
             } else {
                 progress++;
@@ -25,9 +25,9 @@ public class ModMachineBlock extends Block {
         
     }
 
-    private boolean checkRecipe() {}
+    private boolean checkRecipe() {return true;}
 
-    public boolean hasRecipe() {}
+    public boolean hasRecipe() {return true;}
 
     public Boolean getLit() {
         return lit;

@@ -23,6 +23,7 @@ public class FissionItem extends Item {
 
     private ElementItem getIsotopeResult() {
         float isotopeMass = this.reactant.atomicMass - this.radiant.atomicMass - getIsotope().atomicMass;
-        float protonIsotopeMass = ModElements.getMass() * getIsotope().atomicNumber;
+        float protonIsotopeMass = ModElements.getMassFromElement((ElementItem) ModElements.PROTON) * getIsotope().atomicNumber;
+        return
     }
 }

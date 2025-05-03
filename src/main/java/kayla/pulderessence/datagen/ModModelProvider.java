@@ -273,5 +273,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModElements.LIVERMORIUM, Models.GENERATED);
         itemModelGenerator.register(ModElements.TENNESSINE, Models.GENERATED);
         itemModelGenerator.register(ModElements.OGANESSON, Models.GENERATED);
+
+        itemModelGenerator.register(ModElements.ERIDIUM, Models.GENERATED);
     }
 }

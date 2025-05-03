@@ -6,7 +6,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.MutableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.text.Text;
 
 public class ModItems {
 

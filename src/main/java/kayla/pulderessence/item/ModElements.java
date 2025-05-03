@@ -15,7 +15,7 @@ public class ModElements {
 
 
     private static final Map<Integer, ElementItem> ELEMENT_NUMBER_MAP = new HashMap<>();
-    private static final Map<Float, ElementItem> ELEMENT_MASS_MAP = new HashMap<>();
+    private static final Map<Integer, ElementItem> ELEMENT_MASS_MAP = new HashMap<>();
     private static final Map<ElementItem, Integer> NUMBER_ELEMENT_MAP = new HashMap<>();
     private static final Map<ElementItem, Float> MASS_ELEMENT_MAP = new HashMap<>();
 
@@ -146,6 +146,9 @@ public class ModElements {
     public static final ElementItem TENNESSINE = registerElement("element_117", new ElementItem(new FabricItemSettings(), "Ts", 117, 294));
     public static final ElementItem OGANESSON = registerElement("element_118", new ElementItem(new FabricItemSettings(), "Og", 118, 294));
 
+    //Fictional Elements
+    public static final ElementItem ERIDIUM = registerElement("felement_1", new ElementItem(new FabricItemSettings(), "Ed", 40,91.82f));
+
     public float getMass(ElementItem element) {
         return element.atomicMass;
     }
@@ -160,7 +163,7 @@ public class ModElements {
         return NUMBER_ELEMENT_MAP.get(element);
     }
     public static ElementItem getElementFromMass(float mass) {
-        return ELEMENT_MASS_MAP.get(mass);
+        return ELEMENT_MASS_MAP.get(Math.round(mass));
     }
     public static float getMassFromElement(ElementItem element) {
         return MASS_ELEMENT_MAP.get(element);
@@ -170,7 +173,7 @@ public class ModElements {
         ElementItem registeredItem = (ElementItem) Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, id), item);
 
         ELEMENT_NUMBER_MAP.put(item.atomicNumber, registeredItem);
-        ELEMENT_MASS_MAP.put(item.atomicMass, registeredItem);
+        ELEMENT_MASS_MAP.put(Math.round(item.atomicMass), registeredItem);
         NUMBER_ELEMENT_MAP.put(registeredItem, item.atomicNumber);
         MASS_ELEMENT_MAP.put(registeredItem, item.atomicMass);
 

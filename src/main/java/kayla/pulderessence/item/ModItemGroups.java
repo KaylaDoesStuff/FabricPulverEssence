@@ -265,6 +265,8 @@ public class ModItemGroups {
                         entries.add(ModElements.LIVERMORIUM);
                         entries.add(ModElements.TENNESSINE);
                         entries.add(ModElements.OGANESSON);
+
+                        entries.add(ModElements.ERIDIUM);
                     }).build());
 
     public static void registerItemGroups() {}

@@ -11,7 +11,6 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     //ingots
-    public static final Item SILICON_INGOT = registerItems("silicon_ingot", new Item(new FabricItemSettings()));
     public static final Item LEAD_INGOT = registerItems("lead_ingot", new Item(new FabricItemSettings()));
     public static final Item SILVER_INGOT = registerItems("silver_ingot", new Item(new FabricItemSettings()));
     public static final Item YTTRIUM_INGOT = registerItems("yttrium_ingot", new Item(new FabricItemSettings()));
@@ -34,6 +33,16 @@ public class ModItems {
     public static final Item TITANIUM_INGOT = registerItems("titanium_ingot", new Item(new FabricItemSettings()));
     public static final Item VANADIUM_INGOT = registerItems("vanadium_ingot", new Item(new FabricItemSettings()));
     public static final Item ZINC_INGOT = registerItems("zinc_ingot", new Item(new FabricItemSettings()));
+    public static final Item BERYLLIUM_INGOT = registerItems("eridium_ingot", new Item(new FabricItemSettings()));
+    public static final Item DUBNIUM_INGOT = registerItems("gallium_ingot", new Item(new FabricItemSettings()));
+    public static final Item DYSPROSIUM_INGOT = registerItems("germanium_ingot", new Item(new FabricItemSettings()));
+    public static final Item ENERGIUM_INGOT = registerItems("iridium_ingot", new Item(new FabricItemSettings()));
+    public static final Item RUBIDIUM_INGOT = registerItems("magnesium_ingot", new Item(new FabricItemSettings()));
+    public static final Item RUTHENIUM_INGOT = registerItems("manganese_ingot", new Item(new FabricItemSettings()));
+    public static final Item RUTHERFORDIUM_INGOT = registerItems("naquadah_ingot", new Item(new FabricItemSettings()));
+    public static final Item STRONTIUM_INGOT = registerItems("nickel_ingot", new Item(new FabricItemSettings()));
+    public static final Item TANTALUM_INGOT = registerItems("titanium_ingot", new Item(new FabricItemSettings()));
+    public static final Item THORIUM_INGOT = registerItems("vanadium_ingot", new Item(new FabricItemSettings()));
 
     //rods
     public static final Item GOLD_ROD = registerItems("gold_rod", new Item(new FabricItemSettings()));
@@ -46,6 +55,23 @@ public class ModItems {
     public static final Item TUNGSTEN_ROD = registerItems("tungsten_rod", new Item(new FabricItemSettings()));
     public static final Item MYTHRIL_ROD = registerItems("mythril_rod", new Item(new FabricItemSettings()));
     public static final Item INDIUM_ROD = registerItems("indium_rod", new Item(new FabricItemSettings()));
+    public static final Item ALUMINUM_ROD = registerItems("aluminum_rod", new Item(new FabricItemSettings()));
+    public static final Item BRONZE_ROD = registerItems("bronze_rod", new Item(new FabricItemSettings()));
+    public static final Item CARBON_ROD = registerItems("carbon_rod", new Item(new FabricItemSettings()));
+    public static final Item CHROMIUM_ROD = registerItems("chromium_rod", new Item(new FabricItemSettings()));
+    public static final Item COBALT_ROD = registerItems("cobalt_rod", new Item(new FabricItemSettings()));
+    public static final Item ERIDIUM_ROD = registerItems("eridium_rod", new Item(new FabricItemSettings()));
+    public static final Item GALLIUM_ROD = registerItems("gallium_rod", new Item(new FabricItemSettings()));
+    public static final Item GERMANIUM_ROD = registerItems("germanium_rod", new Item(new FabricItemSettings()));
+    public static final Item IRIDIUM_ROD = registerItems("iridium_rod", new Item(new FabricItemSettings()));
+    public static final Item MAGNESIUM_ROD = registerItems("magnesium_rod", new Item(new FabricItemSettings()));
+    public static final Item MANGANESE_ROD = registerItems("manganese_rod", new Item(new FabricItemSettings()));
+    public static final Item NAQUADAH_ROD = registerItems("naquadah_rod", new Item(new FabricItemSettings()));
+    public static final Item NICKEL_ROD = registerItems("nickel_rod", new Item(new FabricItemSettings()));
+    public static final Item SILICON_ROD = registerItems("silison_rod", new Item(new FabricItemSettings()));
+    public static final Item TITANIUM_ROD = registerItems("titanium_rod", new Item(new FabricItemSettings()));
+    public static final Item VANADIUM_ROD = registerItems("vanadium_rod", new Item(new FabricItemSettings()));
+    public static final Item ZINC_ROD = registerItems("zinc_rod", new Item(new FabricItemSettings()));
 
     //dusts
     public static final Item GOLD_DUST = registerItems("gold_dust", new Item(new FabricItemSettings()));
@@ -58,6 +84,23 @@ public class ModItems {
     public static final Item MYTHRIL_DUST = registerItems("mythril_dust", new Item(new FabricItemSettings()));
     public static final Item FAERIE_DUST = registerItems("faerie_dust", new Item(new FabricItemSettings()));
     public static final Item TUNGSTEN_DUST = registerItems("tungsten_dust", new Item(new FabricItemSettings()));
+    public static final Item ALUMINUM_DUST = registerItems("aluminum_dust", new Item(new FabricItemSettings()));
+    public static final Item BRONZE_DUST = registerItems("bronze_dust", new Item(new FabricItemSettings()));
+    public static final Item CARBON_DUST = registerItems("carbon_dust", new Item(new FabricItemSettings()));
+    public static final Item CHROMIUM_DUST = registerItems("chromium_dust", new Item(new FabricItemSettings()));
+    public static final Item COBALT_DUST = registerItems("cobalt_dust", new Item(new FabricItemSettings()));
+    public static final Item ERIDIUM_DUST = registerItems("eridium_dust", new Item(new FabricItemSettings()));
+    public static final Item GALLIUM_DUST = registerItems("gallium_dust", new Item(new FabricItemSettings()));
+    public static final Item GERMANIUM_DUST = registerItems("germanium_dust", new Item(new FabricItemSettings()));
+    public static final Item IRIDIUM_DUST = registerItems("iridium_dust", new Item(new FabricItemSettings()));
+    public static final Item MAGNESIUM_DUST = registerItems("magnesium_dust", new Item(new FabricItemSettings()));
+    public static final Item MANGANESE_DUST = registerItems("manganese_dust", new Item(new FabricItemSettings()));
+    public static final Item NAQUADAH_DUST = registerItems("naquadah_dust", new Item(new FabricItemSettings()));
+    public static final Item NICKEL_DUST = registerItems("nickel_dust", new Item(new FabricItemSettings()));
+    public static final Item SILICON_DUST = registerItems("silicon_dust", new Item(new FabricItemSettings()));
+    public static final Item TITANIUM_DUST = registerItems("titanium_dust", new Item(new FabricItemSettings()));
+    public static final Item VANADIUM_DUST = registerItems("vanadium_dust", new Item(new FabricItemSettings()));
+    public static final Item ZINC_DUST = registerItems("zinc_dust", new Item(new FabricItemSettings()));
 
     //charged rods
     public static final Item CHARGED_GOLD_ROD = registerItems("charged_gold_rod", new ChargedItem(new FabricItemSettings(), 6));
@@ -87,6 +130,12 @@ public class ModItems {
     public static final Item RAW_YTTRIUM = registerItems("raw_yttrium", new Item(new FabricItemSettings()));
     public static final Item RAW_SILVER = registerItems("raw_silver", new Item(new FabricItemSettings()));
     public static final Item RAW_ENERGIUM = registerItems("raw_energium", new Item(new FabricItemSettings()));
+    public static final Item RAW_ALUMINUM = registerItems("raw_aluminum", new Item(new FabricItemSettings()));
+    public static final Item RAW_COBALT = registerItems("raw_cobalt", new Item(new FabricItemSettings()));
+    public static final Item RAW_GERMANIUM = registerItems("raw_germanium", new Item(new FabricItemSettings()));
+    public static final Item RAW_MANGANESE = registerItems("raw_manganese", new Item(new FabricItemSettings()));
+    public static final Item RAW_NICKEL = registerItems("raw_nickel", new Item(new FabricItemSettings()));
+    public static final Item RAW_ZINC = registerItems("raw_zinc", new Item(new FabricItemSettings()));
 
     //crafting
     public static final Item ENERGIUM_SHARD = registerItems("energium_shard", new Item(new FabricItemSettings()));

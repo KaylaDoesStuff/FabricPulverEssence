@@ -1,17 +1,21 @@
 package kayla.pulderessence.block.custom;
 
 import kayla.pulderessence.block.entity.ImplementedInventory;
-import kayla.pulderessence.block.entity.ModBlockEntities;
 import kayla.pulderessence.recipe.MachineRecipe;
 import kayla.pulderessence.recipe.RecipeManager;
+import kayla.pulderessence.block.entity.ModBlockEntities;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,7 +27,7 @@ public class ModMachineBlockEntity extends BlockEntity implements ImplementedInv
     private final String machineName;
 
     public ModMachineBlockEntity(String machineName) {
-        super(ModBlockEntities.MACHINE_BLOCK_ENTITY);
+        super(ModMachineBlockEntity::new); // Ensure to call the super constructor with the correct BlockEntityType
         this.items = DefaultedList.ofSize(3, ItemStack.EMPTY); // Example size
         this.machineName = machineName;
         this.powerStored = 0;
@@ -61,10 +65,24 @@ public class ModMachineBlockEntity extends BlockEntity implements ImplementedInv
     }
 
     private void explode() {
-        // Logic for explosion (e.g., destroy the block, create an explosion effect)
-        // This is a placeholder; implement your explosion logic here
-        System.out.println("Machine exploded due to excess voltage!");
-        world.removeBlock(getPos(), false); // Remove the block
+        // Create an explosion at the block's position
+        if (world != null) {
+            world.createExplosion(null, getPos().getX(), getPos().getY(), getPos().getZ(), 4.0F, Explosion.DestructionType.DESTROY);
+        }
+
+        // Remove the block
+        world.removeBlock(getPos(), false); // Remove the block without dropping items
+
+        // Optionally, drop items from the inventory
+        for (ItemStack itemStack : items) {
+            if (!itemStack.isEmpty()) {
+                ItemEntity itemEntity = new ItemEntity(world, getPos().getX(), getPos().getY(), getPos().getZ(), itemStack);
+                world.spawnEntity(itemEntity);
+            }
+        }
+
+        // Reset power stored to prevent further processing
+        powerStored = 0;
     }
 
     private boolean canProcessRecipe() {
@@ -112,8 +130,6 @@ public class ModMachineBlockEntity extends BlockEntity implements ImplementedInv
         Inventories.writeNbt(tag, items);
         return tag;
     }
-
-    // Implement other methods from ImplementedInventory and SidedInventory as needed
     @Override
     public int[] getAvailableSlots(Direction side) {
         return new int[]{0, 1}; // Input and output slots
@@ -131,6 +147,6 @@ public class ModMachineBlockEntity extends BlockEntity implements ImplementedInv
 
     @Override
     public void markDirty() {
-        super.markDirty;
+        super.markDirty(); // Corrected method call
     }
 }

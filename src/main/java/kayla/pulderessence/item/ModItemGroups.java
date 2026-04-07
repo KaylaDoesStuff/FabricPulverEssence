@@ -267,6 +267,7 @@ public class ModItemGroups {
                         entries.add(ModElements.OGANESSON);
 
                         entries.add(ModElements.ERIDIUM);
+                        entries.add(ModElements.NAQUADRIUM);
                     }).build());
 
     public static void registerItemGroups() {}

@@ -12,6 +12,7 @@ public class ModItems {
 
     //ingots
     public static final Item LEAD_INGOT = registerItems("lead_ingot", new Item(new FabricItemSettings()));
+    public static final Item SILICON_INGOT = registerItems("silicon_ingot", new Item(new FabricItemSettings()));
     public static final Item SILVER_INGOT = registerItems("silver_ingot", new Item(new FabricItemSettings()));
     public static final Item YTTRIUM_INGOT = registerItems("yttrium_ingot", new Item(new FabricItemSettings()));
     public static final Item INDIUM_INGOT = registerItems("indium_ingot", new Item(new FabricItemSettings()));

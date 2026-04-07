@@ -275,5 +275,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModElements.OGANESSON, Models.GENERATED);
 
         itemModelGenerator.register(ModElements.ERIDIUM, Models.GENERATED);
+        itemModelGenerator.register(ModElements.NAQUADRIUM, Models.GENERATED);
     }
 }

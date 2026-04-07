@@ -19,12 +19,12 @@ public class ModElements {
     private static final Map<ElementItem, Integer> NUMBER_ELEMENT_MAP = new HashMap<>();
     private static final Map<ElementItem, Float> MASS_ELEMENT_MAP = new HashMap<>();
 
-    public static final ElementItem PROTON = registerElement("proton", new ElementItem(new FabricItemSettings(), "p", 1, 1.6728f));
-    public static final ElementItem NEUTRON = registerElement("neutron", new ElementItem(new FabricItemSettings(), "n", 0, 1.6749f));
-    public static final ElementItem ELECTRON = registerElement("electron", new ElementItem(new FabricItemSettings(), "e", 0, 0.0000019f));
+    public static final ElementItem PROTON = registerElement("proton", new ElementItem(new FabricItemSettings(), "p", 1, 1.007f));
+    public static final ElementItem NEUTRON = registerElement("neutron", new ElementItem(new FabricItemSettings(), "n", 0, 1.008f));
+    public static final ElementItem ELECTRON = registerElement("electron", new ElementItem(new FabricItemSettings(), "e", 0, 0.0005f));
 
-    public static final ElementItem ALPHA = registerElement("alpha_particle", new ElementItem(new FabricItemSettings(), "a", 2, 6.6447f));
-    public static final ElementItem BETA = registerElement("beta_particle", new ElementItem(new FabricItemSettings(), "b", 0, 0.0000019f));
+    public static final ElementItem ALPHA = registerElement("alpha_particle", new ElementItem(new FabricItemSettings(), "a", 2, 4.002f));
+    public static final ElementItem BETA = registerElement("beta_particle", new ElementItem(new FabricItemSettings(), "b", 0, 0.0005f));
     public static final ElementItem GAMMA = registerElement("gamma_photon", new ElementItem(new FabricItemSettings(), "g", 0, 0));
 
     public static final ElementItem HYDROGEN = registerElement("element_1", new ElementItem(new FabricItemSettings(), "H", 1, 1.008f));
@@ -148,6 +148,7 @@ public class ModElements {
 
     //Fictional Elements
     public static final ElementItem ERIDIUM = registerElement("felement_1", new ElementItem(new FabricItemSettings(), "Ed", 40,91.82f));
+    public static final ElementItem NAQUADRIUM = registerElement("felement_2", new ElementItem(new FabricItemSettings(), "Nq", 119, 295.12f));
 
     public float getMass(ElementItem element) {
         return element.atomicMass;
@@ -170,7 +171,7 @@ public class ModElements {
     }
 
     private static ElementItem registerElement(String id, ElementItem item) {
-        ElementItem registeredItem = (ElementItem) Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, id), item);
+        ElementItem registeredItem = Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, id), item);
 
         ELEMENT_NUMBER_MAP.put(item.atomicNumber, registeredItem);
         ELEMENT_MASS_MAP.put(Math.round(item.atomicMass), registeredItem);

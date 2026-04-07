@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_element_7": {
+    "has_indium_nugget": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:element_7"
+              "pulderessence:indium_nugget"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:progressable_item.pulderessence.ammonia_bucket_reaction"
+        "recipe": "minecraft:item.pulderessence.indium_ingot_from_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_element_7",
+      "has_indium_nugget",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:progressable_item.pulderessence.ammonia_bucket_reaction"
+      "minecraft:item.pulderessence.indium_ingot_from_nugget"
     ]
   },
   "sends_telemetry_event": false

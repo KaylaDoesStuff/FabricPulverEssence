@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:tungsten_ingot_from_nugget"
+        "recipe": "minecraft:item.pulderessence.tungsten_ingot_from_nugget"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tungsten_ingot_from_nugget"
+      "minecraft:item.pulderessence.tungsten_ingot_from_nugget"
     ]
   },
   "sends_telemetry_event": false

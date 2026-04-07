@@ -17,4 +17,6 @@ public class RawOreItem {
     private static CompoundItem registerCompoundItem(String name, CompoundItem item) {
         return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
     }
+
+    public static void registerModCompoundItems() {}
 }

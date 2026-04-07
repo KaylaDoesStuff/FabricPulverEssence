@@ -11,39 +11,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     //ingots
-    public static final Item LEAD_INGOT = registerItems("lead_ingot", new Item(new FabricItemSettings()));
-    public static final Item SILICON_INGOT = registerItems("silicon_ingot", new Item(new FabricItemSettings()));
-    public static final Item SILVER_INGOT = registerItems("silver_ingot", new Item(new FabricItemSettings()));
-    public static final Item YTTRIUM_INGOT = registerItems("yttrium_ingot", new Item(new FabricItemSettings()));
-    public static final Item INDIUM_INGOT = registerItems("indium_ingot", new Item(new FabricItemSettings()));
-    public static final Item TUNGSTEN_INGOT = registerItems("tungsten_ingot", new Item(new FabricItemSettings()));
-    public static final Item MYTHRIL_INGOT = registerItems("mythril_ingot", new Item(new FabricItemSettings()));
-    public static final Item ALUMINUM_INGOT = registerItems("aluminum_ingot", new Item(new FabricItemSettings()));
-    public static final Item BRONZE_INGOT = registerItems("bronze_ingot", new Item(new FabricItemSettings()));
-    public static final Item CARBON_INGOT = registerItems("carbon_ingot", new Item(new FabricItemSettings()));
-    public static final Item CHROMIUM_INGOT = registerItems("chromium_ingot", new Item(new FabricItemSettings()));
-    public static final Item COBALT_INGOT = registerItems("cobalt_ingot", new Item(new FabricItemSettings()));
-    public static final Item ERIDIUM_INGOT = registerItems("eridium_ingot", new Item(new FabricItemSettings()));
-    public static final Item GALLIUM_INGOT = registerItems("gallium_ingot", new Item(new FabricItemSettings()));
-    public static final Item GERMANIUM_INGOT = registerItems("germanium_ingot", new Item(new FabricItemSettings()));
-    public static final Item IRIDIUM_INGOT = registerItems("iridium_ingot", new Item(new FabricItemSettings()));
-    public static final Item MAGNESIUM_INGOT = registerItems("magnesium_ingot", new Item(new FabricItemSettings()));
-    public static final Item MANGANESE_INGOT = registerItems("manganese_ingot", new Item(new FabricItemSettings()));
-    public static final Item NAQUADAH_INGOT = registerItems("naquadah_ingot", new Item(new FabricItemSettings()));
-    public static final Item NICKEL_INGOT = registerItems("nickel_ingot", new Item(new FabricItemSettings()));
-    public static final Item TITANIUM_INGOT = registerItems("titanium_ingot", new Item(new FabricItemSettings()));
-    public static final Item VANADIUM_INGOT = registerItems("vanadium_ingot", new Item(new FabricItemSettings()));
-    public static final Item ZINC_INGOT = registerItems("zinc_ingot", new Item(new FabricItemSettings()));
-    public static final Item BERYLLIUM_INGOT = registerItems("eridium_ingot", new Item(new FabricItemSettings()));
-    public static final Item DUBNIUM_INGOT = registerItems("gallium_ingot", new Item(new FabricItemSettings()));
-    public static final Item DYSPROSIUM_INGOT = registerItems("germanium_ingot", new Item(new FabricItemSettings()));
-    public static final Item ENERGIUM_INGOT = registerItems("iridium_ingot", new Item(new FabricItemSettings()));
-    public static final Item RUBIDIUM_INGOT = registerItems("magnesium_ingot", new Item(new FabricItemSettings()));
-    public static final Item RUTHENIUM_INGOT = registerItems("manganese_ingot", new Item(new FabricItemSettings()));
-    public static final Item RUTHERFORDIUM_INGOT = registerItems("naquadah_ingot", new Item(new FabricItemSettings()));
-    public static final Item STRONTIUM_INGOT = registerItems("nickel_ingot", new Item(new FabricItemSettings()));
-    public static final Item TANTALUM_INGOT = registerItems("titanium_ingot", new Item(new FabricItemSettings()));
-    public static final Item THORIUM_INGOT = registerItems("vanadium_ingot", new Item(new FabricItemSettings()));
+
 
     //rods
     public static final Item GOLD_ROD = registerItems("gold_rod", new Item(new FabricItemSettings()));

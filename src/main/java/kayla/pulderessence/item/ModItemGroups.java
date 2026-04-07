@@ -3,8 +3,10 @@ package kayla.pulderessence.item;
 import kayla.pulderessence.PulderEssence;
 import kayla.pulderessence.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -16,8 +18,7 @@ public class ModItemGroups {
             new Identifier(PulderEssence.MOD_ID, "items"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("group.items"))
-                    .icon(() -> new ItemStack(ModItems.MYTHRIL_INGOT)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.MYTHRIL_INGOT);
+                    .icon(() -> new ItemStack(IngotItem.MYTHRIL_INGOT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MYTHRIL_DUST);
                         entries.add(ModItems.MYTHRIL_SWORD);
                         entries.add(ModItems.MYTHRIL_AXE);
@@ -30,35 +31,30 @@ public class ModItemGroups {
                         entries.add(ModItems.CHARGED_MYTHRIL_ROD);
 
                         entries.add(ModItems.INDIUM_NUGGET);
-                        entries.add(ModItems.INDIUM_INGOT);
                         entries.add(ModItems.INDIUM_DUST);
                         entries.add(ModItems.RAW_INDIUM);
                         entries.add(ModItems.INDIUM_ROD);
                         entries.add(ModItems.CHARGED_INDIUM_ROD);
 
                         entries.add(ModItems.LEAD_NUGGET);
-                        entries.add(ModItems.LEAD_INGOT);
                         entries.add(ModItems.LEAD_DUST);
                         entries.add(ModItems.RAW_LEAD);
                         entries.add(ModItems.LEAD_ROD);
                         entries.add(ModItems.CHARGED_LEAD_ROD);
 
                         entries.add(ModItems.SILVER_NUGGET);
-                        entries.add(ModItems.SILVER_INGOT);
                         entries.add(ModItems.SILVER_DUST);
                         entries.add(ModItems.RAW_SILVER);
                         entries.add(ModItems.SILVER_ROD);
                         entries.add(ModItems.CHARGED_SILVER_ROD);
 
                         entries.add(ModItems.YTTRIUM_NUGGET);
-                        entries.add(ModItems.YTTRIUM_INGOT);
                         entries.add(ModItems.YTTRIUM_DUST);
                         entries.add(ModItems.RAW_YTTRIUM);
                         entries.add(ModItems.YTTRIUM_ROD);
                         entries.add(ModItems.CHARGED_YTTRIUM_ROD);
 
                         entries.add(ModItems.TUNGSTEN_NUGGET);
-                        entries.add(ModItems.TUNGSTEN_INGOT);
                         entries.add(ModItems.TUNGSTEN_DUST);
                         entries.add(ModItems.RAW_TUNGSTEN);
                         entries.add(ModItems.TUNGSTEN_ROD);
@@ -70,7 +66,6 @@ public class ModItemGroups {
                         entries.add(ModItems.ENERGIUM_ROD);
                         entries.add(ModItems.CHARGED_ENERGIUM_ROD);
 
-                        entries.add(ModItems.SILICON_INGOT);
                         entries.add(ModItems.SILICON_BOULE);
 
                         entries.add(ModItems.FAERIE_DUST);
@@ -140,6 +135,50 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PULVERENT_WOOD);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_LOG);
                         entries.add(ModBlocks.STRIPPED_PULVERENT_WOOD);
+                    }).build());
+
+    public static final ItemGroup INGOTS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PulderEssence.MOD_ID, "ingots"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("group.ingots"))
+                    .icon(() -> new ItemStack(IngotItem.IRON_INGOT)).entries((displayContext, entries) -> {
+                        entries.add(IngotItem.INDIUM_INGOT);
+                        entries.add(IngotItem.ALUMINUM_INGOT);
+                        entries.add(IngotItem.BRONZE_INGOT);
+                        entries.add(IngotItem.CARBON_INGOT);
+                        entries.add(IngotItem.CHROMIUM_INGOT);
+                        entries.add(IngotItem.COBALT_INGOT);
+                        entries.add(IngotItem.ERIDIUM_INGOT);
+                        entries.add(IngotItem.GALLIUM_INGOT);
+                        entries.add(IngotItem.GERMANIUM_INGOT);
+                        entries.add(IngotItem.IRIDIUM_INGOT);
+                        entries.add(IngotItem.MAGNESIUM_INGOT);
+                        entries.add(IngotItem.MANGANESE_INGOT);
+                        entries.add(IngotItem.NAQUADAH_INGOT);
+                        entries.add(IngotItem.NICKEL_INGOT);
+                        entries.add(IngotItem.TITANIUM_INGOT);
+                        entries.add(IngotItem.VANADIUM_INGOT);
+                        entries.add(IngotItem.ZINC_INGOT);
+                        entries.add(IngotItem.BERYLLIUM_INGOT);
+                        entries.add(IngotItem.DUBNIUM_INGOT);
+                        entries.add(IngotItem.DYSPROSIUM_INGOT);
+                        entries.add(IngotItem.ENERGIUM_INGOT);
+                        entries.add(IngotItem.RUBIDIUM_INGOT);
+                        entries.add(IngotItem.RUTHENIUM_INGOT);
+                        entries.add(IngotItem.RUTHERFORDIUM_INGOT);
+                        entries.add(IngotItem.STRONTIUM_INGOT);
+                        entries.add(IngotItem.TANTALUM_INGOT);
+                        entries.add(IngotItem.THORIUM_INGOT);
+                        entries.add(IngotItem.IRON_INGOT);
+                        entries.add(IngotItem.COPPER_INGOT);
+                        entries.add(IngotItem.LEAD_INGOT);
+                        entries.add(IngotItem.SILVER_INGOT);
+                        entries.add(IngotItem.YTTRIUM_INGOT);
+                        entries.add(IngotItem.TUNGSTEN_INGOT);
+                        entries.add(IngotItem.SILICON_INGOT);
+                        entries.add(IngotItem.GOLD_INGOT);
+                        entries.add(IngotItem.CUPRONICKEL_INGOT);
+                        entries.add(IngotItem.MYTHRIL_INGOT);
                     }).build());
 
     public static final ItemGroup ELEMENTS = Registry.register(Registries.ITEM_GROUP,

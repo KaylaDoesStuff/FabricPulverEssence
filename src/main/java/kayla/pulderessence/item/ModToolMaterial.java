@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     MYTHRIL(2, 400, 0.3f, 2.5f, 20,
-            () -> Ingredient.ofItems(ModItems.MYTHRIL_INGOT));
+            () -> Ingredient.ofItems(IngotItem.MYTHRIL_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

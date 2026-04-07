@@ -48,10 +48,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LEAD_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LEAD_BLOCK);
 
-        blockStateModelGenerator.registerCooker(ModBlocks.ELECTROLYSIS_STATION, TexturedModel.ORIENTABLE);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARGING_STATION);
-
         blockStateModelGenerator.registerNetherrackBottomCustomTop(ModBlocks.PULVERENT_NYLIUM);
         blockStateModelGenerator.registerLog(ModBlocks.PULVERENT_LOG).log(ModBlocks.PULVERENT_LOG).wood(ModBlocks.PULVERENT_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_PULVERENT_LOG).log(ModBlocks.STRIPPED_PULVERENT_LOG).wood(ModBlocks.STRIPPED_PULVERENT_WOOD);
@@ -71,7 +67,45 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        itemModelGenerator.register(ModItems.MYTHRIL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.COPPER_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.GOLD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MYTHRIL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.IRON_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.INDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.SILVER_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.LEAD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TUNGSTEN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.YTTRIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CUPRONICKEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUMINUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CARBON_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CHROMIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.COBALT_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ERIDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.GALLIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.GERMANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.IRIDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MAGNESIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MANGANESE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NAQUADAH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NICKEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TITANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.VANADIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ZINC_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BERYLLIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.DUBNIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.DYSPROSIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ENERGIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RUBIDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RUTHENIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RUTHERFORDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.STRONTIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TANTALUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.THORIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.SILICON_INGOT, Models.GENERATED);
+
+
         itemModelGenerator.register(ModItems.MYTHRIL_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_MYTHRIL_ROD, Models.HANDHELD_ROD);
@@ -86,35 +120,30 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHARGED_IRON_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.IRON_DUST,Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.INDIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_INDIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_INDIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.INDIUM_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.SILVER_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILVER_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILVER_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_SILVER_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_SILVER, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILVER_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.LEAD_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEAD_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEAD_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_LEAD_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_LEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.LEAD_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_TUNGSTEN_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TUNGSTEN_NUGGET, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.YTTRIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.YTTRIUM_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.YTTRIUM_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_YTTRIUM_ROD, Models.HANDHELD_ROD);
@@ -137,7 +166,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FAERIE_ROD, Models.HANDHELD_ROD);
         itemModelGenerator.register(ModItems.CHARGED_FAERIE_ROD, Models.HANDHELD_ROD);
 
-        itemModelGenerator.register(ModItems.SILICON_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SILICON_BOULE, Models.GENERATED);
 
 

@@ -1,9 +1,11 @@
 package kayla.pulderessence.datagen;
 
 import kayla.pulderessence.block.ModBlocks;
+import kayla.pulderessence.item.IngotItem;
 import kayla.pulderessence.item.ModElements;
 import kayla.pulderessence.item.ChemicalReactionItems;
 import kayla.pulderessence.item.ModItems;
+import kayla.pulderessence.item.custom.CompoundItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -100,6 +102,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
     }
 
+    private void convertableNuggetIngot(Consumer<RecipeJsonProvider> exporter, CompoundItem ingot, Item nugget) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, nugget, 9)
+                .input(ingot, 1)
+                .criterion(hasItem(ingot), conditionsFromItem(ingot))
+                .offerTo(exporter, new Identifier(nugget.getTranslationKey() + "s_from_ingot"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ingot, 1)
+                .input(nugget, 9)
+                .criterion(hasItem(nugget), conditionsFromItem(nugget))
+                .offerTo(exporter, new Identifier(ingot.getTranslationKey() + "_from_nugget"));
+    }
+
+    private void rodRecipe(Consumer<RecipeJsonProvider> exporter, CompoundItem item, Item output) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
+                .pattern("M")
+                .pattern("M")
+                .input('M', item)
+                .criterion(hasItem(item), conditionsFromItem(item))
+                .offerTo(exporter, new Identifier(getRecipeName(output)));
+    }
     @Override    
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         bucketElementRecipe(exporter, ModElements.HYDROGEN, 2, ModElements.OXYGEN, 1, ChemicalReactionItems.H2O_BUCKET);
@@ -110,138 +132,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         bottleElementRecipe(exporter, ModElements.SODIUM, 1, ModElements.OXYGEN, 1, ModElements.CHLORINE, 1, ChemicalReactionItems.NaOCl_BOTTLE);
         bottleElementRecipe(exporter, ModElements.CARBON, 1, ModElements.HYDROGEN, 1, ModElements.CHLORINE, 3, ChemicalReactionItems.CHCl3_BOTTLE);
 
-        offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 200, "mythril");
-        offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 0.7f, 100, "mythril");
+        offerSmelting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, IngotItem.MYTHRIL_INGOT, 0.7f, 200, "mythril");
+        offerBlasting(exporter, MYTHRIL_SMELTABLES, RecipeCategory.MISC, IngotItem.MYTHRIL_INGOT, 0.7f, 100, "mythril");
 
-        offerSmelting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 200, "indium");
-        offerBlasting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.INDIUM_INGOT, 0.7f, 100, "indium");
+        offerSmelting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, IngotItem.INDIUM_INGOT, 0.7f, 200, "indium");
+        offerBlasting(exporter, INDIUM_SMELTABLES, RecipeCategory.MISC, IngotItem.INDIUM_INGOT, 0.7f, 100, "indium");
 
-        offerSmelting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 200, "tungsten");
-        offerBlasting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 0.7f, 100, "tungsten");
+        offerSmelting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, IngotItem.TUNGSTEN_INGOT, 0.7f, 200, "tungsten");
+        offerBlasting(exporter, TUNGSTEN_SMELTABLES, RecipeCategory.MISC, IngotItem.TUNGSTEN_INGOT, 0.7f, 100, "tungsten");
 
         offerSmelting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 200, "energium");
         offerBlasting(exporter, ENERGIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENERGIUM_SHARD, 0.7f, 100, "energium");
 
-        offerSmelting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 0.7f, 200, "yttrium");
-        offerBlasting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 0.7f, 100, "yttrium");
+        offerSmelting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, IngotItem.YTTRIUM_INGOT, 0.7f, 200, "yttrium");
+        offerBlasting(exporter, YTTRIUM_SMELTABLES, RecipeCategory.MISC, IngotItem.YTTRIUM_INGOT, 0.7f, 100, "yttrium");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, IngotItem.MYTHRIL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.MYTHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_MYTHRIL, RecipeCategory.DECORATIONS, ModBlocks.RAW_MYTHRIL_BLOCK);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.INDIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.INDIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, IngotItem.INDIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.INDIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_INDIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_INDIUM_BLOCK);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TUNGSTEN_INGOT, RecipeCategory.DECORATIONS, ModBlocks.TUNGSTEN_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, IngotItem.TUNGSTEN_INGOT, RecipeCategory.DECORATIONS, ModBlocks.TUNGSTEN_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TUNGSTEN, RecipeCategory.DECORATIONS, ModBlocks.RAW_TUNGSTEN_BLOCK);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.YTTRIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.YTTRIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, IngotItem.YTTRIUM_INGOT, RecipeCategory.DECORATIONS, ModBlocks.YTTRIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_YTTRIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_YTTRIUM_BLOCK);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ENERGIUM_SHARD, RecipeCategory.DECORATIONS, ModBlocks.ENERGIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_ENERGIUM, RecipeCategory.DECORATIONS, ModBlocks.RAW_ENERGIUM_BLOCK);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_NUGGET, 9)
-                .input(ModItems.MYTHRIL_INGOT, 1)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
-                .offerTo(exporter, new Identifier("mythril_nuggets_from_ingot"));
+        convertableNuggetIngot(exporter, IngotItem.MYTHRIL_INGOT, ModItems.MYTHRIL_NUGGET);
+        convertableNuggetIngot(exporter, IngotItem.YTTRIUM_INGOT, ModItems.YTTRIUM_NUGGET);
+        convertableNuggetIngot(exporter, IngotItem.INDIUM_INGOT, ModItems.INDIUM_NUGGET);
+        convertableNuggetIngot(exporter, IngotItem.TUNGSTEN_INGOT, ModItems.TUNGSTEN_NUGGET);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_INGOT, 1)
-                .input(ModItems.MYTHRIL_NUGGET, 9)
-                .criterion(hasItem(ModItems.MYTHRIL_NUGGET), conditionsFromItem(ModItems.MYTHRIL_NUGGET))
-                .offerTo(exporter, new Identifier("mythril_ingot_from_nugget"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_NUGGET, 9)
-                .input(ModItems.YTTRIUM_INGOT, 1)
-                .criterion(hasItem(ModItems.YTTRIUM_INGOT), conditionsFromItem(ModItems.YTTRIUM_INGOT))
-                .offerTo(exporter, new Identifier("yttrium_nuggets_from_ingot"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_INGOT, 1)
-                .input(ModItems.YTTRIUM_NUGGET, 9)
-                .criterion(hasItem(ModItems.YTTRIUM_NUGGET), conditionsFromItem(ModItems.YTTRIUM_NUGGET))
-                .offerTo(exporter, new Identifier("yttrium_ingot_from_nugget"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_NUGGET, 9)
-                .input(ModItems.INDIUM_INGOT, 1)
-                .criterion(hasItem(ModItems.INDIUM_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
-                .offerTo(exporter, new Identifier("indium_nuggets_from_ingot"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_INGOT, 1)
-                .input(ModItems.INDIUM_NUGGET, 9)
-                .criterion(hasItem(ModItems.INDIUM_NUGGET), conditionsFromItem(ModItems.INDIUM_NUGGET))
-                .offerTo(exporter, new Identifier("indium_ingot_from_nugget"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_NUGGET, 9)
-                .input(ModItems.TUNGSTEN_INGOT, 1)
-                .criterion(hasItem(ModItems.TUNGSTEN_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
-                .offerTo(exporter, new Identifier("tungsten_nuggets_from_ingot"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_INGOT, 1)
-                .input(ModItems.TUNGSTEN_NUGGET, 9)
-                .criterion(hasItem(ModItems.TUNGSTEN_NUGGET), conditionsFromItem(ModItems.TUNGSTEN_NUGGET))
-                .offerTo(exporter, new Identifier("tungsten_ingot_from_nugget"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MYTHRIL_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.MYTHRIL_NUGGET)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YTTRIUM_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.YTTRIUM_NUGGET)
-                .criterion(hasItem(ModItems.YTTRIUM_INGOT), conditionsFromItem(ModItems.YTTRIUM_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.YTTRIUM_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.INDIUM_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.INDIUM_NUGGET)
-                .criterion(hasItem(ModItems.INDIUM_INGOT), conditionsFromItem(ModItems.INDIUM_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.INDIUM_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TUNGSTEN_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.TUNGSTEN_NUGGET)
-                .criterion(hasItem(ModItems.TUNGSTEN_INGOT), conditionsFromItem(ModItems.TUNGSTEN_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TUNGSTEN_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENERGIUM_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.ENERGIUM_SHARD)
-                .criterion(hasItem(ModItems.ENERGIUM_SHARD), conditionsFromItem(ModItems.ENERGIUM_SHARD))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ENERGIUM_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.SILVER_NUGGET)
-                .criterion(hasItem(ModItems.SILVER_NUGGET), conditionsFromItem(ModItems.SILVER_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SILVER_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAD_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', ModItems.LEAD_NUGGET)
-                .criterion(hasItem(ModItems.LEAD_NUGGET), conditionsFromItem(ModItems.LEAD_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.LEAD_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', Items.IRON_NUGGET)
-                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.IRON_ROD)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLD_ROD, 1)
-                .pattern("M")
-                .pattern("M")
-                .input('M', Items.GOLD_NUGGET)
-                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLD_ROD)));
+        rodRecipe(exporter, IngotItem.MYTHRIL_INGOT, ModItems.MYTHRIL_ROD);
+        rodRecipe(exporter, IngotItem.YTTRIUM_INGOT, ModItems.YTTRIUM_ROD);
+        rodRecipe(exporter, IngotItem.INDIUM_INGOT, ModItems.INDIUM_ROD);
+        rodRecipe(exporter, IngotItem.TUNGSTEN_INGOT, ModItems.TUNGSTEN_ROD);
+        rodRecipe(exporter, IngotItem.ENERGIUM_INGOT, ModItems.ENERGIUM_ROD);
+        rodRecipe(exporter, IngotItem.SILVER_INGOT, ModItems.SILVER_ROD);
+        rodRecipe(exporter, IngotItem.LEAD_INGOT, ModItems.LEAD_ROD);
+        rodRecipe(exporter, IngotItem.IRON_INGOT, ModItems.IRON_ROD);
+        rodRecipe(exporter, IngotItem.GOLD_INGOT, ModItems.GOLD_ROD);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.FAERIE_ROD, 4)
                 .pattern("M")
@@ -295,41 +229,41 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("M")
                 .pattern("M")
                 .pattern("S")
-                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('M', IngotItem.MYTHRIL_INGOT)
                 .input('S', Items.STICK)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .criterion(hasItem(IngotItem.MYTHRIL_INGOT), conditionsFromItem(IngotItem.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_SWORD)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_AXE, 1)
                 .pattern("MM")
                 .pattern("SM")
                 .pattern("S ")
-                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('M', IngotItem.MYTHRIL_INGOT)
                 .input('S', Items.STICK)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .criterion(hasItem(IngotItem.MYTHRIL_INGOT), conditionsFromItem(IngotItem.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_AXE)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE, 1)
                 .pattern("MMM")
                 .pattern(" S ")
                 .pattern(" S ")
-                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('M', IngotItem.MYTHRIL_INGOT)
                 .input('S', Items.STICK)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .criterion(hasItem(IngotItem.MYTHRIL_INGOT), conditionsFromItem(IngotItem.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_PICKAXE)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_SHOVEL, 1)
                 .pattern("M")
                 .pattern("S")
                 .pattern("S")
-                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('M', IngotItem.MYTHRIL_INGOT)
                 .input('S', Items.STICK)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .criterion(hasItem(IngotItem.MYTHRIL_INGOT), conditionsFromItem(IngotItem.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_SHOVEL)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.MYTHRIL_HOE, 1)
                 .pattern("MM")
                 .pattern("S ")
                 .pattern("S ")
-                .input('M', ModItems.MYTHRIL_INGOT)
+                .input('M', IngotItem.MYTHRIL_INGOT)
                 .input('S', Items.STICK)
-                .criterion(hasItem(ModItems.MYTHRIL_INGOT), conditionsFromItem(ModItems.MYTHRIL_INGOT))
+                .criterion(hasItem(IngotItem.MYTHRIL_INGOT), conditionsFromItem(IngotItem.MYTHRIL_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.MYTHRIL_HOE)));
 
     }

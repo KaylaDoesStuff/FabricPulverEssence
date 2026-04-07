@@ -1,34 +1,34 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_indium_ingot": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:item.pulderessence.tungsten_nuggets_from_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungsten_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:indium_ingot"
+              "pulderessence:tungsten_ingot"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:indium_nuggets_from_ingot"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_indium_ingot",
+      "has_tungsten_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:indium_nuggets_from_ingot"
+      "minecraft:item.pulderessence.tungsten_nuggets_from_ingot"
     ]
   },
   "sends_telemetry_event": false

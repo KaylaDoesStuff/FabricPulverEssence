@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mythril_ingot": {
+    "has_indium_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:mythril_ingot"
+              "pulderessence:indium_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:mythril_nuggets_from_ingot"
+        "recipe": "minecraft:item.pulderessence.indium_nuggets_from_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_mythril_ingot",
+      "has_indium_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:mythril_nuggets_from_ingot"
+      "minecraft:item.pulderessence.indium_nuggets_from_ingot"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_energium_shard": {
+    "has_energium_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "pulderessence:energium_shard"
+              "pulderessence:energium_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_energium_shard",
+      "has_energium_ingot",
       "has_the_recipe"
     ]
   ],

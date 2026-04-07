@@ -17,3 +17,12 @@ Items
 - Faerie Dust and Rod
 - Indium Ingot, Rod, Nugget
 - Charged variants of Rods
+
+Chemistry
+- Added all elements to own group
+- Added all chemical compound Tooltips
+- Created helper methods for adding checmical recipes -# todo - Add new recipe types
+
+Machines
+- Added 12 machine tiers, which have maximum voltage,
+- Added Machine custom block class -# todo - Fix machine class to work with voltage tiers

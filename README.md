@@ -17,6 +17,7 @@ Items
 - Faerie Dust and Rod
 - Indium Ingot, Rod, Nugget
 - Charged variants of Rods
+- Entire possible ingot list implemented for single elements.
 
 Chemistry
 - Added all elements to own group

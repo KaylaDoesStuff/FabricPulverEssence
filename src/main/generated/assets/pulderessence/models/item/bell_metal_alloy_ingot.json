@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pulderessence:item/bell_metal_alloy_ingot"
+  }
+}

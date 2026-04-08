@@ -142,43 +142,60 @@ public class ModItemGroups {
             FabricItemGroup.builder()
                     .displayName(Text.translatable("group.ingots"))
                     .icon(() -> new ItemStack(IngotItem.IRON_INGOT)).entries((displayContext, entries) -> {
-                        entries.add(IngotItem.INDIUM_INGOT);
-                        entries.add(IngotItem.ALUMINUM_INGOT);
-                        entries.add(IngotItem.BRONZE_INGOT);
-                        entries.add(IngotItem.CARBON_INGOT);
-                        entries.add(IngotItem.CHROMIUM_INGOT);
-                        entries.add(IngotItem.COBALT_INGOT);
-                        entries.add(IngotItem.ERIDIUM_INGOT);
-                        entries.add(IngotItem.GALLIUM_INGOT);
-                        entries.add(IngotItem.GERMANIUM_INGOT);
-                        entries.add(IngotItem.IRIDIUM_INGOT);
-                        entries.add(IngotItem.MAGNESIUM_INGOT);
-                        entries.add(IngotItem.MANGANESE_INGOT);
-                        entries.add(IngotItem.NAQUADAH_INGOT);
-                        entries.add(IngotItem.NICKEL_INGOT);
-                        entries.add(IngotItem.TITANIUM_INGOT);
-                        entries.add(IngotItem.VANADIUM_INGOT);
-                        entries.add(IngotItem.ZINC_INGOT);
-                        entries.add(IngotItem.BERYLLIUM_INGOT);
-                        entries.add(IngotItem.DUBNIUM_INGOT);
-                        entries.add(IngotItem.DYSPROSIUM_INGOT);
-                        entries.add(IngotItem.ENERGIUM_INGOT);
-                        entries.add(IngotItem.RUBIDIUM_INGOT);
-                        entries.add(IngotItem.RUTHENIUM_INGOT);
-                        entries.add(IngotItem.RUTHERFORDIUM_INGOT);
-                        entries.add(IngotItem.STRONTIUM_INGOT);
-                        entries.add(IngotItem.TANTALUM_INGOT);
-                        entries.add(IngotItem.THORIUM_INGOT);
-                        entries.add(IngotItem.IRON_INGOT);
-                        entries.add(IngotItem.COPPER_INGOT);
-                        entries.add(IngotItem.LEAD_INGOT);
-                        entries.add(IngotItem.SILVER_INGOT);
-                        entries.add(IngotItem.YTTRIUM_INGOT);
-                        entries.add(IngotItem.TUNGSTEN_INGOT);
-                        entries.add(IngotItem.SILICON_INGOT);
-                        entries.add(IngotItem.GOLD_INGOT);
-                        entries.add(IngotItem.CUPRONICKEL_INGOT);
-                        entries.add(IngotItem.MYTHRIL_INGOT);
+                        // INGOTS BY ATOMIC NUMBER ORDER (1-118, solid metals only + fictional)
+                        entries.add(IngotItem.LITHIUM_INGOT);      // 3: Li
+                        entries.add(IngotItem.BERYLLIUM_INGOT);    // 4: Be
+                        entries.add(IngotItem.SODIUM_INGOT);       // 11: Na
+                        entries.add(IngotItem.MAGNESIUM_INGOT);    // 12: Mg
+                        entries.add(IngotItem.CALCIUM_INGOT);      // 20: Ca
+                        entries.add(IngotItem.SCANDIUM_INGOT);     // 21: Sc
+                        entries.add(IngotItem.TITANIUM_INGOT);     // 22: Ti
+                        entries.add(IngotItem.VANADIUM_INGOT);     // 23: V
+                        entries.add(IngotItem.CHROMIUM_INGOT);     // 24: Cr
+                        entries.add(IngotItem.MANGANESE_INGOT);    // 25: Mn
+                        entries.add(IngotItem.IRON_INGOT);         // 26: Fe
+                        entries.add(IngotItem.COBALT_INGOT);       // 27: Co
+                        entries.add(IngotItem.NICKEL_INGOT);       // 28: Ni
+                        entries.add(IngotItem.COPPER_INGOT);       // 29: Cu
+                        entries.add(IngotItem.ZINC_INGOT);         // 30: Zn
+                        entries.add(IngotItem.GALLIUM_INGOT);      // 31: Ga
+                        entries.add(IngotItem.STRONTIUM_INGOT);    // 38: Sr
+                        entries.add(IngotItem.YTTRIUM_INGOT);      // 39: Y
+                        entries.add(IngotItem.ZIRCONIUM_INGOT);    // 40: Zr
+                        entries.add(IngotItem.NIOBIUM_INGOT);      // 41: Nb
+                        entries.add(IngotItem.MOLYBDENUM_INGOT);   // 42: Mo
+                        entries.add(IngotItem.RHENIUM_INGOT);      // 75: Re
+                        entries.add(IngotItem.OSMIUM_INGOT);       // 76: Os
+                        entries.add(IngotItem.IRIDIUM_INGOT);      // 77: Ir
+                        entries.add(IngotItem.PLATINUM_INGOT);     // 78: Pt
+                        entries.add(IngotItem.GOLD_INGOT);         // 79: Au
+                        entries.add(IngotItem.MERCURY_INGOT);      // 80: Hg (mp  -39°C, but included)
+                        entries.add(IngotItem.THALLIUM_INGOT);     // 81: Tl
+                        entries.add(IngotItem.LEAD_INGOT);         // 82: Pb
+                        entries.add(IngotItem.BISMUTH_INGOT);      // 83: Bi
+                        entries.add(IngotItem.POLONIUM_INGOT);     // 84: Po (radioactive)
+                        entries.add(IngotItem.BARIUM_INGOT);       // 56: Ba
+                        entries.add(IngotItem.TUNGSTEN_INGOT);     // 74: W
+                        entries.add(IngotItem.TANTALUM_INGOT);     // 73: Ta
+                        entries.add(IngotItem.CADMIUM_INGOT);      // 48: Cd
+                        entries.add(IngotItem.INDIUM_INGOT);       // 49: In
+                        entries.add(IngotItem.ANTIMONY_INGOT);     // 51: Sb
+                        entries.add(IngotItem.TELLURIUM_INGOT);    // 52: Te
+                        entries.add(IngotItem.SILVER_INGOT);       // 47: Ag
+                        entries.add(IngotItem.PALLADIUM_INGOT);    // 46: Pd
+                        entries.add(IngotItem.RHODIUM_INGOT);      // 45: Rh
+                        entries.add(IngotItem.RUTHENIUM_INGOT);    // 44: Ru
+                        entries.add(IngotItem.THORIUM_INGOT);      // 90: Th
+                        entries.add(IngotItem.URANIUM_INGOT);      // 92: U
+                        entries.add(IngotItem.SELENIUM_INGOT);     // 34: Se
+                        entries.add(IngotItem.ARSENIC_INGOT);      // 33: As
+
+// FICTIONAL (Endgame)
+                        entries.add(IngotItem.MYTHRIL_INGOT);      // My
+                        entries.add(IngotItem.NAQUADAH_INGOT);     // Nq
+                        entries.add(IngotItem.NAQUADRIAH_INGOT);   // Nr
+                        entries.add(IngotItem.ENERGIUM_INGOT);     // En
+                        entries.add(IngotItem.ERIDIUM_INGOT);      // Er
                     }).build());
 
     public static final ItemGroup ELEMENTS = Registry.register(Registries.ITEM_GROUP,

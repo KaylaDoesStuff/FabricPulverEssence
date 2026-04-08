@@ -2,6 +2,7 @@ package kayla.pulderessence.datagen;
 
 import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.*;
+import kayla.pulderessence.item.ore.RawOreItem;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
@@ -67,44 +68,183 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
+// ALKALI & ALKALINE EARTH METALS
+        itemModelGenerator.register(RawOreItem.RAW_SPODUMENE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_PETALITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_AMBLYGONITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_BERYL_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_PHENAKITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_HALITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_TRONA_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_MAGNESITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_DOLOMITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_BRUCIITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_SYLVITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CARNALLITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_LIMESTONE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_GYPSUM_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_ANHYDRITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_LEPIDOLITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_POLLUCITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CELESTITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_STRONITIANITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_BARITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_WITHERITE_ORE, Models.GENERATED);
+
+// IRON ORES
+        itemModelGenerator.register(RawOreItem.RAW_HEMATITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_MAGNETITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_LIMONITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_SIDERITE_ORE, Models.GENERATED);
+
+// COPPER ORES
+        itemModelGenerator.register(RawOreItem.RAW_CHALCOPYRITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_MALACHITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_AZURITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_BORNITE_ORE, Models.GENERATED);
+
+// ALUMINUM ORES
+        itemModelGenerator.register(RawOreItem.RAW_BAUXITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CRYOLITE_ORE, Models.GENERATED);
+
+// LEAD ORES
+        itemModelGenerator.register(RawOreItem.RAW_GALENA_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CERUSSITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_ANGLESITE_ORE, Models.GENERATED);
+
+// TIN ORES
+        itemModelGenerator.register(RawOreItem.RAW_CASSITERITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_STANNITE_ORE, Models.GENERATED);
+
+// TITANIUM ORES
+        itemModelGenerator.register(RawOreItem.RAW_ILMENITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_RUTILE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_ANATASE_ORE, Models.GENERATED);
+
+// ZINC ORES
+        itemModelGenerator.register(RawOreItem.RAW_SPHALERITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_SMITHSONITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_HEMIMORPHITE_ORE, Models.GENERATED);
+
+// MOLYBDENUM ORES
+        itemModelGenerator.register(RawOreItem.RAW_MOLYBDENITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_WULFENITE_ORE, Models.GENERATED);
+
+// SILVER ORES
+        itemModelGenerator.register(RawOreItem.RAW_ARGENTITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CERARGYRITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_POLYBASITE_ORE, Models.GENERATED);
+
+// TUNGSTEN ORES
+        itemModelGenerator.register(RawOreItem.RAW_WOLFRAMITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_SCHEELITE_ORE, Models.GENERATED);
+
+// CHROMIUM ORES
+        itemModelGenerator.register(RawOreItem.RAW_CHROMITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CROCOITE_ORE, Models.GENERATED);
+
+// MANGANESE ORES
+        itemModelGenerator.register(RawOreItem.RAW_PYROLUSITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_PSILOMELANE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_RHODOCHROSITE_ORE, Models.GENERATED);
+
+// COBALT ORES
+        itemModelGenerator.register(RawOreItem.RAW_COBALTITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_ERYTHRITE_ORE, Models.GENERATED);
+
+// NICKEL ORES
+        itemModelGenerator.register(RawOreItem.RAW_PENTLANDITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_MILLERITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_NICCOLITE_ORE, Models.GENERATED);
+
+// VANADIUM ORES
+        itemModelGenerator.register(RawOreItem.RAW_VANADINITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_CARNOTITE_ORE, Models.GENERATED);
+
+// NON-METALS
+        itemModelGenerator.register(RawOreItem.RAW_SULFUR_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_PYRITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_FLUORITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_APATITE_ORE, Models.GENERATED);
+        itemModelGenerator.register(RawOreItem.RAW_PHOSPHORITE_ORE, Models.GENERATED);
+
+        itemModelGenerator.register(IngotItem.IRON_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.COPPER_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.GOLD_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.MYTHRIL_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.IRON_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.INDIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.SILVER_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.LEAD_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.TUNGSTEN_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.YTTRIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.CUPRONICKEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.ALUMINUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.BRONZE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.CARBON_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.CHROMIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.COBALT_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.ERIDIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.GALLIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.GERMANIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.IRIDIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.MAGNESIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.MANGANESE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.NAQUADAH_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.NICKEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.LEAD_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.TITANIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.VANADIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.ZINC_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.BERYLLIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.DUBNIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.DYSPROSIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.ENERGIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.RUBIDIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.RUTHENIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.RUTHERFORDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.SILVER_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NICKEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.COBALT_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CHROMIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MANGANESE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MOLYBDENUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TUNGSTEN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.PLATINUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BISMUTH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MAGNESIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CALCIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BARIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.CADMIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.INDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.GALLIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.THALLIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ANTIMONY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.TELLURIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.SELENIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ARSENIC_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.STRONTIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.SCANDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.YTTRIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ZIRCONIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NIOBIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.TANTALUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RHENIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(IngotItem.THORIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(IngotItem.SILICON_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.URANIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RUTHENIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.RHODIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.PALLADIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.OSMIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.IRIDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NAQUADAH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.NAQUADRIAH_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ENERGIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ERIDIUM_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.MYTHRIL_INGOT, Models.GENERATED);
 
+        // "A" ALLOYS MODEL GENERATOR (17 total)
+        itemModelGenerator.register(IngotItem.ALCLAD_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALDREY_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALLOYS_8090_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALMAG_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALMELEC_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALMgSi_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALNIMAX_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALSIMEC_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALSIN_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUMINIUM_BRONZE_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUMEL_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUMICROM_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUMINIUM_GALIMAX_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ALUSIL_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ANTANIUM_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.ARDOL_ALLOY_INGOT, Models.GENERATED);
+
+        // "B" ALLOYS MODEL GENERATOR (10 total)
+        itemModelGenerator.register(IngotItem.BABBITT_METAL_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BARIUM_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BARMETAL_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BELL_METAL_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BERYLCO_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BETA_BRASS_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BIRMABRIGHT_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BIRMINGHAM_GOLD_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BRONZE_ALLOY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(IngotItem.BRASS_ALLOY_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.MYTHRIL_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.MYTHRIL_ROD, Models.HANDHELD_ROD);

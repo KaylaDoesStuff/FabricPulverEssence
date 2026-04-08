@@ -27,10 +27,22 @@ public class CompoundItem extends Item {
             if (counts.get(i) == 1) {
                 formula.append(elements.get(i));
             } else {
-                formula.append(elements.get(i)).append(counts.get(i));
+                formula.append(elements.get(i)).append(toSubscript(counts.get(i)));
             }
         }
         return formula.toString();
+    }
+
+    private static String toSubscript(int number) {
+        String[] subscriptDigits = {"₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"};
+
+        String numStr = String.valueOf(number);
+        StringBuilder subscript = new StringBuilder();
+        for (char digit : numStr.toCharArray()) {
+            int digitValue = digit - '0';
+            subscript.append(subscriptDigits[digitValue]);
+        }
+        return subscript.toString();
     }
 
     @Override

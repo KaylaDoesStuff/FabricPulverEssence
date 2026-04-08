@@ -102,7 +102,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier("progressable_" + output.getTranslationKey()));
     }
 
-    private void convertableNuggetIngot(Consumer<RecipeJsonProvider> exporter, CompoundItem ingot, Item nugget) {
+    private void convertableNuggetIngot(Consumer<RecipeJsonProvider> exporter, Item ingot, Item nugget) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, nugget, 9)
                 .input(ingot, 1)
                 .criterion(hasItem(ingot), conditionsFromItem(ingot))
@@ -114,7 +114,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(ingot.getTranslationKey() + "_from_nugget"));
     }
 
-    private void rodRecipe(Consumer<RecipeJsonProvider> exporter, CompoundItem item, Item output) {
+    private void rodRecipe(Consumer<RecipeJsonProvider> exporter, Item item, Item output) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
                 .pattern("M")
                 .pattern("M")

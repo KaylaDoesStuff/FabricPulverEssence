@@ -271,7 +271,7 @@ public class ModItemGroups {
                         entries.add(ModElements.DYSPROSIUM);
                         entries.add(ModElements.HOLMIUM);
                         entries.add(ModElements.ERBIUM);
-                        entries.add(ModElements.THULLIUM);
+                        entries.add(ModElements.THULIUM);
                         entries.add(ModElements.YTTERBIUM);
                         entries.add(ModElements.LUTETIUM);
                         entries.add(ModElements.HAFNIUM);

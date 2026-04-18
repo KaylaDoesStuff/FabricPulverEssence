@@ -1,5 +1,6 @@
 package kayla.pulderessence.item.custom;
 
+import kayla.pulderessence.item.types.ElementType;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,22 +13,22 @@ import java.util.List;
 
 public class CompoundItem extends Item {
 
-    public final List<String> elementId;
+    public final List<ElementType> elementId;
     public final List<Integer> elementAmount;
 
-    public CompoundItem(Settings settings, List<String> elementId, List<Integer> elementAmount) {
+    public CompoundItem(Settings settings, List<ElementType> elementId, List<Integer> elementAmount) {
         super(settings);
         this.elementId = elementId;
         this.elementAmount = elementAmount;
     }
 
-    public static String buildFormula(List<String> elements, List<Integer> counts) {
+    public static String buildFormula(List<ElementType> elements, List<Integer> counts) {
         StringBuilder formula = new StringBuilder();
         for (int i = 0; i < elements.size(); i++) {
             if (counts.get(i) == 1) {
-                formula.append(elements.get(i));
+                formula.append(elements.get(i).getAtomicSymbol());
             } else {
-                formula.append(elements.get(i)).append(toSubscript(counts.get(i)));
+                formula.append(elements.get(i).getAtomicSymbol()).append(toSubscript(counts.get(i)));
             }
         }
         return formula.toString();

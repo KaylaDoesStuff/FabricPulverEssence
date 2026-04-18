@@ -1,9 +1,9 @@
-// 1.20.1	2026-04-10T23:03:43.574952751	PulderEssence/Block Loot Tables
+// 1.20.1	2026-04-18T23:27:18.53325133	PulderEssence/Block Loot Tables
 4bf096447d404f9ce35b741e95fba0e6747fd007 data/pulderessence/loot_tables/blocks/deepslate_silver_ore.json
 aca5b0052ccc0a8342ceda1ff996cb60d7c9c58e data/pulderessence/loot_tables/blocks/deepslate_mythril_ore.json
+254d6f9d4a732994473ee792bb432a57f2141a21 data/pulderessence/loot_tables/blocks/deepslate_lead_ore.json
 0746b6ab228c81df62a9b2d14b6b1df55a890480 data/pulderessence/loot_tables/blocks/deepslate_energium_ore.json
 24f9043ccc65bf043814cb2551070ef83c9291cd data/pulderessence/loot_tables/blocks/lead_block.json
-254d6f9d4a732994473ee792bb432a57f2141a21 data/pulderessence/loot_tables/blocks/deepslate_lead_ore.json
 c0beb9fe8af0625377de193046e320282ee4c2e3 data/pulderessence/loot_tables/blocks/energium_ore.json
 db2daa44ba6b6f82e69188b1957942de0fea3592 data/pulderessence/loot_tables/blocks/yttrium_block.json
 966e18ec4afbe79737a546dd259cabe2637f7a0e data/pulderessence/loot_tables/blocks/mythril_ore.json

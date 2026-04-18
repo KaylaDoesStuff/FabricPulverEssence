@@ -95,7 +95,7 @@ public class ModElements {
     public static final ElementItem DYSPROSIUM = registerElement("element_66", new ElementItem(new FabricItemSettings(), "Dy", 66, 162.5f));
     public static final ElementItem HOLMIUM = registerElement("element_67", new ElementItem(new FabricItemSettings(), "Ho", 67, 164.93f));
     public static final ElementItem ERBIUM = registerElement("element_68", new ElementItem(new FabricItemSettings(), "Er", 68, 167.26f));
-    public static final ElementItem THULLIUM = registerElement("element_69", new ElementItem(new FabricItemSettings(), "Tm", 69, 168.93f));
+    public static final ElementItem THULIUM = registerElement("element_69", new ElementItem(new FabricItemSettings(), "Tm", 69, 168.93f));
     public static final ElementItem YTTERBIUM = registerElement("element_70", new ElementItem(new FabricItemSettings(), "Yb", 70, 173.04f));
     public static final ElementItem LUTETIUM = registerElement("element_71", new ElementItem(new FabricItemSettings(), "Lu", 71, 174.97f));
     public static final ElementItem HAFNIUM = registerElement("element_72", new ElementItem(new FabricItemSettings(), "Hf", 72, 178.49f));

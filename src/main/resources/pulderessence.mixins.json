@@ -4,6 +4,6 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"GravityMixin",
-		"SprintAccelerationMixin"
+		"FixJumpMixin"
 	]
 }

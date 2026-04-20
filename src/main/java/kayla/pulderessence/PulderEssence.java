@@ -2,11 +2,15 @@ package kayla.pulderessence;
 
 import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.*;
+import kayla.pulderessence.world.VoidChunkGenerator;
 import kayla.pulderessence.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +21,8 @@ public class PulderEssence implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		Registry.register(Registries.CHUNK_GENERATOR, new Identifier(MOD_ID, "void_chunk_generator"), VoidChunkGenerator.CODEC);
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();

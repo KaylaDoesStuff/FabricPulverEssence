@@ -1,46 +1,30 @@
 package kayla.pulderessence.mixin;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(LivingEntity.class)
-public class GravityMixin {
+public abstract class GravityMixin {
 
-    @Inject(method = "travel", at = @At("HEAD"))
-    private void pinDropPhysics(CallbackInfo ci) {
-        LivingEntity entity = (LivingEntity)(Object)this;
+    // Realistic physics values for Earth gravity at 20 TPS
+    // g = 9.81 m/s² ÷ 20 ticks/s = 0.4905 m/tick²
+    // Terminal velocity of human skydiver = 53 m/s ÷ 20 ticks/s = 2.65 m/tick
 
-        // Pure freefall only
-        if (isFreefalling(entity)) {
-            Vec3d vel = entity.getVelocity();
-
-            // 90kg Pin Drop - VERTICAL ONLY
-            double gravity = 0.045;
-            double termVel = 4.2;
-
-            double drag = MathHelper.clamp(0.92 + (1.0 - Math.abs(vel.y) / termVel) * 0.08, 0.92, 1.0);
-            double newYVel = vel.y * drag - gravity;
-            newYVel = MathHelper.clamp(newYVel, -termVel, 2.0);
-
-            // HORIZONTAL VELOCITY 100% UNTOUCHED
-            // Only replace Y component
-            entity.setVelocity(vel.x, newYVel, vel.z);
-        }
+    /**
+     * Replaces the vanilla gravity constant (0.08) with realistic Earth gravity.
+     */
+    @ModifyConstant(method = "travel", constant = @Constant(doubleValue = 0.08))
+    private double modifyGravityConstant(double original) {
+        return 0.4905;
     }
 
-    private boolean isFreefalling(LivingEntity entity) {
-        Vec3d vel = entity.getVelocity();
-        return !entity.hasNoGravity() &&
-                !entity.isOnGround() &&
-                vel.y < -0.05 &&  // Definitely falling
-                !entity.isFallFlying() &&
-                !entity.hasVehicle() &&
-                !entity.isUsingRiptide() &&
-                !entity.isClimbing();
+    /**
+     * Replaces the vanilla terminal velocity cap (3.92) with a realistic 53 m/s.
+     */
+    @ModifyConstant(method = "travel", constant = @Constant(doubleValue = 3.92))
+    private double modifyTerminalVelocityConstant(double original) {
+        return 2.65;
     }
 }

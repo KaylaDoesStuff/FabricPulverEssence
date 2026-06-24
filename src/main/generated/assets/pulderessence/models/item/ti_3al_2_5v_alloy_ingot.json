@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pulderessence:item/ti_3al_2_5v_alloy_ingot"
+  }
+}

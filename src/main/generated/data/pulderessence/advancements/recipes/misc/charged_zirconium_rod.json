@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:charged_zirconium_rod"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zirconium_rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:zirconium_rod"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_zirconium_rod",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:charged_zirconium_rod"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,38 +1,36 @@
 package kayla.pulderessence.item.custom;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import kayla.pulderessence.item.types.ElementType;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.ClickType;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ChargedItem extends Item {
+public class ChargedItem extends CompoundItem {
     private int charge;
 
     public ChargedItem(Settings settings, int initialCharge) {
-        super(settings);
+        super(settings, List.of(), List.of());
+        this.charge = initialCharge;
+    }
+
+    public ChargedItem(Settings settings, int initialCharge, List<ElementType> elementId, List<Integer> elementAmount) {
+        super(settings, elementId, elementAmount);
         this.charge = initialCharge;
     }
 
     @Override
-
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        super.appendTooltip(stack, world, tooltip, context);
         tooltip.add(chargeTooltip());
         tooltip.add(chargeDescription());
-        super.appendTooltip(stack, world, tooltip, context);
     }
 
     public MutableText chargeTooltip() {

@@ -1,6 +1,6 @@
 package kayla.pulderessence.datagen;
 
-import kayla.pulderessence.item.ModItems;
+import kayla.pulderessence.item.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;

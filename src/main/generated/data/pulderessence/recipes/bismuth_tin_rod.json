@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "pulderessence:bismuth_tin_alloy_ingot"
+    }
+  },
+  "pattern": [
+    "M",
+    "M"
+  ],
+  "result": {
+    "item": "pulderessence:bismuth_tin_rod"
+  },
+  "show_notification": true
+}

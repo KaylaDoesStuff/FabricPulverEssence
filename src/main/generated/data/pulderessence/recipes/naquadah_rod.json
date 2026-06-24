@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "pulderessence:naquadah_ingot"
+    }
+  },
+  "pattern": [
+    "M",
+    "M"
+  ],
+  "result": {
+    "item": "pulderessence:naquadah_rod"
+  },
+  "show_notification": true
+}

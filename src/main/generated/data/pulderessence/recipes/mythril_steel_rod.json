@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "pulderessence:mythril_steel_alloy_ingot"
+    }
+  },
+  "pattern": [
+    "M",
+    "M"
+  ],
+  "result": {
+    "item": "pulderessence:mythril_steel_rod"
+  },
+  "show_notification": true
+}

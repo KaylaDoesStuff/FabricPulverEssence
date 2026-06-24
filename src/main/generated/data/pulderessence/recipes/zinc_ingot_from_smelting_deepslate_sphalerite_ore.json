@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "sphalerite",
+  "ingredient": {
+    "item": "pulderessence:deepslate_sphalerite_ore"
+  },
+  "result": "pulderessence:zinc_ingot"
+}

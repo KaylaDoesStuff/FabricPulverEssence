@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pulderessence:item/sterling_silver_alloy_ingot"
+  }
+}

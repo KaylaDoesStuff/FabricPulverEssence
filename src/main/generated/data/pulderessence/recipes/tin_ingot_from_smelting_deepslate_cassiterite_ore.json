@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "cassiterite",
+  "ingredient": {
+    "item": "pulderessence:deepslate_cassiterite_ore"
+  },
+  "result": "pulderessence:tin_ingot"
+}

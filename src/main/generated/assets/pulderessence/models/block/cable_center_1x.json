@@ -1,0 +1,47 @@
+{
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#cable",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#cable",
+          "tintindex": 0
+        },
+        "north": {
+          "texture": "#cable",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#cable",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#cable",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#cable",
+          "tintindex": 0
+        }
+      },
+      "from": [
+        7,
+        7,
+        7
+      ],
+      "to": [
+        9,
+        9,
+        9
+      ]
+    }
+  ],
+  "textures": {
+    "cable": "pulderessence:block/cable/center",
+    "particle": "pulderessence:block/cable/center"
+  }
+}

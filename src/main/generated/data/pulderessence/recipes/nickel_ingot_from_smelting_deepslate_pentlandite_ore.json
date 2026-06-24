@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "pentlandite",
+  "ingredient": {
+    "item": "pulderessence:deepslate_pentlandite_ore"
+  },
+  "result": "pulderessence:nickel_ingot"
+}

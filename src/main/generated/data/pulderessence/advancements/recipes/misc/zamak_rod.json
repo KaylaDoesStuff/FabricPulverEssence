@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:zamak_rod"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zamak_alloy_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:zamak_alloy_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_zamak_alloy_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:zamak_rod"
+    ]
+  },
+  "sends_telemetry_event": false
+}

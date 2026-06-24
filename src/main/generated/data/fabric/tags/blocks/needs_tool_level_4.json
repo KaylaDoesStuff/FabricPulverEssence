@@ -1,4 +1,25 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "pulderessence:hollingsworthite_ore",
+    "pulderessence:deepslate_hollingsworthite_ore",
+    "pulderessence:stibiopalladinite_ore",
+    "pulderessence:deepslate_stibiopalladinite_ore",
+    "pulderessence:calaverite_ore",
+    "pulderessence:deepslate_calaverite_ore",
+    "pulderessence:clausthalite_ore",
+    "pulderessence:deepslate_clausthalite_ore",
+    "pulderessence:thortveitite_ore",
+    "pulderessence:deepslate_thortveitite_ore",
+    "pulderessence:mythrilite_ore",
+    "pulderessence:deepslate_mythrilite_ore",
+    "pulderessence:naquadite_ore",
+    "pulderessence:deepslate_naquadite_ore",
+    "pulderessence:naquadriate_ore",
+    "pulderessence:deepslate_naquadriate_ore",
+    "pulderessence:energite_ore",
+    "pulderessence:deepslate_energite_ore",
+    "pulderessence:eridium_vein_ore",
+    "pulderessence:deepslate_eridium_vein_ore"
+  ]
 }

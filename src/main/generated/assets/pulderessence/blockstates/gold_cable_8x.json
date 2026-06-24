@@ -1,0 +1,79 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_center_8x"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x",
+          "x": 90
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x",
+          "x": 90,
+          "y": 180
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x",
+          "x": 90,
+          "y": 90
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x",
+          "x": 90,
+          "y": 270
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_arm_8x",
+          "x": 180
+        }
+      ],
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

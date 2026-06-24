@@ -1,0 +1,11 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "pulderessence:block/cable_center_16x"
+        }
+      ]
+    }
+  ]
+}

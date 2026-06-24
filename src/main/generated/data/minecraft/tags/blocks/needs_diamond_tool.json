@@ -1,4 +1,25 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "pulderessence:apatite_ore",
+    "pulderessence:deepslate_apatite_ore",
+    "pulderessence:xenotime_ore",
+    "pulderessence:deepslate_xenotime_ore",
+    "pulderessence:bastnaesite_ore",
+    "pulderessence:deepslate_bastnaesite_ore",
+    "pulderessence:monazite_ore",
+    "pulderessence:deepslate_monazite_ore",
+    "pulderessence:thorite_ore",
+    "pulderessence:deepslate_thorite_ore",
+    "pulderessence:uraninite_ore",
+    "pulderessence:deepslate_uraninite_ore",
+    "pulderessence:lepidolite_ore",
+    "pulderessence:deepslate_lepidolite_ore",
+    "pulderessence:sperrylite_ore",
+    "pulderessence:deepslate_sperrylite_ore",
+    "pulderessence:iridosmine_ore",
+    "pulderessence:deepslate_iridosmine_ore",
+    "pulderessence:laurite_ore",
+    "pulderessence:deepslate_laurite_ore"
+  ]
 }

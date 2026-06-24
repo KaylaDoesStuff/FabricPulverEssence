@@ -7,15 +7,29 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.util.*;
+
 public class ModBucketItems {
 
-    public static final Item AMMONIA_BUCKET = registerBucketItem("ammonia_bucket", new Item(new FabricItemSettings()));
-    public static final Item SULFURIC_ACID_BUCKET = registerBucketItem("sulfuric_acid_bucket", new Item(new FabricItemSettings()));
-    public static final Item HYDROCHLORIC_ACID_BUCKET = registerBucketItem("hydrochloric_acid_bucket", new Item(new FabricItemSettings()));
+    private static final List<String> ENTRIES = List.of(
+        "ammonia_bucket", "sulfuric_acid_bucket", "hydrochloric_acid_bucket"
+    );
 
-    private static Item registerBucketItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
+    private static final Map<String, Item> ITEMS = new LinkedHashMap<>();
+
+    public static Item get(String name) {
+        return ITEMS.get(name);
     }
 
-    public static void registerBuckets() {}
+    public static Collection<Item> getAll() {
+        return Collections.unmodifiableCollection(ITEMS.values());
+    }
+
+    public static void registerBuckets() {
+        for (String name : ENTRIES) {
+            Item item = new Item(new FabricItemSettings());
+            Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
+            ITEMS.put(name, item);
+        }
+    }
 }

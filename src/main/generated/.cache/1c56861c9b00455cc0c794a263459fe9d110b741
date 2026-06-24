@@ -1,9 +1,9 @@
-// 1.20.1	2026-04-18T23:27:18.534082952	PulderEssence/Tags for minecraft:block
-cc123e4b92d4f0f79440299411a6ae6a3f5d69f5 data/minecraft/tags/blocks/needs_iron_tool.json
-163efc086170122ab394a0501fd4083f0dd5d721 data/minecraft/tags/blocks/mineable/pickaxe.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data/fabric/tags/blocks/needs_tool_level_4.json
-47fb1e9f46f8f1ce9edadd49b7aaaa8bcf701eb6 data/minecraft/tags/blocks/needs_stone_tool.json
+// 1.20.1	2026-06-18T23:56:43.979495089	PulderEssence/Tags for minecraft:block
+09765c6bbca912e2dd187c25708e25d4a41a2db4 data/minecraft/tags/blocks/mineable/pickaxe.json
 ea1e65eb0d569cee7feb3a519ae7715926f148b5 data/minecraft/tags/blocks/mineable/axe.json
+a1689302563b295de55b5c058ff4a6c5d6085555 data/minecraft/tags/blocks/needs_diamond_tool.json
+3e19925c9a64c1f647f5b76e0a46cb827e14c943 data/fabric/tags/blocks/needs_tool_level_4.json
+0ab95cf079f3f3c9513dda4b1feb8900bf3eecf5 data/minecraft/tags/blocks/needs_stone_tool.json
 91ce774f66d4d6764a2f3630d8c30e5e7d3f951b data/minecraft/tags/blocks/fence_gates.json
+b9406abb6e27eec471e2601bfdd316fb2e423e00 data/minecraft/tags/blocks/needs_iron_tool.json
 42e9f580a84c71683eee868fd90f9ac1d8cea557 data/minecraft/tags/blocks/fences.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data/minecraft/tags/blocks/needs_diamond_tool.json

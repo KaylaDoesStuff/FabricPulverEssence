@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "galena",
+  "ingredient": {
+    "item": "pulderessence:deepslate_galena_ore"
+  },
+  "result": "pulderessence:lead_ingot"
+}

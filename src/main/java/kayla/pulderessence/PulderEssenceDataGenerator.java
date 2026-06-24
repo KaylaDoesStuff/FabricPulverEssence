@@ -18,6 +18,8 @@ public class PulderEssenceDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModLanguageProvider::new);
+		pack.addProvider(ModTextureProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
 	}
 

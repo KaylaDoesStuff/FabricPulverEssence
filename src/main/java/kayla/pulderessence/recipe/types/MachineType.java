@@ -1,16 +1,22 @@
 package kayla.pulderessence.recipe.types;
 
 public enum MachineType {
-    MIX(5, 3),
-    ELECTROLYZE(1, 6),
-    BLAST(4, 4),
-    CENTRIFUGE(1, 6),
-    SMELT(1, 1);
+    SMELT(1, 1),
+    MACERATOR(1, 3),
+    ORE_WASHER(1, 3),
+    THERMAL_CENTRIFUGE(1, 4),
+    ELECTROLYZER(2, 4),
+    BLAST_FURNACE(4, 4),
+    CHEMICAL_REACTOR(4, 4),
+    DISTILLATION_TOWER(1, 6),
+    CRYSTALLIZER(2, 2),
+    MIXER(6, 3),
+    VACUUM_FURNACE(2, 2),
+    COMPRESSOR(1, 1),
+    ALLOY_SMELTER(4, 2);
 
     private int inputs;
     private int outputs;
-    private boolean supportsFluid;
-    private int fluidSlots;
 
     MachineType(int inputs, int outputs) {
         this.inputs = inputs;

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld_rod",
+  "textures": {
+    "layer0": "pulderessence:item/silicon_bronze_rod"
+  }
+}

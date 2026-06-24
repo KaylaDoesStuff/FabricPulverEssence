@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "stibnite",
+  "ingredient": {
+    "item": "pulderessence:stibnite"
+  },
+  "result": "pulderessence:antimony_ingot"
+}

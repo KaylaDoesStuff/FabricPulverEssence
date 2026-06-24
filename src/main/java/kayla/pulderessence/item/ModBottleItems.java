@@ -8,14 +8,29 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.util.*;
+
 public class ModBottleItems {
 
-    public static final Item BLEACH_BOTTLE = registerBottleItem("bleach_bottle", new GlassBottleItem(new FabricItemSettings()));
-    public static final Item CHLOROFORM_BOTTLE = registerBottleItem("chloroform_bottle", new GlassBottleItem(new FabricItemSettings()));
+    private static final List<String> ENTRIES = List.of(
+        "bleach_bottle", "chloroform_bottle"
+    );
 
-    private static Item registerBottleItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
+    private static final Map<String, Item> ITEMS = new LinkedHashMap<>();
+
+    public static Item get(String name) {
+        return ITEMS.get(name);
     }
 
-    public static void registerBottles() {}
+    public static Collection<Item> getAll() {
+        return Collections.unmodifiableCollection(ITEMS.values());
+    }
+
+    public static void registerBottles() {
+        for (String name : ENTRIES) {
+            Item item = new GlassBottleItem(new FabricItemSettings());
+            Registry.register(Registries.ITEM, new Identifier(PulderEssence.MOD_ID, name), item);
+            ITEMS.put(name, item);
+        }
+    }
 }

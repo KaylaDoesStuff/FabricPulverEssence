@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_sphalerite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pulderessence:deepslate_sphalerite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:zinc_ingot_from_smelting_deepslate_sphalerite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_sphalerite_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:zinc_ingot_from_smelting_deepslate_sphalerite_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

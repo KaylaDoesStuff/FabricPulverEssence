@@ -1,9 +1,25 @@
 {
   "replace": false,
   "values": [
-    "pulderessence:mythril_ore",
-    "pulderessence:deepslate_mythril_ore",
-    "pulderessence:indium_ore",
-    "pulderessence:deepslate_indium_ore"
+    "pulderessence:kernite_ore",
+    "pulderessence:deepslate_kernite_ore",
+    "pulderessence:chromite_ore",
+    "pulderessence:deepslate_chromite_ore",
+    "pulderessence:pyrolusite_ore",
+    "pulderessence:deepslate_pyrolusite_ore",
+    "pulderessence:columbite_ore",
+    "pulderessence:deepslate_columbite_ore",
+    "pulderessence:tantalite_ore",
+    "pulderessence:deepslate_tantalite_ore",
+    "pulderessence:zircon_ore",
+    "pulderessence:deepslate_zircon_ore",
+    "pulderessence:vanadinite_ore",
+    "pulderessence:deepslate_vanadinite_ore",
+    "pulderessence:wolframite_ore",
+    "pulderessence:deepslate_wolframite_ore",
+    "pulderessence:molybdenite_ore",
+    "pulderessence:deepslate_molybdenite_ore",
+    "pulderessence:rheniite_ore",
+    "pulderessence:deepslate_rheniite_ore"
   ]
 }

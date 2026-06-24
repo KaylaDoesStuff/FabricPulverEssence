@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "hematite",
+  "ingredient": {
+    "item": "pulderessence:hematite_ore"
+  },
+  "result": "pulderessence:iron_ingot"
+}

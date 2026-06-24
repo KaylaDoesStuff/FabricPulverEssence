@@ -48,7 +48,9 @@ public class CompoundItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal(buildFormula(elementId, elementAmount)).formatted(Formatting.DARK_GRAY));
+        if (elementId != null && !elementId.isEmpty()) {
+            tooltip.add(Text.literal(buildFormula(elementId, elementAmount)).formatted(Formatting.DARK_GRAY));
+        }
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

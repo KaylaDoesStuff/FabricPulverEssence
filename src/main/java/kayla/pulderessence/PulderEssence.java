@@ -2,6 +2,7 @@ package kayla.pulderessence;
 
 import kayla.pulderessence.block.ModBlocks;
 import kayla.pulderessence.item.*;
+import kayla.pulderessence.voltage.TierTypes;
 import kayla.pulderessence.world.VoidChunkGenerator;
 import kayla.pulderessence.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -24,21 +25,29 @@ public class PulderEssence implements ModInitializer {
 
 		Registry.register(Registries.CHUNK_GENERATOR, new Identifier(MOD_ID, "void_chunk_generator"), VoidChunkGenerator.CODEC);
 		LOGGER.info("Hello Fabric world!");
-		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModWorldGeneration.generateModWorldGen();
-        ChemicalReactionItems.registerCrafts();
+		ModIngots.registerIngots();
+		ModRods.registerRods();
+		ModChargedRods.registerChargedRods();
+		ModDusts.registerDusts();
+		ModNuggets.registerNuggets();
+		ModOres.registerOres();
+		ModCraftingItems.registerCraftingItems();
+		ModTools.registerTools();
+//        ChemicalReactionItems.registerCrafts();
 		ModBucketItems.registerBuckets();
 		ModBottleItems.registerBottles();
-		IngotItem.registerIngotItems();
+		ModWires.registerAll();
+		TierTypes.init();
 
-		StrippableBlockRegistry.register(ModBlocks.PULVERENT_LOG, ModBlocks.STRIPPED_PULVERENT_LOG);
-		StrippableBlockRegistry.register(ModBlocks.PULVERENT_WOOD, ModBlocks.STRIPPED_PULVERENT_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.get("pulverent_log"), ModBlocks.get("stripped_pulverent_log"));
+		StrippableBlockRegistry.register(ModBlocks.get("pulverent_wood"), ModBlocks.get("stripped_pulverent_wood"));
 
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.PULVERENT_LOG, 5, 5);
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.PULVERENT_WOOD, 5, 5);
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_PULVERENT_LOG, 5, 5);
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_PULVERENT_WOOD, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.get("pulverent_log"), 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.get("pulverent_wood"), 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.get("stripped_pulverent_log"), 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.get("stripped_pulverent_wood"), 5, 5);
 	}
 }

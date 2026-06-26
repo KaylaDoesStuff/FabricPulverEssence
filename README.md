@@ -51,5 +51,5 @@ Datagen
 - Full Fabric datagen pipeline: block/item tags, loot tables, recipes, models/blockstates, language, world gen
 - 1830 generated cable blockstate+model files via atlas texture system
 
-Physics (stubs)
-- Gravity and TimeDilation framework stubs
+Physics
+- Black holes working as intended, and generating randomly sparsely within space dimension

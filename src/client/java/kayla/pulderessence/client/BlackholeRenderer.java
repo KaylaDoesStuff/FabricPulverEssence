@@ -9,6 +9,8 @@ import net.minecraft.client.gl.JsonEffectShaderProgram;
 import net.minecraft.client.gl.GlUniform;
 import net.minecraft.client.render.Camera;
 import com.mojang.blaze3d.systems.RenderSystem;
+import java.util.ArrayList;
+import java.util.List;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -66,10 +68,10 @@ public class BlackholeRenderer {
         float fovRad = (float) Math.toRadians(fov / 2.0);
         float radToUV = 1.0f / (2.0f * fovRad);
 
-        TimeDilation.SchwarzschildSource best = null;
-        float bestUX = 0, bestUY = 0;
-        float bestEventHorizonUV = 0, bestEinsteinRadiusUV = 0;
-        double bestScore = -1;
+        List<Float> uxList = new ArrayList<>();
+        List<Float> uyList = new ArrayList<>();
+        List<Float> ehList = new ArrayList<>();
+        List<Float> erList = new ArrayList<>();
 
         for (var source : sources) {
             double dx = source.pos().getX() + 0.5 - camPos.x;
@@ -93,29 +95,26 @@ public class BlackholeRenderer {
             if (ux < -0.1f || ux > 1.1f || uy < -0.1f || uy > 1.1f) continue;
 
             double r_s = source.r_s();
-            double eventHorizonUV = (r_s / dist) * radToUV;
-            double einsteinRadiusUV = Math.sqrt(2.0 * r_s / dist) * radToUV;
+            float eventHorizonUV = (float) ((r_s / dist) * radToUV);
+            float einsteinRadiusUV = (float) (Math.sqrt(2.0 * r_s / dist) * radToUV);
 
-            // Score by angular impact — larger Einstein radius = more visible
-            double score = einsteinRadiusUV;
-            if (score > bestScore) {
-                bestScore = score;
-                best = source;
-                bestUX = ux;
-                bestUY = uy;
-                bestEventHorizonUV = (float) eventHorizonUV;
-                bestEinsteinRadiusUV = (float) einsteinRadiusUV;
-            }
+            uxList.add(ux);
+            uyList.add(uy);
+            ehList.add(eventHorizonUV);
+            erList.add(einsteinRadiusUV);
+
+            if (uxList.size() >= 2) break;
         }
 
-        if (best == null) { active = false; return; }
+        if (uxList.isEmpty()) { active = false; return; }
 
-        float photonSphereUV = bestEventHorizonUV * 1.5f;
-
-        setUniform(program, "u_blackHolePos", bestUX, bestUY);
-        setUniform(program, "u_eventHorizon", bestEventHorizonUV);
-        setUniform(program, "u_einsteinRadius", bestEinsteinRadiusUV);
-        setUniform(program, "u_photonSphereRadius", photonSphereUV);
+        int count = uxList.size();
+        setUniform(program, "u_bhCount", (float) count);
+        for (int i = 0; i < count; i++) {
+            setUniform(program, "u_bhPos" + i, uxList.get(i), uyList.get(i));
+            setUniform(program, "u_bhEh" + i, ehList.get(i));
+            setUniform(program, "u_bhEr" + i, erList.get(i));
+        }
         setUniform(program, "u_gravityStrength", 1.0f);
         active = true;
     }

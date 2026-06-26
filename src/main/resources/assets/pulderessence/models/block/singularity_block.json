@@ -1,6 +1,5 @@
 {
-  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "pulderessence:block/singularity_block"
+    "particle": "pulderessence:block/singularity_block"
   }
 }

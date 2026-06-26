@@ -1,0 +1,14 @@
+{
+    "vertex": "blackhole",
+    "fragment": "blackhole",
+    "samplers": [
+        { "name": "DiffuseSampler" }
+    ],
+    "uniforms": [
+        { "name": "u_blackHolePos", "type": "float", "count": 2, "values": [ 0.5, 0.5 ] },
+        { "name": "u_eventHorizon", "type": "float", "count": 1, "values": [ 0.1 ] },
+        { "name": "u_einsteinRadius", "type": "float", "count": 1, "values": [ 0.25 ] },
+        { "name": "u_photonSphereRadius", "type": "float", "count": 1, "values": [ 0.15 ] },
+        { "name": "u_gravityStrength", "type": "float", "count": 1, "values": [ 0.05 ] }
+    ]
+}

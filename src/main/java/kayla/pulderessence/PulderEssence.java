@@ -1,6 +1,7 @@
 package kayla.pulderessence;
 
 import kayla.pulderessence.block.ModBlocks;
+import kayla.pulderessence.block.custom.ModBlockEntities;
 import kayla.pulderessence.item.*;
 import kayla.pulderessence.voltage.TierTypes;
 import kayla.pulderessence.world.VoidChunkGenerator;
@@ -40,6 +41,7 @@ public class PulderEssence implements ModInitializer {
 		ModBucketItems.registerBuckets();
 		ModBottleItems.registerBottles();
 		ModWires.registerAll();
+		ModBlockEntities.registerSingularityBlockEntity();
 		TierTypes.init();
 
 		StrippableBlockRegistry.register(ModBlocks.get("pulverent_log"), ModBlocks.get("stripped_pulverent_log"));

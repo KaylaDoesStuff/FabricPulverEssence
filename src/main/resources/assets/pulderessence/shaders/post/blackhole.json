@@ -1,0 +1,22 @@
+{
+  "targets": [ "swap" ],
+  "passes": [
+    {
+      "name": "blackhole",
+      "intarget": "minecraft:main",
+      "outtarget": "swap",
+      "uniforms": [
+        { "name": "u_blackHolePos",     "values": [ 0.5, 0.5 ] },
+        { "name": "u_eventHorizon",    "values": [ 0.1 ] },
+        { "name": "u_einsteinRadius",  "values": [ 0.25 ] },
+        { "name": "u_photonSphereRadius", "values": [ 0.15 ] },
+        { "name": "u_gravityStrength", "values": [ 0.05 ] }
+      ]
+    },
+    {
+      "name": "blit",
+      "intarget": "swap",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}

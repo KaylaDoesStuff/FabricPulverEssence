@@ -37,4 +37,12 @@ public abstract class GravityMixin {
     private float modifyJumpVelocity(float original) {
         return 0.2325F;
     }
+
+    /**
+     * Increases sprint boost to achieve ~7 m/s with reduced walk speed.
+     */
+    @ModifyConstant(method = "<clinit>", constant = @Constant(doubleValue = 0.30000001192092896))
+    private static double modifySprintBoost(double original) {
+        return 3.375;
+    }
 }

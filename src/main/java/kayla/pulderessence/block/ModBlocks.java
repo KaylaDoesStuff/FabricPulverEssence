@@ -1,6 +1,7 @@
 package kayla.pulderessence.block;
 
 import kayla.pulderessence.PulderEssence;
+import kayla.pulderessence.block.custom.SingularityBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -156,7 +157,8 @@ public class ModBlocks {
         new BlockEntry("pulverent_fence", () -> new FenceBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS))),
         new BlockEntry("pulverent_fence_gate", () -> new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), WoodType.OAK)),
         new BlockEntry("pulverent_door", () -> new DoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK)),
-        new BlockEntry("pulverent_trapdoor", () -> new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK))
+        new BlockEntry("pulverent_trapdoor", () -> new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS), BlockSetType.OAK)),
+        new BlockEntry("singularity_block", () -> new SingularityBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque()))
     );
 
     private static final Map<String, Block> BLOCKS = new LinkedHashMap<>();

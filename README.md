@@ -27,3 +27,7 @@ Chemistry
 Machines
 - Added 12 machine tiers, which have maximum voltage,
 - Added Machine custom block class -# todo - Fix machine class to work with voltage tiers
+
+To do
+guns with chemical explosions use p=f/a and how damage scales 
+do similar with bows and arrows 

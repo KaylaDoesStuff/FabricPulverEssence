@@ -2,8 +2,6 @@ package kayla.pulderessence.world;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import kayla.pulderessence.block.ModBlocks;
-import kayla.pulderessence.block.custom.SingularityBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -78,28 +76,6 @@ public class VoidChunkGenerator extends ChunkGenerator {
 
     @Override
     public void generateFeatures(StructureWorldAccess world, Chunk chunk, StructureAccessor structureAccessor) {
-        int chunkX = chunk.getPos().x;
-        int chunkZ = chunk.getPos().z;
-
-        double dist = Math.sqrt(chunkX * 16.0 * chunkX * 16.0 + chunkZ * 16.0 * chunkZ * 16.0);
-        if (dist < 2000) return;
-
-        long seed = world.getSeed() + chunkX * 341873128712L + chunkZ * 132897987541L;
-        Random random = new Random(seed);
-
-        if (random.nextFloat() > 0.03f) return;
-
-        int x = chunkX * 16 + random.nextInt(16);
-        int y = 30 + random.nextInt(200);
-        int z = chunkZ * 16 + random.nextInt(16);
-        BlockPos pos = new BlockPos(x, y, z);
-
-        world.setBlockState(pos, ModBlocks.get("singularity_block").getDefaultState(), 2);
-
-        BlockEntity be = world.getBlockEntity(pos);
-        if (be instanceof SingularityBlockEntity sbe) {
-            sbe.setMass(500.0 + random.nextDouble() * 500.0);
-        }
     }
 
     @Override

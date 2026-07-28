@@ -1,17 +1,16 @@
 {
     "vertex": "blackhole",
     "fragment": "blackhole",
+    "attributes": ["Position"],
     "samplers": [
-        { "name": "DiffuseSampler" }
+        { "name": "DiffuseSampler" },
+        { "name": "u_blackHoleData" }
     ],
     "uniforms": [
-        { "name": "u_bhPos0", "type": "float", "count": 2, "values": [ 0.5, 0.5 ] },
-        { "name": "u_bhPos1", "type": "float", "count": 2, "values": [ 0.5, 0.5 ] },
-        { "name": "u_bhEh0", "type": "float", "count": 1, "values": [ 0.0 ] },
-        { "name": "u_bhEh1", "type": "float", "count": 1, "values": [ 0.0 ] },
-        { "name": "u_bhEr0", "type": "float", "count": 1, "values": [ 0.0 ] },
-        { "name": "u_bhEr1", "type": "float", "count": 1, "values": [ 0.0 ] },
-        { "name": "u_bhCount", "type": "float", "count": 1, "values": [ 0.0 ] },
-        { "name": "u_gravityStrength", "type": "float", "count": 1, "values": [ 1.0 ] }
+        { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0] },
+        { "name": "InSize", "type": "float", "count": 2, "values": [1.0, 1.0] },
+        { "name": "OutSize", "type": "float", "count": 2, "values": [1.0, 1.0] },
+        { "name": "u_blackHoleCount", "type": "int", "count": 1, "values": [0] },
+        { "name": "u_tanHalfFov", "type": "float", "count": 1, "values": [0.7] }
     ]
 }

@@ -1,11 +1,18 @@
 #version 150
 
+in vec4 Position;
+
+uniform mat4 ProjMat;
+uniform vec2 InSize;
+uniform vec2 OutSize;
+
 out vec2 texCoord;
+out vec2 oneTexel;
 
 void main() {
-    int id = gl_VertexID;
-    float x = float(((id & 1) ^ (id >> 1)) * 2 - 1);
-    float y = float((id >> 1) * 2 - 1);
-    gl_Position = vec4(x, y, 0.0, 1.0);
-    texCoord = gl_Position.xy * 0.5 + 0.5;
+    vec4 outPos = ProjMat * vec4(Position.xy, 0.0, 1.0);
+    gl_Position = vec4(outPos.xy, 0.2, 1.0);
+
+    texCoord = Position.xy / OutSize;
+    oneTexel = 1.0 / InSize;
 }
